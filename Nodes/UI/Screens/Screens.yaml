@@ -531,37 +531,6 @@ Children:
             DataType: Color
             ModellingRule: Optional
             Value: "#06344b"
-          - Name: Immaginediprovgaperlingua
-            Type: Image
-            Children:
-            - Name: Path
-              Type: BaseDataVariableType
-              DataType: ResourceUri
-              Value: "ns=7;%PROJECTDIR%/icons8-italy-96.png"
-            - Name: Width
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 60.0
-            - Name: Height
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 60.0
-            - Name: LeftMargin
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 40.0
-            - Name: TopMargin
-              Type: BaseVariableType
-              DataType: Size
-              ModellingRule: Optional
-              Value: 10.0
-            - Name: Visible
-              Type: BaseDataVariableType
-              DataType: Boolean
-              ModellingRule: Optional
       - Name: CurrentAlarmText
         Type: Label
         Children:
@@ -1111,7 +1080,7 @@ Children:
       - Name: Message
         Type: BaseDataVariableType
         DataType: LocalizedText
-        Value: {"LocaleId":"en-US","Text":"È stato richiesto lo spegnimento dell'interfaccia. Premere Si per confermare, altrimenti premere No"}
+        Value: {"NamespaceIndex":7,"TextId":"QuitMessage"}
     - Name: logo
       Type: Image
       Children:
@@ -1491,13 +1460,13 @@ Children:
             DataType: ResourceUri
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/icons8-italy-96.png"
+            Value: "ns=7;%PROJECTDIR%/icons8-great-britain-96.png"
           - Name: FalseValue
             Type: BaseDataVariableType
             DataType: ResourceUri
             ReferenceType: HasParameter
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/icons8-great-britain-96.png"
+            Value: "ns=7;%PROJECTDIR%/icons8-italy-96.png"
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -1996,7 +1965,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Home"}
+            Value: {"NamespaceIndex":7,"TextId":"Home"}
           - Name: Width
             Type: BaseVariableType
             DataType: Size
@@ -2168,7 +2137,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Produzione"}
+            Value: {"NamespaceIndex":7,"TextId":"Produzione"}
           - Name: Width
             Type: BaseVariableType
             DataType: Size
@@ -2335,7 +2304,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Articoli"}
+            Value: {"NamespaceIndex":7,"TextId":"Articoli"}
           - Name: Width
             Type: BaseVariableType
             DataType: Size
@@ -2502,7 +2471,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Comandi"}
+            Value: {"NamespaceIndex":7,"TextId":"Comandi"}
           - Name: Width
             Type: BaseVariableType
             DataType: Size
@@ -2669,7 +2638,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Allarmi"}
+            Value: {"NamespaceIndex":7,"TextId":"Allarmi"}
           - Name: Width
             Type: BaseVariableType
             DataType: Size
@@ -3822,7 +3791,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Nuovo"}
+      Value: {"NamespaceIndex":7,"TextId":"Nuovo"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -3986,7 +3955,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Elimina"}
+      Value: {"NamespaceIndex":7,"TextId":"Elimina"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -4159,7 +4128,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Avvia"}
+      Value: {"NamespaceIndex":7,"TextId":"Avvia"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -4332,7 +4301,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Termina"}
+      Value: {"NamespaceIndex":7,"TextId":"Termina"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -4651,7 +4620,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Storico Produzione"}
+      Value: {"NamespaceIndex":7,"TextId":"Storico Produzione"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -4806,7 +4775,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"PRODUZIONE"}
+        Value: {"NamespaceIndex":7,"TextId":"PRODUZIONE"}
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -5114,7 +5083,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"ARTICOLO"}
+          Value: {"NamespaceIndex":7,"TextId":"ARTICOLO"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -5401,7 +5370,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"ANAGRAFICA ARTICOLI"}
+          Value: {"NamespaceIndex":7,"TextId":"ANAGRAFICA ARTICOLI"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -5970,7 +5939,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Descrizione:"}
+      Value: {"NamespaceIndex":7,"TextId":"Descrizione:"}
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -6026,7 +5995,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Programma Robot:"}
+      Value: {"NamespaceIndex":7,"TextId":"Programma Robot:"}
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -6179,7 +6148,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Descrizione"}
+          Value: {"NamespaceIndex":7,"TextId":"Descrizione:"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6215,7 +6184,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Programma Robot"}
+          Value: {"NamespaceIndex":7,"TextId":"Programma Robot"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6569,7 +6538,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Elimina"}
+      Value: {"NamespaceIndex":7,"TextId":"Elimina"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -6741,7 +6710,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Nuovo"}
+      Value: {"NamespaceIndex":7,"TextId":"Nuovo"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -6875,7 +6844,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Salva"}
+      Value: {"NamespaceIndex":7,"TextId":"Salva"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -7014,7 +6983,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Modifica"}
+      Value: {"NamespaceIndex":7,"TextId":"Modifica"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -7153,7 +7122,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Annulla"}
+      Value: {"NamespaceIndex":7,"TextId":"Annulla"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -8843,7 +8812,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"ALLARMI"}
+        Value: {"NamespaceIndex":7,"TextId":"ALLARMI"}
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -9010,7 +8979,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Storico Allarmi"}
+      Value: {"NamespaceIndex":7,"TextId":"Storico Allarmi"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -9162,7 +9131,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"storico allarmi"}
+      Value: {"NamespaceIndex":7,"TextId":"storico allarmi"}
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -9271,7 +9240,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"STORICO PRODUZIONE"}
+        Value: {"NamespaceIndex":7,"TextId":"STORICO PRODUZIONE"}
       - Name: TextHorizontalAlignment
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
@@ -9783,7 +9752,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"FILTRO DI RICERCA"}
+          Value: {"NamespaceIndex":7,"TextId":"FILTRO DI RICERCA"}
         - Name: TextHorizontalAlignment
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
@@ -9841,7 +9810,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Da:"}
+        Value: {"NamespaceIndex":7,"TextId":"Da:"}
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -9888,7 +9857,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"A:"}
+        Value: {"NamespaceIndex":7,"TextId":"A:"}
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -9935,7 +9904,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Cerca:"}
+        Value: {"NamespaceIndex":7,"TextId":"Cerca:"}
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -10023,7 +9992,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Rimuovi Filtro"}
+        Value: {"NamespaceIndex":7,"TextId":"Rimuovi Filtro"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -10187,7 +10156,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Abilita Filtro Per Data:"}
+        Value: {"NamespaceIndex":7,"TextId":"Abilita Filtro Per Data:"}
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -10234,7 +10203,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Applica Filtro"}
+        Value: {"NamespaceIndex":7,"TextId":"Applica Filtro"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size

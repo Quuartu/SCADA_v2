@@ -280,7 +280,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Si"}
+        Value: {"NamespaceIndex":7,"TextId":"SI"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -433,7 +433,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"No"}
+        Value: {"NamespaceIndex":7,"TextId":"No"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -618,7 +618,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"it-IT","Text":"Attenzione"}
+          Value: {"NamespaceIndex":7,"TextId":"Attenzione"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -947,7 +947,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Ordine Di Produzione:"}
+      Value: {"NamespaceIndex":7,"TextId":"Ordine Di Produzione"}
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -995,7 +995,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Nome Articolo:"}
+      Value: {"NamespaceIndex":7,"TextId":"Nome Articolo:"}
     - Name: Width
       Type: BaseVariableType
       DataType: Size
@@ -1172,7 +1172,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Annulla"}
+      Value: {"NamespaceIndex":7,"TextId":"Annulla"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -1287,7 +1287,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Inserisci"}
+      Value: {"NamespaceIndex":7,"TextId":"Inserisci"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -3134,7 +3134,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Annulla"}
+        Value: {"NamespaceIndex":7,"TextId":"Annulla"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -3253,7 +3253,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Conferma"}
+        Value: {"NamespaceIndex":7,"TextId":"Conferma"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -3486,7 +3486,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"No"}
+      Value: {"NamespaceIndex":7,"TextId":"No"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -3702,7 +3702,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Attenzione"}
+        Value: {"NamespaceIndex":7,"TextId":"Attenzione"}
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -3877,7 +3877,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"SI"}
+      Value: {"NamespaceIndex":7,"TextId":"SI"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size

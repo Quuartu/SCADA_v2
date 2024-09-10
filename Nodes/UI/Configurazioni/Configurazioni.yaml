@@ -77,7 +77,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#155c80"
+        Value: "#06344b"
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -91,6 +91,11 @@ Children:
         DataType: HorizontalAlignment
         ModellingRule: Optional
         Value: 3
+      - Name: CornerRadius
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
     - Name: Button1
       Type: Button
       Children:
@@ -98,7 +103,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"X"}
+        Value: {"LocaleId":"en-US","Text":"  "}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -126,7 +131,6 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#ff0000"
       - Name: RightMargin
         Type: BaseVariableType
         DataType: Size
@@ -193,11 +197,41 @@ Children:
           - Name: Severity
             Type: PropertyType
             DataType: UInt16
+      - Name: Style
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "Transparent"
+      - Name: ImagePath
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        ModellingRule: Optional
+        Value: "ns=7;%PROJECTDIR%/icons8-close-96.png"
+      - Name: ImageWidth
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 55.0
+      - Name: ImageHeight
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 55.0
     - Name: FillColor
       Type: BaseDataVariableType
       DataType: Color
       ModellingRule: Optional
       Value: "#f0f0f0"
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#06344b"
+    - Name: CornerRadius
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
   - Name: NavigationPanel1
     Type: NavigationPanel
     Children:
@@ -344,7 +378,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 40.0
+        Value: 30.0
       - Name: BorderThickness
         Type: BaseDataVariableType
         DataType: Size
@@ -359,12 +393,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: -20.0
+        Value: -10.0
       - Name: FillColor
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#155c80"
+        Value: "#06344b"
       - Name: Label1
         Type: Label
         Children:
@@ -403,6 +437,10 @@ Children:
           DataType: Color
           ModellingRule: Optional
           Value: "#ffffff"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
     - Name: FillColor
       Type: BaseDataVariableType
       DataType: Color
@@ -415,21 +453,22 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Indirizzo IP:"}
+        Value: {"NamespaceIndex":7,"TextId":"Indirizzo IP:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 161.0
+        Value: 106.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 250.0
+        Value: 260.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
@@ -449,7 +488,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 2
     - Name: Label3
       Type: Label
       Children:
@@ -457,21 +495,22 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Utente:"}
+        Value: {"NamespaceIndex":7,"TextId":"Utente:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 248.0
+        Value: 276.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 250.0
+        Value: 260.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
@@ -491,7 +530,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 2
     - Name: Label4
       Type: Label
       Children:
@@ -504,12 +542,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 539.0
+        Value: 630.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 250.0
+        Value: 276.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -534,7 +572,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 2
     - Name: TextBox1
       Type: TextBox
       Children:
@@ -556,17 +593,22 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 279.0
+        Value: 280.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
+        Value: 280.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 248.0
+        Value: 270.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
     - Name: TextBox2
       Type: TextBox
       Children:
@@ -588,17 +630,22 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 283.0
+        Value: 220.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 677.0
+        Value: 760.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 249.0
+        Value: 270.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 51.0
     - Name: Label5
       Type: Label
       Children:
@@ -606,21 +653,22 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Nome Cartella Programmi:"}
+        Value: {"NamespaceIndex":7,"TextId":"Nome Cartella Programmi:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 80.0
+        Value: 46.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 250.0
+        Value: 260.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
@@ -640,7 +688,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 2
     - Name: TextBox3
       Type: TextBox
       Children:
@@ -667,12 +714,17 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 259.0
+        Value: 280.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 78.0
+        Value: 40.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
     - Name: TextBox4
       Type: TextBox
       Children:
@@ -694,17 +746,22 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 699.0
+        Value: 700.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
+        Value: 280.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 160.0
+        Value: 100.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -722,21 +779,22 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"it-IT","Text":"Estensione file:"}
+        Value: {"NamespaceIndex":7,"TextId":"Estensione file:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+        Value: 20.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 327.0
+        Value: 336.0
       - Name: Width
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 250.0
+        Value: 260.0
       - Name: Height
         Type: BaseVariableType
         DataType: Size
@@ -756,7 +814,6 @@ Children:
         Type: BaseVariableType
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
-        Value: 2
     - Name: TextBox5
       Type: TextBox
       Children:
@@ -778,17 +835,32 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 279.0
+        Value: 280.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
+        Value: 280.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 327.0
+        Value: 330.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+    - Name: BorderColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#06344b"
+    - Name: CornerRadius
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
   - Name: Width
     Type: BaseVariableType
     DataType: Size

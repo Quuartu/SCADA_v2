@@ -114,3 +114,18 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":252,"Namespace":1},"Body":{"Hash":[168,248,251,197,41,122,230,71,15,35,0,60,238,28,147,99,123,71,250,116,110,23,240,201,126,95,113,152,9,248,73,1],"Salt":[184,106,54,244,31,110,231,242,145,110,44,130,104,64,133,98,22,171,238,133,158,51,235,98,112,73,153,144,2,119,44,213]}}]
+  - Name: LocaleId
+    Id: g=514206faea661a13e056f4f4fc433b40
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "it-IT"
+  - Name: Language
+    Id: g=3558d0755fc3b603609dd8d73e4a3ad5
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "it-IT"
+  - Class: Reference
+    Type: HasGroup
+    Target: g=5a0638750acef8844bd6b34df337ca7a
