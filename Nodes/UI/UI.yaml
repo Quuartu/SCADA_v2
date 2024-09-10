@@ -38,7 +38,6 @@ Children:
       - Name: PressedColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#155c80"
       - Name: IconUsesTextColor
         Type: BaseDataVariableType
         DataType: Boolean
@@ -46,7 +45,6 @@ Children:
       - Name: PressedBorderColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#06344b"
     - Name: Accent
       Type: ButtonStyle
       Children:
