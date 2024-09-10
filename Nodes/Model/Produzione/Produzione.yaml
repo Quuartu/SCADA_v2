@@ -1,0 +1,58 @@
+Name: Produzione
+Type: FolderType
+Children:
+- Name: NuovaProduzione
+  Id: g=3c814e6e698d389a0e42f4300f4f94cf
+  Type: BaseObjectType
+  Children:
+  - Name: Odp
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: NomeArticolo
+    Type: BaseDataVariableType
+    DataType: String
+- Name: rowIdSelected
+  Id: g=15aaff7cec2db47876fbb03b9dd0ecb8
+  Type: BaseDataVariableType
+  DataType: Int64
+- Name: ButtonProduzioneEnabled
+  Type: BaseObjectType
+  Children:
+  - Name: AvviaEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: TerminaEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: EliminaEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: FiltroProduzione
+  Type: BaseObjectType
+  Children:
+  - Name: TextFilter
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: FilterActive
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: QueryProduzione
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: pr_ButtonTerminaSelected
+  Id: g=71fcbfc6dd117edefa4d264a12ac438e
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: OdlStart
+  Type: BaseDataVariableType
+  DataType: Int64
+- Name: ap_start
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: ResetProduction
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: ProduzioneInCorso
+  Type: BaseDataVariableType
+  DataType: Boolean

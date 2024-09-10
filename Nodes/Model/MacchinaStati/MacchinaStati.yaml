@@ -1,0 +1,9 @@
+Name: MacchinaStati
+Type: FolderType
+Children:
+- Name: MachineStatus
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: MachineStatusText
+  Type: BaseDataVariableType
+  DataType: String

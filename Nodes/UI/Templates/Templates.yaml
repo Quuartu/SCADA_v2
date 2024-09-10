@@ -1,0 +1,5 @@
+Name: Templates
+Type: FolderType
+Children:
+- File: LoginForm/LoginForm.yaml
+- File: CalendarPicker/CalendarPicker.yaml

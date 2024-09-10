@@ -1,0 +1,4 @@
+Name: CommDrivers
+Type: CommDriversCategoryFolder
+Children:
+- File: S7TIAPROFINETDriver1/S7TIAPROFINETDriver1.yaml

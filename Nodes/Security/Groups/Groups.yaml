@@ -1,0 +1,10 @@
+Name: Groups
+Id: g=33ac98afcbbcd645bc8146197074cc43
+Type: GroupsCategoryFolder
+Children:
+- Name: Sviluppatori
+  Id: g=5a0638750acef8844bd6b34df337ca7a
+  Type: GroupType
+- Name: Utenti
+  Id: g=28058f63fd5f5e5b416aa1356bf134a0
+  Type: GroupType

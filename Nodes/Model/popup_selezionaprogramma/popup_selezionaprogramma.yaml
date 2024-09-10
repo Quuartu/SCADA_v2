@@ -1,0 +1,10 @@
+Name: popup_selezionaprogramma
+Type: FolderType
+Children:
+- Name: sp_ProgramList
+  Id: g=52820ff8bb5787dd1911e377e8ccee2e
+  Type: BaseDataVariableType
+  DataType: String
+- Name: sp_ProgramSelected
+  Type: BaseDataVariableType
+  DataType: String

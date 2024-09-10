@@ -1,0 +1,10 @@
+Name: DB91
+Type: FolderType
+Children:
+- Name: DB91_CambioProduzione
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DB91_TerminaProduzione
+  Type: BaseDataVariableType
+  DataType: Boolean
+- File: Ricetta/Ricetta.yaml

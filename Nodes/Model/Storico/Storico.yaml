@@ -1,0 +1,20 @@
+Name: Storico
+Type: FolderType
+Children:
+- Name: FilterTextStorico
+  Type: BaseDataVariableType
+  DataType: String
+- Name: QueryStorico
+  Id: g=2cd0aba2892e41315e871d0b5f4d7013
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: bdateFilter
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DateFrom
+  Type: BaseDataVariableType
+  DataType: DateTime
+- Name: DateTo
+  Type: BaseDataVariableType
+  DataType: DateTime

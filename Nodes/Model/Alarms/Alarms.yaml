@@ -1,0 +1,24 @@
+Name: Alarms
+Type: FolderType
+Children:
+- Name: Alm1
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Alm2
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Alm3
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Alm4
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Alm5
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Wrn1
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Wrn2
+  Type: BaseDataVariableType
+  DataType: Boolean

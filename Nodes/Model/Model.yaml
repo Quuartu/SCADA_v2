@@ -1,0 +1,20 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- File: MacchinaStati/MacchinaStati.yaml
+- Name: fillBar
+  Type: BaseDataVariableType
+  DataType: Int32
+- File: Popup/Popup.yaml
+- File: Alarms/Alarms.yaml
+- File: Produzione/Produzione.yaml
+- File: Anagrafica/Anagrafica.yaml
+- File: Drivers/Drivers.yaml
+- File: Configurazioni/Configurazioni.yaml
+- File: popup_selezionaprogramma/popup_selezionaprogramma.yaml
+- File: Storico/Storico.yaml
+- Name: Locale
+  Id: g=4333f7c117d5cf0f6d7352ad71103084
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true

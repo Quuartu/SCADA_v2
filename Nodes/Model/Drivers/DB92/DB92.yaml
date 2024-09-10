@@ -1,0 +1,18 @@
+Name: DB92
+Type: FolderType
+Children:
+- Name: DB92_ODP
+  Type: BaseDataVariableType
+  DataType: Int64
+- Name: DB92_CambioProduzioneOK
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DB92_CambioProduzioneKO
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DB92_AckTerminaProduzione
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: DB92_ProduzioneInCorso
+  Type: BaseDataVariableType
+  DataType: Boolean

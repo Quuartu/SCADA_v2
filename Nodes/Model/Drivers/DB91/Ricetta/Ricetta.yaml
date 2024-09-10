@@ -1,0 +1,12 @@
+Name: Ricetta
+Type: FolderType
+Children:
+- Name: Product_ID
+  Type: BaseDataVariableType
+  DataType: String
+- Name: Descrizione
+  Type: BaseDataVariableType
+  DataType: String
+- Name: ProgrammaRobot
+  Type: BaseDataVariableType
+  DataType: Int32

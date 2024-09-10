@@ -1,0 +1,62 @@
+Name: Anagrafica
+Type: FolderType
+Children:
+- Name: Prodotto
+  Type: BaseObjectType
+  Children:
+  - Name: ID
+    Type: BaseDataVariableType
+    DataType: Int64
+  - Name: Product_ID
+    Id: g=00d6617c4d348a585e53722880c45611
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Descr
+    Id: g=f4f76849b3fc89e1d204da0e92cbe067
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Robot_Program
+    Id: g=d21658f0cbfb45899e7afdf6943b751b
+    Type: BaseDataVariableType
+    DataType: Int32
+- Name: ButtonAnagraficaEnabled
+  Type: BaseObjectType
+  Children:
+  - Name: SalvaEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: EliminaEnabled
+    Id: g=9ab7e5fd0b7a2c0df78a4d885a0cef6e
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: AnnullaEnabled
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: ModificaEnabled
+    Id: g=ee8e51eff51bb354e7986d717ba69a70
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bInEditMode
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: bInInsertMode
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: rowIdAnagraficaSelected
+  Id: g=3a8f7dc53253a5e23657f7c82eaf22d6
+  Type: BaseDataVariableType
+  DataType: Int64
+- Name: QueryAnagrafica
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: FiltroAnagrafica
+  Type: BaseObjectType
+  Children:
+  - Name: TextFilter
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: FilterActive
+    Id: g=1776daf9bf3445c35bfc0357ccb5c6bb
+    Type: BaseDataVariableType
+    DataType: Boolean

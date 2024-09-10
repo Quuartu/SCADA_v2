@@ -1,0 +1,51 @@
+Name: Configurazioni
+Type: FolderType
+Children:
+- Name: FTPRobot
+  Id: g=b9970f5ad20be023ecae0987358eef4d
+  Type: BaseObjectType
+  Children:
+  - Name: ftp_NomeCartella
+    Id: g=c404c761356f5dc442b281f806116df7
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_IndirizzoIP
+    Id: g=cca650755f34e7a99e9fd0602becd1e2
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_Utente
+    Id: g=2ec5d53946df88b2f069c0ef44511f3f
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_Password
+    Id: g=81944dde4321a221032f3520630f3020
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_EstensioneFile
+    Id: g=dfc6b7c6eea6250b390dc1441cc26f8b
+    Type: BaseDataVariableType
+    DataType: String
+- Name: Database
+  Id: g=a48f016aa7efa44b431ee254eacd318e
+  Type: BaseObjectType
+  Children:
+  - Name: NomeDB
+    Id: g=f91caae6c739edab22e650707b9abfae
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Server
+    Id: g=50e8b9117d114be4e42b471b516d93bf
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: UsaUtenzaSQL
+    Id: g=fdb87bcdbe3e3e39ab6c903e32e923fc
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: UtenteSQL
+    Id: g=d076082089ae18456b8cb0d58fe9116a
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: PasswordSQL
+    Id: g=16dd404e9ec9516e8ca6010b3b6f213b
+    Type: BaseDataVariableType
+    DataType: String

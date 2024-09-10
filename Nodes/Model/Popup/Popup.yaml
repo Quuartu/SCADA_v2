@@ -1,0 +1,24 @@
+Name: Popup
+Type: FolderType
+Children:
+- Name: OpenPopUp
+  Id: g=3d4ff19a6a34843207416da0ada60fc2
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: Testo_PopUp
+  Id: g=c0c9fd3b734a18b3c3b45c7efbd4dc4a
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "test"
+- Name: PopupOK
+  Id: g=4ff1a15bb895973f79be0eb20b83c695
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: PopupYes
+  Id: g=5b00f05748579754e3ce4b3e16145e03
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: PopupNo
+  Id: g=d264b93421aec7cf504bf492a91ec907
+  Type: BaseDataVariableType
+  DataType: Boolean
