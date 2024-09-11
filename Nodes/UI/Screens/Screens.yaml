@@ -345,6 +345,52 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
+      - Name: PolyLine1
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 2.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 60.0
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 510.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "M 0.000000 0.000000 L 0.000000 60.000000"
+        - Name: Visible
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: true
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/Groups/Sviluppatori"
+        - Name: LineColor
+          Type: BaseDataVariableType
+          DataType: Color
+          ModellingRule: Optional
+          Value: "#06344b"
     - Name: RightMargin
       Type: BaseVariableType
       DataType: Size
@@ -1017,7 +1063,7 @@ Children:
       - Name: Path
         Type: BaseDataVariableType
         DataType: ResourceUri
-        Value: "ns=7;%PROJECTDIR%/worker-2-513.png"
+        Value: "ns=7;%PROJECTDIR%/icons8-worker-100.png"
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -1118,12 +1164,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 990.0
+        Value: 780.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 20.0
+        Value: 10.0
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -1210,7 +1256,7 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 109.0
+        Value: 130.0
       - Name: Visible
         Type: BaseDataVariableType
         DataType: Boolean
@@ -1224,6 +1270,11 @@ Children:
         Type: BaseDataVariableType
         DataType: Boolean
         Value: true
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
     - Name: Button2
       Type: Button
       Children:
@@ -1236,12 +1287,12 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1180.0
+        Value: 540.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 20.0
+        Value: 10.0
       - Name: MouseClickEventHandler1
         Type: EventHandler
         Children:
@@ -1338,6 +1389,11 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "{Session}/Groups/Sviluppatori"
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
     - Name: Time
       Type: DateTimePicker
       Children:
@@ -1421,6 +1477,116 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "/Objects/SCADA/UI/DefaultStyleSheet/ButtonStyles/Transparent"
+    - Name: Image2
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/icons8-great-britain-96.png"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/Locale"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: true
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1760.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+    - Name: Image1
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/icons8-italy-96.png"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/Locale"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: true
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1760.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
     - Name: Lingua
       Type: Button
       Children:
@@ -1442,31 +1608,6 @@ Children:
       - Name: ImagePath
         Type: BaseDataVariableType
         DataType: ResourceUri
-        Children:
-        - Name: ConditionalConverter1
-          Type: ConditionalConverter
-          Children:
-          - Name: Condition
-            Type: BaseDataVariableType
-            DataType: Boolean
-            ReferenceType: HasSource
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "/Objects/SCADA/Model/Locale"
-          - Name: TrueValue
-            Type: BaseDataVariableType
-            DataType: ResourceUri
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/icons8-great-britain-96.png"
-          - Name: FalseValue
-            Type: BaseDataVariableType
-            DataType: ResourceUri
-            ReferenceType: HasParameter
-            ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/icons8-italy-96.png"
       - Name: Width
         Type: BaseVariableType
         DataType: Size
@@ -1838,22 +1979,22 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 80.0
+      Value: 90.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 30.0
+      Value: 40.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 830.0
+      Value: 1060.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 26.0
+      Value: 20.0
     - Name: Visible
       Type: BaseDataVariableType
       DataType: Boolean
@@ -1875,22 +2016,21 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 720.0
+      Value: 940.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 28.0
+      Value: 10.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 90.0
+      Value: 120.0
     - Name: TextHorizontalAlignment
       Type: BaseVariableType
       DataType: TextHorizontalAlignment
       ModellingRule: Optional
-      Value: 2
     - Name: Visible
       Type: BaseDataVariableType
       DataType: Boolean
@@ -1900,6 +2040,16 @@ Children:
         Type: DynamicLink
         DataType: NodePath
         Value: "{Session}/Groups/Sviluppatori"
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: TextVerticalAlignment
+      Type: BaseVariableType
+      DataType: TextVerticalAlignment
+      ModellingRule: Optional
+      Value: 1
   - Name: LayoutMenu
     Type: Rectangle
     Children:
@@ -2088,7 +2238,6 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/image_1.png"
           - Name: ImagePosition
             Type: BaseDataVariableType
             DataType: Position
@@ -2117,6 +2266,33 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: Image1
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/icons8-home-96.png"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 50.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 60.0
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
       - Name: PanelProduzione
         Type: Panel
         Children:
@@ -2260,7 +2436,6 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/image_2.png"
           - Name: ImagePosition
             Type: BaseDataVariableType
             DataType: Position
@@ -2284,6 +2459,33 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: Image1
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/icons8-production-96.png"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 50.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 60.0
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
       - Name: PanelArticoli
         Type: Panel
         Children:
@@ -2427,7 +2629,6 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/image_3.png"
           - Name: ImagePosition
             Type: BaseDataVariableType
             DataType: Position
@@ -2451,6 +2652,33 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: Image1
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/icons8-database-96.png"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 50.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 60.0
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
       - Name: PanelComandi
         Type: Panel
         Children:
@@ -2594,7 +2822,6 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/image_4.png"
           - Name: ImagePosition
             Type: BaseDataVariableType
             DataType: Position
@@ -2618,6 +2845,33 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: Image1
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/icons8-doorbell-96.png"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 50.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 60.0
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
       - Name: PanelAllarmi
         Type: Panel
         Children:
@@ -2761,7 +3015,6 @@ Children:
             Type: BaseDataVariableType
             DataType: ResourceUri
             ModellingRule: Optional
-            Value: "ns=7;%PROJECTDIR%/image_5.png"
           - Name: ImagePosition
             Type: BaseDataVariableType
             DataType: Position
@@ -2785,6 +3038,33 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
+        - Name: Image1
+          Type: Image
+          Children:
+          - Name: Path
+            Type: BaseDataVariableType
+            DataType: ResourceUri
+            Value: "ns=7;%PROJECTDIR%/icons8-warning-96.png"
+          - Name: Width
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 50.0
+          - Name: Height
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 60.0
+          - Name: LeftMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
+          - Name: TopMargin
+            Type: BaseVariableType
+            DataType: Size
+            ModellingRule: Optional
+            Value: 10.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -3012,12 +3292,10 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 480.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 140.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -3035,6 +3313,123 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 320.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 950.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1700.0
+    - Name: PolyLine1
+      Type: PolyLine
+      Children:
+      - Name: LineThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 480.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 140.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 450.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 590.0
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: String
+        ModellingRule: Optional
+        Value: "M 0.000000 90.000000 L 190.000000 0.000000"
+    - Name: Ellipse1
+      Type: Ellipse
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 930.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 580.0
+      - Name: Blink
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+    - Name: Ellipse2
+      Type: Ellipse
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 930.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 580.0
+      - Name: Blink
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#eb001b"
   - Name: HorizontalAlignment
     Type: BaseVariableType
     DataType: HorizontalAlignment
@@ -3043,6 +3438,307 @@ Children:
     Type: BaseVariableType
     DataType: VerticalAlignment
     ModellingRule: Optional
+  - Name: Panel1
+    Type: Panel
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 420.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 730.0
+    - Name: Rectangle1
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#06344b"
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+      - Name: PolyLine1
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 420.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+      - Name: PolyLine2
+        Type: PolyLine
+        Children:
+        - Name: LineThickness
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 1.0
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: LeftMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 420.0
+        - Name: TopMargin
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+        - Name: Path
+          Type: BaseDataVariableType
+          DataType: String
+          ModellingRule: Optional
+    - Name: Label1
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"NamespaceIndex":7,"TextId":"CELLA DI SALDATURA - Doppio Tornio"}
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        ModellingRule: Optional
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 22.0
+      - Name: FontWeight
+        Type: BaseDataVariableType
+        DataType: FontWeightEnum
+        ModellingRule: Optional
+        Value: 700
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+    - Name: Label2
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"NamespaceIndex":7,"TextId":"SCALA: 1:20"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 140.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        ModellingRule: Optional
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
+    - Name: Image1
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/icons8-perspective-view-64.png"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 60.0
+    - Name: Image2
+      Type: Image
+      Children:
+      - Name: Path
+        Type: BaseDataVariableType
+        DataType: ResourceUri
+        Value: "ns=7;%PROJECTDIR%/icons8-progress-indicator-64.png"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 100.0
+    - Name: Label3
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"NamespaceIndex":7,"TextId":"STATO: Non Attiva"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 230.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        ModellingRule: Optional
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
 - Name: Produzione
   Id: g=1b26b501cdd080a487235a03a43de7b0
   Supertype: Screen
@@ -3927,7 +4623,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-create-96.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -3948,6 +4643,33 @@ Children:
       DataType: Position
       ModellingRule: Optional
       Value: 5
+  - Name: Image2
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-create-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnEliminaClienteToReaGrid
     Type: Button
     Children:
@@ -4105,7 +4827,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-trash-96.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -4121,6 +4842,33 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
+  - Name: Image3
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-trash-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 260.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnAvviaClienteToReaGrid
     Type: Button
     Children:
@@ -4273,7 +5021,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-play-90.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -4435,7 +5182,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-stop-64.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -4910,7 +5656,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Procedere con l'eliminazione della produzione {0}?"}
+          Value: {"NamespaceIndex":7,"TextId":"Procedere con l'eliminazione della produzione {0}?"}
         - Name: ns=2;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -5016,6 +5762,60 @@ Children:
           ReferenceType: HasComponent
           ModellingRule: Optional
           Value: 2
+  - Name: Image4
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-play-90.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 480.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
+  - Name: Image5
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-stop-90.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 700.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
 - Name: Articoli
   Id: g=9393c538ff47886c9647ba067b331f75
   Supertype: Screen
@@ -6591,7 +7391,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-trash-96.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -6703,6 +7502,33 @@ Children:
       DataType: Position
       ModellingRule: Optional
       Value: 5
+  - Name: Image4
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-trash-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 480.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnNuovoProductGrid
     Type: Button
     Children:
@@ -6806,7 +7632,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-create-96.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -6837,6 +7662,33 @@ Children:
       DataType: Color
       ModellingRule: Optional
       Value: "#155c80"
+  - Name: Image2
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-create-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 40.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnSalvaProductGrid
     Type: Button
     Children:
@@ -6945,7 +7797,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-save-96.png"
     - Name: ImageWidth
       Type: BaseDataVariableType
       DataType: Size
@@ -6976,6 +7827,33 @@ Children:
       DataType: Position
       ModellingRule: Optional
       Value: 5
+  - Name: Image3
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-save-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 260.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnModificaProductGrid
     Type: Button
     Children:
@@ -7089,7 +7967,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-pencil-90.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -7115,6 +7992,33 @@ Children:
       DataType: Position
       ModellingRule: Optional
       Value: 5
+  - Name: Image5
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-pencil-90.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 700.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: BtnAnnullaProductGrid
     Type: Button
     Children:
@@ -7233,7 +8137,6 @@ Children:
       Type: BaseDataVariableType
       DataType: ResourceUri
       ModellingRule: Optional
-      Value: "ns=7;%PROJECTDIR%/icons8-undo-96.png"
     - Name: ImagePosition
       Type: BaseDataVariableType
       DataType: Position
@@ -7254,6 +8157,33 @@ Children:
       DataType: Position
       ModellingRule: Optional
       Value: 5
+  - Name: Image6
+    Type: Image
+    Children:
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=7;%PROJECTDIR%/icons8-undo-96.png"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 920.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 860.0
   - Name: TextBox1
     Type: TextBox
     Children:
@@ -7535,7 +8465,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"it-IT","Text":"Configura"}
+      Value: {"NamespaceIndex":7,"TextId":"Configura"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
