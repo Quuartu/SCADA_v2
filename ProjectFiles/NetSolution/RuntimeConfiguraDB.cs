@@ -17,6 +17,8 @@ using FTOptix.Core;
 using System.IO;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class RuntimeConfiguraDB : BaseNetLogic

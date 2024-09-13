@@ -19,6 +19,8 @@ using FTOptix.Core;
 using System.Net;
 using System.Collections.Generic;
 using System.IO;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class Popup_selezionaProgrammaRbt : BaseNetLogic

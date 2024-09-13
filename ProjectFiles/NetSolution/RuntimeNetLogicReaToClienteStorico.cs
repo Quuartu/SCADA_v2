@@ -17,6 +17,8 @@ using FTOptix.Core;
 using FTOptix.SerialPort;
 using FTOptix.System;
 using FTOptix.EventLogger;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class RuntimeNetLogicReaToClienteStorico : BaseNetLogic

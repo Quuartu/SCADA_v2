@@ -11,6 +11,10 @@ Children:
   - Name: NomeArticolo
     Type: BaseDataVariableType
     DataType: String
+  - Name: Quantità
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1
 - Name: rowIdSelected
   Id: g=15aaff7cec2db47876fbb03b9dd0ecb8
   Type: BaseDataVariableType

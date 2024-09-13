@@ -2,6 +2,7 @@ Name: Anagrafica
 Type: FolderType
 Children:
 - Name: Prodotto
+  Id: g=8c41bf03d392a8b9a222c4c91a3f65ad
   Type: BaseObjectType
   Children:
   - Name: ID

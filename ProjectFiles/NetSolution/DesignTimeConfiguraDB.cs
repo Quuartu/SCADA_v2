@@ -20,6 +20,8 @@ using System.Data;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.IO;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class DesignTimeConfiguraDB : BaseNetLogic

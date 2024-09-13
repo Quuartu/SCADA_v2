@@ -20,6 +20,8 @@ using FTOptix.SerialPort;
 using FTOptix.System;
 using System.Threading.Tasks;
 using FTOptix.EventLogger;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 
 #endregion
 

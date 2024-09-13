@@ -3,6 +3,8 @@ using System;
 using System.Globalization;
 using FTOptix.NetLogic;
 using UAManagedCore;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class CalendarPickerLogic : BaseNetLogic

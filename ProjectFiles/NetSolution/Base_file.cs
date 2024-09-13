@@ -15,6 +15,8 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.EventLogger;
 using FTOptix.Core;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class Base_file : BaseNetLogic

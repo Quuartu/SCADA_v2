@@ -14,6 +14,8 @@ using FTOptix.Retentivity;
 using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class script_StateMachine1 : BaseNetLogic

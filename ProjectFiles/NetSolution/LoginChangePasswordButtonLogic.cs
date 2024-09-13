@@ -3,6 +3,8 @@ using FTOptix.Core;
 using FTOptix.NetLogic;
 using FTOptix.UI;
 using UAManagedCore;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class LoginChangePasswordButtonLogic : BaseNetLogic

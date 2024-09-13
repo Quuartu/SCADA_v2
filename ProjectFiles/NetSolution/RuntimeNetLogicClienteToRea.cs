@@ -21,6 +21,8 @@ using FTOptix.SerialPort;
 using FTOptix.System;
 using System.Threading.Tasks;
 using FTOptix.EventLogger;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class RuntimeNetLogicClienteToRea : BaseNetLogic
@@ -97,7 +99,7 @@ public class RuntimeNetLogicClienteToRea : BaseNetLogic
     {
         var prodottoObj = InformationModel.GetObject(prodottoObjNodeId);
 
-        string[] columns = { "Production_Command", "Product_ID" };
+        string[] columns = { "Production_Command", "Product_ID"};
 
         string odp = prodottoObj.GetVariable("Odp").Value.Value.ToString();
         string nomeArticolo = prodottoObj.GetVariable("NomeArticolo").Value.Value.ToString();

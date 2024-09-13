@@ -15,6 +15,8 @@ using FTOptix.ODBCStore;
 using FTOptix.S7TiaProfinet;
 using FTOptix.CommunicationDriver;
 using FTOptix.Alarm;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 #endregion
 
 public class script_maincycle : BaseNetLogic

@@ -97,15 +97,31 @@ Project:
    Uri: 'urn:FTOptix:Alarm:Net'
    Module: FTOptix.Alarm.Net
    Version: 1.2
+  25:
+   Uri: 'urn:FTOptix:Recipe'
+   Module: FTOptix.Recipe
+   Version: 1.0
+  26:
+   Uri: 'urn:FTOptix:Recipe:Net'
+   Module: FTOptix.Recipe.Net
+   Version: 1.0
+  27:
+   Uri: 'urn:FTOptix:SQLiteStore'
+   Module: FTOptix.SQLiteStore
+   Version: 1.0
+  28:
+   Uri: 'urn:FTOptix:SQLiteStore:Net'
+   Module: FTOptix.SQLiteStore.Net
+   Version: 1.0
  Statistics:
-  TotalNodeCount: 8974
-  Objects: 1731
-  ObjectTypes: 29
-  Variables: 7183
+  TotalNodeCount: 10216
+  Objects: 1925
+  ObjectTypes: 31
+  Variables: 8217
   VariableTypes: 0
   DataTypes: 0
-  Methods: 31
-  References: 109
+  Methods: 43
+  References: 146
   ReferenceTypes: 0
   Files: 44
  Nodes:

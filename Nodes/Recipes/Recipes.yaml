@@ -1,2 +1,91 @@
 Name: Recipes
 Type: RecipesCategoryFolder
+Children:
+- Name: RecipeSchema1
+  Id: g=9a88a62c7e907f11ee7da8c794a72111
+  Type: RecipeSchema
+  Children:
+  - Name: Root
+    Type: BaseObjectType
+    Children:
+    - Name: ID
+      Type: BaseDataVariableType
+      DataType: Int64
+    - Name: Product_ID
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Descr
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Robot_Program
+      Type: BaseDataVariableType
+      DataType: Int32
+  - Class: Reference
+    Target: ns=25;i=27
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=33
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=31
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=35
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=37
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=76
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=62
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=58
+    Direction: Forward
+  - Class: Reference
+    Target: ns=25;i=60
+    Direction: Forward
+  - Name: Store
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: TargetNode
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/SCADA/Model/Anagrafica/Prodotto"
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+  - Name: EditModel
+    Id: g=188e0d2f83d86a9f3078ce27df856905
+    Type: BaseObjectType
+    Children:
+    - Name: ID
+      Type: BaseDataVariableType
+      DataType: Int64
+    - Name: Product_ID
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Descr
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Robot_Program
+      Type: BaseDataVariableType
+      DataType: Int32

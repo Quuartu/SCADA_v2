@@ -16,6 +16,8 @@ using UAManagedCore;
 using FTOptix.EventLogger;
 using FTOptix.S7TiaProfinet;
 using FTOptix.CommunicationDriver;
+using FTOptix.SQLiteStore;
+using FTOptix.Recipe;
 using OpcUa = UAManagedCore.OpcUa;
 
 #endregion

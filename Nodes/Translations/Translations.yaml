@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [78,3],
+    "Dimensions": [109,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -88,6 +88,37 @@ Children:
      "Procedere con l'eliminazione della produzione {0}?","Proceed with the elimination of production {0}?","Procedere con l'eliminazione della produzione {0}?",
      "CELLA DI SALDATURA - Doppio Tornio","WELDING CELL - Dual Lathe","CELLA DI SALDATURA - Doppio Tornio",
      "SCALA: 1:20","SCALE: 1:20","SCALA: 1:20",
-     "STATO: Non Attiva","STATE: Inactive","STATO: Non Attiva"
+     "STATO: Non Attiva","STATE: Inactive","STATO: Non Attiva",
+     "RecipesEditorStoreOfSchema","Store of schema","L'archivio dello schema",
+     "Save","Save","Salva",
+     "Delete","Delete","Elimina",
+     "Load","Load","Carica",
+     "Apply","Apply","Applica",
+     "RecipeControllerRecipe","Recipe","Ricetta",
+     "RecipeControllerEmptyRecipeName","Recipe name is empty","Il nome della ricetta è vuoto",
+     "RecipeControllerCreatedAndSaved","created and saved","creata e salvata",
+     "RecipeControllerDeleted","deleted","eliminata",
+     "RecipeControllerRecipeApplied","Recipe applied","Ricetta applicata",
+     "RecipeControllerRecipeLoaded","Recipe loaded","Ricetta caricata",
+     "RecipeControllerSaved","saved","salvata",
+     "RecipesEditorNotARecipe","is not a recipe","non è una ricetta",
+     "RecipesEditorRecipeSchemaNotFound","RecipeSchema variable not found","Variabile RecipeSchema non trovata",
+     "RecipesEditorRecipeSchemaNotSet","RecipeSchema not set","RecipeSchema non impostato",
+     "RecipesEditorRecipeNotFound","Recipe not found","Ricetta non trovata",
+     "RecipesEditorNotAStore","is not a store","non è un archivio",
+     "RecipesEditorNotSet","is not set","non è impostato",
+     "RecipesEditorStore","Store","Archivio",
+     "RecipesEditorNotFound","not found","non trovato",
+     "RecipesEditorEditModelOfSchema","EditModel of schema","EditModel dello schema",
+     "IMPOSTAZIONI","SETTINGS","IMPOSTAZIONI",
+     "Impostazioni","Settings","Impostazioni",
+     "Passo:","Step:","Passo:",
+     "ID_Prodotto","Product_ID","ID_Prodotto",
+     "ID_Prodotto:","Product_ID:","ID_Prodotto",
+     "Quantità_Prodotta","Quantity_Produced","Quantità_Prodotta",
+     "Quantità_Richiesta","Quantity_Requested","Quantità_Richiesta",
+     "Esporta Ricetta","Recipe Export","Esporta Ricetta",
+     "Importa Ricetta","Recipe Import","Importa Ricetta",
+     "Open Folder","Open Folder","Apri Cartella"
     ]
    }
