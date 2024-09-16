@@ -35,10 +35,10 @@ Children:
   Type: BaseObjectType
   Children:
   - Name: TextFilter
-    Id: g=db910f8242128f347c95a7f8728b6806
     Type: BaseDataVariableType
     DataType: String
   - Name: FilterActive
+    Id: g=de66cd134b3e33b4d9ced9a7e5eccf1d
     Type: BaseDataVariableType
     DataType: Boolean
 - Name: QueryProduzione

@@ -4410,7 +4410,7 @@ Children:
     - Name: Model
       Type: NodePointer
       DataType: NodeId
-      Value: {"IdType":2,"Id":"2bda4869c387bdafddbb26491ece9f6a","Namespace":7}
+      Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1"
       Children:
       - Name: ItemKind
         Type: PropertyType
@@ -4421,17 +4421,6 @@ Children:
     - Name: SelectedValue
       Type: BaseDataVariableType
       DataType: BaseDataType
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/SCADA/Model/Produzione/NuovaProduzione/NomeArticolo"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
     - Name: SelectedItem
       Type: NodePointer
       DataType: NodeId
@@ -4480,11 +4469,6 @@ Children:
     - Name: SelectedValuePath
       Type: BaseDataVariableType
       DataType: BaseDataType
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "{Item}/Name@Value"
     - Name: OrderBy
       Type: BaseDataVariableType
       DataType: NodePath
@@ -4503,6 +4487,11 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 40.0
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: ComboBoxModeEnum
+      ModellingRule: Optional
+      Value: 2
   - Name: Label3
     Type: Label
     Children:
@@ -4740,7 +4729,7 @@ Children:
           - Name: ns=2;ObjectPointer
             Type: NodePointer
             DataType: NodeId
-            Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1"
+            Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2"
             Children:
             - Name: Kind
               Type: PropertyType
@@ -4753,10 +4742,6 @@ Children:
           - Name: InputArguments
             Type: BaseObjectType
             Children:
-            - Name: TableName
-              Type: BaseDataVariableType
-              DataType: String
-              Description: {"NamespaceIndex":15,"TextId":"TableNameDescription"}
             - Name: ColumnNames
               Type: BaseDataVariableType
               DataType: String
@@ -4769,11 +4754,6 @@ Children:
               Description: {"NamespaceIndex":15,"TextId":"InsertValuesDescription"}
               ValueRank: OneOrMoreDimensions
               ArrayDimensions: [0,0]
-              Children:
-              - Name: DynamicLink
-                Type: DynamicLink
-                DataType: NodePath
-                Value: "/Objects/SCADA/Model/Produzione/NuovaProduzione"
         - Name: MethodContainer2
           Type: BaseObjectType
           Children:
@@ -4950,22 +4930,6 @@ Children:
       - Name: MethodsToCall
         Type: BaseObjectType
         Children:
-        - Name: MethodContainer2
-          Type: BaseObjectType
-          Children:
-          - Name: ns=2;ObjectPointer
-            Type: NodePointer
-            DataType: NodeId
-            Value: "/Objects/SCADA/DataStores/ODBC_PRG_OPTIX/RuntimeNetLogicClienteToRea"
-            Children:
-            - Name: Kind
-              Type: PropertyType
-              DataType: NodeId
-              Value: "/Types/ObjectTypes/BaseObjectType"
-          - Name: ns=2;Method
-            Type: BaseDataVariableType
-            DataType: String
-            Value: "pr_Annulla"
         - Name: MethodContainer1
           Type: BaseObjectType
           Children:

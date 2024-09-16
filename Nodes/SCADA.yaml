@@ -71,3 +71,10 @@ Children:
     Type: PropertyType
     DataType: NodeId
     Value: "/Objects/SCADA/Recipes/RecipeSchema1/EditModel"
+- Name: RecipeSchema2
+  Type: Alias
+  DataType: NodeId
+  Children:
+  - Name: Kind
+    Type: PropertyType
+    DataType: NodeId

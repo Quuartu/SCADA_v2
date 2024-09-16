@@ -378,6 +378,35 @@ Children:
         - Name: /Robot_Program
           Type: StoreColumn
           DataType: Int32
+    - Name: RecipeSchema2
+      Id: g=4362cf1754228c9c1df4cf764beaf8f5
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Odp
+          Type: StoreColumn
+          DataType: String
+        - Name: Name
+          Type: StoreColumn
+          DataType: String
+        - Name: Quantità
+          Type: StoreColumn
+          DataType: Int32
+          Value: 1
   - Class: Reference
     Target: ns=27;i=30
     Direction: Forward
