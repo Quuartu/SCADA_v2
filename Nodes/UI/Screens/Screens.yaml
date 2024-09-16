@@ -1958,98 +1958,6 @@ Children:
       - Name: Second
         Type: BaseDataVariableType
         DataType: Int32
-  - Name: Switch1
-    Type: Switch
-    Children:
-    - Name: Checked
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "{Window}/FullScreen"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 90.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 40.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1060.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: Visible
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "{Session}/Groups/Sviluppatori"
-  - Name: Label1
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Full Screen:"}
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 940.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 10.0
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 120.0
-    - Name: TextHorizontalAlignment
-      Type: BaseVariableType
-      DataType: TextHorizontalAlignment
-      ModellingRule: Optional
-    - Name: Visible
-      Type: BaseDataVariableType
-      DataType: Boolean
-      Value: true
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "{Session}/Groups/Sviluppatori"
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 60.0
-    - Name: TextVerticalAlignment
-      Type: BaseVariableType
-      DataType: TextVerticalAlignment
-      ModellingRule: Optional
-      Value: 1
   - Name: LayoutMenu
     Type: Rectangle
     Children:
@@ -16041,6 +15949,15 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 10.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Groups/Sviluppatori"
     - Name: Checkbox1
       Type: CheckBox
       Children:
@@ -16088,6 +16005,15 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 23.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Groups/Sviluppatori"
 - Name: StoricoAllarmi
   Id: g=c8dda8e718b574278da9eac994586a55
   Supertype: Screen

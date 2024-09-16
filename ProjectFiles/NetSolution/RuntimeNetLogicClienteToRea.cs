@@ -99,12 +99,13 @@ public class RuntimeNetLogicClienteToRea : BaseNetLogic
     {
         var prodottoObj = InformationModel.GetObject(prodottoObjNodeId);
 
-        string[] columns = { "Production_Command", "Product_ID"};
+        string[] columns = { "Production_Command", "Product_ID", "Quantity_Requested"};
 
         string odp = prodottoObj.GetVariable("Odp").Value.Value.ToString();
         string nomeArticolo = prodottoObj.GetVariable("NomeArticolo").Value.Value.ToString();
+        int quantità = prodottoObj.GetVariable("Quantità").Value;
 
-        if (odp == "" || nomeArticolo == "")
+        if (odp == "" || nomeArticolo == "" || quantità < 1)
         {
             PopUpNetLogic popup = new PopUpNetLogic();
             popup.OpenPopUp("INSERISCI VALORI VALIDI", 0);
@@ -117,9 +118,10 @@ public class RuntimeNetLogicClienteToRea : BaseNetLogic
             return;
         }
 
-        var values = new object[1, 2];
+        var values = new object[1, 3];
         values[0, 0] = odp;
         values[0, 1] = nomeArticolo;
+        values[0, 2] = quantità;
 
         _table = _store.Tables.Get<Table>(TABLE_NAME);
         _table.Insert(columns, values);
