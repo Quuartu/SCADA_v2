@@ -35,6 +35,7 @@ Children:
   Type: BaseObjectType
   Children:
   - Name: TextFilter
+    Id: g=db910f8242128f347c95a7f8728b6806
     Type: BaseDataVariableType
     DataType: String
   - Name: FilterActive

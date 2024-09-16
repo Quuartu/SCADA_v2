@@ -366,12 +366,12 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
+        - Name: Name
+          Type: StoreColumn
+          DataType: String
         - Name: /ID
           Type: StoreColumn
           DataType: Int64
-        - Name: /Product_ID
-          Type: StoreColumn
-          DataType: String
         - Name: /Descr
           Type: StoreColumn
           DataType: String
