@@ -40,6 +40,13 @@ public class RuntimeNetLogic1 : BaseNetLogic
         String[] Header;
         // Perform the query
         myStore.Query("SELECT * FROM RecipeSchema1 WHERE Name = '" + ProductID + "'", out Header, out ResultSet);
+        //Applico Product_ID
         Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Product_ID").Value = ProductID;
+        //Applico ID
+        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/ID").Value = (long)ResultSet[0, 1];
+        //Applico Descr
+        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Descr").Value = (string)ResultSet[0, 3];
+        //Applico Robot_Program
+        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Robot_Program").Value = (long)ResultSet[0, 4];
     }
 }
