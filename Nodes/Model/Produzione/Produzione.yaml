@@ -61,3 +61,7 @@ Children:
 - Name: ProduzioneInCorso
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: DelButton
+  Id: g=b9185d76a8ecec6b98bcd1dae264e64e
+  Type: BaseDataVariableType
+  DataType: Boolean

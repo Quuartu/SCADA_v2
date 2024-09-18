@@ -153,7 +153,13 @@ Children:
       - Name: BackgroundColor
         Type: BaseDataVariableType
         DataType: Color
-        Value: "#07598200"
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+      - Name: FocusBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
     - Name: InputBoxStyle1
       Type: InputBoxStyle
       Children:
@@ -181,6 +187,11 @@ Children:
     Children:
     - Name: Default
       Type: ChartStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
   - Name: DataListStyles
     Type: BaseObjectType
     Children:
@@ -195,11 +206,50 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 22.0
+      - Name: VerticalLineColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: HorizontalLineColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3ba"
+      - Name: SelectionBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: SelectionBorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: HoverBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0fafff"
+      - Name: HoverTextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: AlternateBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
+      - Name: HeaderBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
   - Name: ToolTipStyles
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: ToolTipStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
   - Name: ScrollBarStyles
     Type: BaseObjectType
     Children:

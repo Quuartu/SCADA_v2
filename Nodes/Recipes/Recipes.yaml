@@ -90,10 +90,21 @@ Children:
       Type: BaseDataVariableType
       DataType: Int32
 - Name: RecipeSchema2
+  Id: g=7bf40158d7ea6186ad8373c693b7d08a
   Type: RecipeSchema
   Children:
   - Name: Root
     Type: BaseObjectType
+    Children:
+    - Name: Odp
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: NomeArticolo
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Quantità
+      Type: BaseDataVariableType
+      DataType: Int32
   - Class: Reference
     Target: ns=25;i=27
     Direction: Forward
@@ -147,3 +158,16 @@ Children:
     - Name: Kind
       Type: PropertyType
       DataType: NodeId
+  - Name: EditModel
+    Id: g=3b891084da39542d93d326afdf827b89
+    Type: BaseObjectType
+    Children:
+    - Name: Odp
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: NomeArticolo
+      Type: BaseDataVariableType
+      DataType: String
+    - Name: Quantità
+      Type: BaseDataVariableType
+      DataType: Int32

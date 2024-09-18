@@ -74,7 +74,9 @@ Children:
 - Name: RecipeSchema2
   Type: Alias
   DataType: NodeId
+  Value: "/Objects/SCADA/Recipes/RecipeSchema2/EditModel"
   Children:
   - Name: Kind
     Type: PropertyType
     DataType: NodeId
+    Value: "/Objects/SCADA/Recipes/RecipeSchema2/EditModel"

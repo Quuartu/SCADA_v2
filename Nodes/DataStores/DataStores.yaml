@@ -379,7 +379,6 @@ Children:
           Type: StoreColumn
           DataType: Int32
     - Name: RecipeSchema2
-      Id: g=4362cf1754228c9c1df4cf764beaf8f5
       Type: SQLiteStoreTable
       Children:
       - Class: Reference
@@ -397,16 +396,45 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: Odp
+        - Name: /ID
           Type: StoreColumn
-          DataType: String
+          DataType: Int32
         - Name: Name
           Type: StoreColumn
           DataType: String
-        - Name: Quantità
+        - Name: /Odp
+          Type: StoreColumn
+          DataType: String
+        - Name: /NomeArticolo
+          Type: StoreColumn
+          DataType: String
+        - Name: /Date_Insert
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /Date_Elab
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /Date_Update
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /Date_End
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /Quantità
           Type: StoreColumn
           DataType: Int32
-          Value: 1
+        - Name: /Quantity_Produced
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Extra_Production
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Total_Reject
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Status
+          Type: StoreColumn
+          DataType: SByte
   - Class: Reference
     Target: ns=27;i=30
     Direction: Forward
