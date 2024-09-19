@@ -4186,7 +4186,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Production_Command"}
+          Value: {"NamespaceIndex":7,"TextId":"Production_Command"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -4258,7 +4258,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Insert"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Insert"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -4294,7 +4294,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Elab"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Elab"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -4329,7 +4329,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Update"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Update"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -4364,7 +4364,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_End"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_End"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -4541,7 +4541,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Status"}
+          Value: {"NamespaceIndex":7,"TextId":"Status"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6581,6 +6581,7 @@ Children:
         - Name: OrderBy
           Type: BaseDataVariableType
           DataType: NodePath
+          Value: "{Item}/&/ID"
         - Name: DataItemTemplate
           Type: DataGridLabelItemTemplate
           Children:
@@ -6591,7 +6592,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2/Columns/&/ID"
+              Value: "{Item}/&/ID"
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
@@ -6602,7 +6603,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Production_Command"}
+          Value: {"NamespaceIndex":7,"TextId":"Production_Command"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6674,7 +6675,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Insert"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Insert"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6688,6 +6689,7 @@ Children:
         - Name: OrderBy
           Type: BaseDataVariableType
           DataType: NodePath
+          Value: "{Item}/&/Date_Insert"
         - Name: DataItemTemplate
           Type: DataGridLabelItemTemplate
           Children:
@@ -6698,7 +6700,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2/Columns/&/Date_Insert"
+              Value: "{Item}/&/Date_Insert"
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
@@ -6709,7 +6711,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Elab"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Elab"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6744,7 +6746,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_Update"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Update"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6779,7 +6781,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Date_End"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_End"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6956,7 +6958,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Status"}
+          Value: {"NamespaceIndex":7,"TextId":"Status"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -13085,6 +13087,16 @@ Children:
               - Name: Severity
                 Type: PropertyType
                 DataType: UInt16
+        - Class: Method
+          Name: Insert
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:
@@ -16855,7 +16867,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Production_Command"}
+          Value: {"NamespaceIndex":7,"TextId":"Production_Command"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -16927,7 +16939,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Data Inizio"}
+          Value: {"NamespaceIndex":7,"TextId":"Date_Insert"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size

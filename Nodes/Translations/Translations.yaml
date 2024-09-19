@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [109,3],
+    "Dimensions": [116,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -119,6 +119,13 @@ Children:
      "Quantità_Richiesta","Quantity_Requested","Quantità_Richiesta",
      "Esporta Ricetta","Recipe Export","Esporta Ricetta",
      "Importa Ricetta","Recipe Import","Importa Ricetta",
-     "Open Folder","Open Folder","Apri Cartella"
+     "Open Folder","Open Folder","Apri Cartella",
+     "Date_Insert","Date_Insert","Data_Inserimento",
+     "Date_End","Date_End","Data_Fine",
+     "Date_Elab","Date_Elab","Data_Elab",
+     "Date_elab","Date_Elab","Data_Elab",
+     "Date_Update","Date_Update","Data_Update",
+     "Production_Command","Production_Command","Ordine_di_Produzione",
+     "Status","Status","Stato"
     ]
    }

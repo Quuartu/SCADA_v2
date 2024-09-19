@@ -402,7 +402,6 @@ Children:
         - Name: /ID
           Type: StoreColumn
           DataType: Int32
-          Value: 0
         - Name: /Odp
           Type: StoreColumn
           DataType: String
@@ -411,16 +410,16 @@ Children:
           DataType: String
         - Name: /Date_Insert
           Type: StoreColumn
-          DataType: DateTime
+          DataType: DateTimePickerInputFormatEnum
         - Name: /Date_Elab
           Type: StoreColumn
-          DataType: DateTime
+          DataType: DateTimePickerInputFormatEnum
         - Name: /Date_Update
           Type: StoreColumn
-          DataType: DateTime
+          DataType: DateTimePickerInputFormatEnum
         - Name: /Date_End
           Type: StoreColumn
-          DataType: DateTime
+          DataType: DateTimePickerInputFormatEnum
         - Name: /Quantità
           Type: StoreColumn
           DataType: Int32

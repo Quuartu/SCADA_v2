@@ -16,6 +16,10 @@ using FTOptix.Retentivity;
 using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
+using System.Data.Common;
+using System.Collections.Generic;
+using System.Reflection.PortableExecutable;
+using System.Globalization;
 #endregion
 
 public class RuntimeNetLogic2 : BaseNetLogic
