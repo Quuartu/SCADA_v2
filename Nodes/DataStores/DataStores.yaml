@@ -396,12 +396,13 @@ Children:
       - Name: Columns
         Type: BaseObjectType
         Children:
-        - Name: /ID
-          Type: StoreColumn
-          DataType: Int32
         - Name: Name
           Type: StoreColumn
           DataType: String
+        - Name: /ID
+          Type: StoreColumn
+          DataType: Int32
+          Value: 0
         - Name: /Odp
           Type: StoreColumn
           DataType: String

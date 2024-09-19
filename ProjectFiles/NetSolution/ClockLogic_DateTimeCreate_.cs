@@ -18,7 +18,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 #endregion
 
-public class RuntimeNetLogic2 : BaseNetLogic
+public class ClockLogic_DateTimeCreate_ : BaseNetLogic
 {
     public override void Start()
     {
@@ -29,19 +29,4 @@ public class RuntimeNetLogic2 : BaseNetLogic
     {
         // Insert code to be executed when the user-defined logic is stopped
     }
-
-    [ExportMethod]
-    public void GetValue(string Odp)
-    {
-        // Get the Database from the current project
-        var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
-        // Create the output to get the result (mandatory)
-        Object[,] ResultSet;
-        String[] Header;
-        // Perform the query
-        myStore.Query("SELECT * FROM RecipeSchema2 WHERE Name = '" + Odp + "'", out Header, out ResultSet);
-        //Applico Production Order
-        Project.Current.GetVariable("Recipes/RecipeSchema2/EditModel/Odp").Value = Odp;
-    }
-
 }

@@ -6581,7 +6581,6 @@ Children:
         - Name: OrderBy
           Type: BaseDataVariableType
           DataType: NodePath
-          Value: "{Item}/&/ID"
         - Name: DataItemTemplate
           Type: DataGridLabelItemTemplate
           Children:
@@ -6592,7 +6591,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "{Item}/&/ID"
+              Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2/Columns/&/ID"
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
@@ -6689,7 +6688,6 @@ Children:
         - Name: OrderBy
           Type: BaseDataVariableType
           DataType: NodePath
-          Value: "{Item}/&/Date_Insert"
         - Name: DataItemTemplate
           Type: DataGridLabelItemTemplate
           Children:
@@ -6700,7 +6698,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "{Item}/&/Date_Insert"
+              Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2/Columns/&/Date_Insert"
         - Name: Visible
           Type: BaseDataVariableType
           DataType: Boolean
