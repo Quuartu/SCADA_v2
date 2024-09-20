@@ -145,13 +145,9 @@ public class RecipeController : BaseNetLogic
     {
         //creo ID e Data di Inserimento
         var values = new object[1, 2];
-        Object[,] ResultID;
-        String[] HeaderID;
         var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
-        myStore.Query("SELECT COALESCE(MAX(ID), 0) FROM RecipeSchema2", out HeaderID, out ResultID);
-
-        values[0, 0] = ResultID;
+        values[0, 0] = long.Parse(DateTime.Now.ToString("yyddHHmmss"));
         values[0, 1] = DateTime.Now;
 
         Object[,] ResultSet;
