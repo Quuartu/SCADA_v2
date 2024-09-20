@@ -147,7 +147,7 @@ public class RecipeController : BaseNetLogic
         var values = new object[1, 2];
         var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
-        values[0, 0] = long.Parse(DateTime.Now.ToString("yyddHHmmss"));
+        values[0, 0] = long.Parse(DateTime.Now.ToString("yyMMddHHmmss"));
         values[0, 1] = DateTime.Now;
 
         Object[,] ResultSet;
