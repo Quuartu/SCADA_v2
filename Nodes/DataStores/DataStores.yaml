@@ -401,7 +401,8 @@ Children:
           DataType: String
         - Name: /ID
           Type: StoreColumn
-          DataType: Int32
+          DataType: Int64
+          Value: 1
         - Name: /Odp
           Type: StoreColumn
           DataType: String
