@@ -141,7 +141,7 @@ public class RecipeController : BaseNetLogic
 
 
     [ExportMethod]
-    public void Insert(string Odp)    // DA MODIFICARE!
+    public void Insert(string Odp)   
     {
         //creo ID e Data di Inserimento
         var values = new object[1, 2];
@@ -153,12 +153,21 @@ public class RecipeController : BaseNetLogic
         Object[,] ResultSet;
         String[] Header;
         myStore.Query("UPDATE RecipeSchema2 SET \"/ID\" = " + values[0, 0] + ",\"/Date_Insert\" = '" + values[0, 1] + "' WHERE Name = '" + Odp + "'", out Header, out ResultSet);
-        
-
-        //VALUES((SELECT IFNULL(MAX(id), 0) + 1 FROM nome_tabella), 'valore1', 'valore2');
     }
 
+    [ExportMethod]
+    public void InsertID_Article(string Odp)
+    {
+        //creo ID 
+        var values = new object[1, 1];
+        var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
+        values[0, 0] = long.Parse(DateTime.Now.ToString("yyMMddHHmmss"));
+
+        Object[,] ResultSet;
+        String[] Header;
+        myStore.Query("UPDATE RecipeSchema1 SET \"/ID\" = " + values[0, 0] + " WHERE Name = '" + Odp + "'", out Header, out ResultSet);
+    }
 
     [ExportMethod]
     public void Delete(string RecipeName)

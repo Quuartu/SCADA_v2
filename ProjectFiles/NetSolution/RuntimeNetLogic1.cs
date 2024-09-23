@@ -45,8 +45,8 @@ public class RuntimeNetLogic1 : BaseNetLogic
         //Applico ID
         Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/ID").Value = (long)ResultSet[0, 1];
         //Applico Descr
-        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Descr").Value = (string)ResultSet[0, 3];
+        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Descr").Value = (string)ResultSet[0, 2];
         //Applico Robot_Program
-        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Robot_Program").Value = (long)ResultSet[0, 4];
+        Project.Current.GetVariable("Recipes/RecipeSchema1/EditModel/Robot_Program").Value = (long)ResultSet[0, 3];
     }
 }

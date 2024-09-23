@@ -372,6 +372,7 @@ Children:
         - Name: /ID
           Type: StoreColumn
           DataType: Int64
+          Value: 1
         - Name: /Descr
           Type: StoreColumn
           DataType: String
@@ -495,6 +496,7 @@ Children:
     Target: ns=15;i=59
     Direction: Forward
   - Name: RuntimeNetLogicClienteToReaLocale
+    Id: g=e4d6f3df91b06ea99e6792541f77ef2f
     Type: NetLogic
     Children:
     - Class: Method
@@ -507,5 +509,15 @@ Children:
         ValueRank: OneDimension
         ArrayDimensions: [0]
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"status","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Class: Method
+      Name: pr_AvviaLocale
+      Children:
+      - Name: ns=0;InputArguments
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"id","DataType":{"Id":8},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
   - Name: RuntimeNetLogicAnagraficaLocale
     Type: NetLogic

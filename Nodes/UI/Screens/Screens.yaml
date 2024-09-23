@@ -7143,6 +7143,33 @@ Children:
               DataType: UInt32
               Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
               ValueRank: ScalarOrOneDimension
+        - Name: MethodContainer3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/RuntimeNetLogicClienteToReaLocale"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "pr_ManageProductionButtonsLocale"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: status
+              Type: BaseDataVariableType
+              DataType: Int32
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../SelectedItem/&/Status@Value"
       - Name: EventArguments
         Type: UserSelectionChanged
         Children:
@@ -7677,7 +7704,7 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/SCADA/Model/Produzione/DelButton"
+        Value: "/Objects/SCADA/Model/Produzione/ButtonProduzioneEnabled/AvviaEnabled"
     - Name: MouseClickEventHandler1
       Type: EventHandler
       Children:
@@ -7849,7 +7876,7 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "/Objects/SCADA/Model/Produzione/DelButton"
+        Value: "/Objects/SCADA/Model/Produzione/ButtonProduzioneEnabled/TerminaEnabled"
     - Name: MouseClickEventHandler1
       Type: EventHandler
       Children:
@@ -8286,7 +8313,7 @@ Children:
       - Name: ObjectPointer
         Type: NodePointer
         DataType: NodeId
-        Value: "/Objects/SCADA/DataStores/ODBC_PRG_OPTIX/RuntimeNetLogicClienteToRea"
+        Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/RuntimeNetLogicClienteToReaLocale"
         Children:
         - Name: Kind
           Type: PropertyType
@@ -8295,7 +8322,7 @@ Children:
       - Name: Method
         Type: BaseDataVariableType
         DataType: String
-        Value: "pr_Avvia"
+        Value: "pr_AvviaLocale"
       - Name: InputArguments
         Type: BaseObjectType
         Children:
@@ -8306,7 +8333,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../ClienteToRea/SelectedItem/ID"
+            Value: "../../../../ClienteToRea/SelectedItem/&/ID"
     - Name: OnCancel
       Type: MethodInvocation
       Children:
@@ -8345,7 +8372,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../ClienteToRea/SelectedItem/ID"
+            Value: "../../../../ClienteToRea/SelectedItem/&/ID"
             Children:
             - Name: Mode
               Type: BaseVariableType
@@ -8756,6 +8783,37 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 3
+  - Name: Label1
+    Type: Label
+    Children:
+    - Name: Text
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../ClienteToRea/SelectedItem/&/ID"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 461.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 80.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 489.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
 - Name: Articoli
   Id: g=9393c538ff47886c9647ba067b331f75
   Supertype: Screen
@@ -11806,6 +11864,42 @@ Children:
                 - Name: ErrorPolicy
                   Type: BaseDataVariableType
                   DataType: CopyErrorPolicy
+            - Name: MethodContainer2
+              Type: BaseObjectType
+              Children:
+              - Name: ns=2;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../RecipeController@NodeId"
+                  Children:
+                  - Name: Mode
+                    Type: BaseVariableType
+                    DataType: DynamicLinkMode
+                    ModellingRule: Optional
+                    Value: 2
+              - Name: ns=2;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "InsertID_Article"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: Odp
+                  Type: BaseDataVariableType
+                  DataType: String
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{RecipeSchema1}/Product_ID"
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -13097,6 +13191,16 @@ Children:
             ValueRank: OneDimension
             ArrayDimensions: [0]
             Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: InsertID_Article
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:
@@ -13352,59 +13456,6 @@ Children:
             DataType: TextVerticalAlignment
             ModellingRule: Optional
             Value: 1
-        - Name: SpinBox
-          Type: SpinBox
-          Children:
-          - Name: Value
-            Type: BaseDataVariableType
-            DataType: Double
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "{RecipeSchema1}/ID"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                Value: 2
-          - Name: VerticalAlignment
-            Type: BaseVariableType
-            DataType: VerticalAlignment
-            ModellingRule: Optional
-            Value: 2
-          - Name: HorizontalAlignment
-            Type: BaseVariableType
-            DataType: HorizontalAlignment
-            ModellingRule: Optional
-            Value: 1
-          - Name: RightMargin
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-          - Name: Width
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: 150.0
-          - Name: Format
-            Type: BaseDataVariableType
-            DataType: String
-            ModellingRule: Optional
-            Value: "n0"
-          - Name: TopMargin
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-            Value: -2.0
-          - Name: BottomMargin
-            Type: BaseVariableType
-            DataType: Size
-            ModellingRule: Optional
-          - Name: Enabled
-            Type: BaseDataVariableType
-            DataType: Boolean
-            Value: true
         - Name: TopMargin
           Type: BaseVariableType
           DataType: Size
@@ -13525,7 +13576,6 @@ Children:
           - Name: BorderColor
             Type: BaseDataVariableType
             DataType: Color
-            ModellingRule: Optional
             Value: "#06344b"
           - Name: Height
             Type: BaseVariableType
@@ -13637,8 +13687,35 @@ Children:
           - Name: BorderColor
             Type: BaseDataVariableType
             DataType: Color
-            ModellingRule: Optional
             Value: "#06344b"
+            Children:
+            - Name: KeyValueConverter1
+              Type: ValueMapConverter
+              Children:
+              - Name: Source
+                Type: BaseDataVariableType
+                DataType: BaseDataType
+                ReferenceType: HasSource
+                Children:
+                - Name: DynamicLink
+                  Type: DynamicLink
+                  DataType: NodePath
+              - Name: ns=2;Pairs
+                Type: BaseObjectType
+                ModellingRule: None
+                Children:
+                - Name: Pair
+                  Type: ValueMapPair
+                  ModellingRule: None
+                  Children:
+                  - Name: Key
+                    Type: BaseDataVariableType
+                    DataType: UInt32
+                    ModellingRule: None
+                  - Name: Value
+                    Type: BaseDataVariableType
+                    DataType: String
+                    ModellingRule: None
           - Name: Height
             Type: BaseVariableType
             DataType: Size
@@ -13759,7 +13836,6 @@ Children:
           - Name: BorderColor
             Type: BaseDataVariableType
             DataType: Color
-            ModellingRule: Optional
             Value: "#06344b"
           - Name: Height
             Type: BaseVariableType
@@ -14543,6 +14619,40 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../SelectedItem/Name@Value"
+        - Name: MethodContainer3
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Value: "/Objects/SCADA/Model/Anagrafica/ButtonAnagraficaEnabled/EliminaEnabled"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Boolean
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Value: true
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: UserSelectionChanged
         Children:

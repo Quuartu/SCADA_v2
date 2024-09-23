@@ -45,7 +45,7 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
             _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
             _table = _store.Tables.Get<Table>(TABLE_NAME);
 
-            Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = $"SELECT * FROM {TABLE_NAME}";
+            //Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = $"SELECT * FROM {TABLE_NAME}";
         }
         catch (Exception ex)
         {
@@ -78,7 +78,7 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
                 return art;
             }
 
-            art.Id = (int)result[0, 1];
+            art.Id = (long)result[0, 1];
             art.Product_ID = (string)result[0, 0];
             art.Descr = (string)result[0, 2];
             art.Robot_Program = (int)result[0, 3];
@@ -96,7 +96,7 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
 
 public class AnagraficaLocale
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Product_ID { get; set; }
     public string Descr { get; set; }
     public int Robot_Program { get; set; }

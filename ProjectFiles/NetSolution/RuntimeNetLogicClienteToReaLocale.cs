@@ -50,6 +50,16 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     }
 
     /// <summary>
+    /// Avvia produzione
+    /// </summary>
+    [ExportMethod]
+    public void pr_AvviaLocale(long id)
+    {
+        Project.Current.GetVariable(VariablePaths.PathOdlStart).Value = id;
+        Project.Current.GetVariable(VariablePaths.Pathap_start).Value = true;
+    }
+
+    /// <summary>
     /// Controlla l'abilitazione dei pulsanti a seconda dello stato
     /// </summary>
     [ExportMethod]
@@ -121,7 +131,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     /// <summary>
     /// Sincronizza tutti gli stati dei record di produzione all'avvio della macchina a stati
     /// </summary>
-    public void pr_StatusSyncro_Locale(int id)
+    public void pr_StatusSyncro_Locale(long id)
     {
         try
         {
@@ -163,7 +173,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     /// <summary>
     /// Aggiorna lo stato della produzione al valore desiderato
     /// </summary>
-    public void pr_UpdateStatusLocale(int id, int status)
+    public void pr_UpdateStatusLocale(long id, int status)
     {
         try
         {
@@ -179,7 +189,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     /// <summary>
     /// Ritorna i dati relativi al record con /ID=id
     /// </summary>
-    public ClienteToReaLocale pr_GetByIdLocale(int id)
+    public ClienteToReaLocale pr_GetByIdLocale(long id)
     {
         ClienteToReaLocale prod = new ClienteToReaLocale();
 
@@ -221,7 +231,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
 
 public class ClienteToReaLocale
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
     public string Production_Command { get; set; }
     public string Product_ID { get; set; }
     public DateTime? Date_Insert { get; set; }
