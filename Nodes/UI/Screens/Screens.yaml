@@ -1510,7 +1510,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/SCADA/Model/Locale"
+              Value: "/Objects/SCADA/Model/Lingua"
           - Name: TrueValue
             Type: BaseDataVariableType
             DataType: Boolean
@@ -1565,7 +1565,7 @@ Children:
             - Name: DynamicLink
               Type: DynamicLink
               DataType: NodePath
-              Value: "/Objects/SCADA/Model/Locale"
+              Value: "/Objects/SCADA/Model/Lingua"
           - Name: TrueValue
             Type: BaseDataVariableType
             DataType: Boolean
@@ -1666,7 +1666,7 @@ Children:
                 Type: BaseDataVariableType
                 DataType: VariablePointer
                 Description: {"NamespaceIndex":2,"TextId":"ToggleVariableToModifyDescription"}
-                Value: "/Objects/SCADA/Model/Locale"
+                Value: "/Objects/SCADA/Model/Lingua"
               - Name: ArrayIndex
                 Type: BaseDataVariableType
                 DataType: UInt32
@@ -1717,7 +1717,7 @@ Children:
                     - Name: DynamicLink
                       Type: DynamicLink
                       DataType: NodePath
-                      Value: "/Objects/SCADA/Model/Locale"
+                      Value: "/Objects/SCADA/Model/Lingua"
                   - Name: TrueValue
                     Type: BaseDataVariableType
                     DataType: LocaleId
@@ -2307,7 +2307,7 @@ Children:
                         DataType: NodeId
                         ReferenceType: HasParameter
                         ModellingRule: Optional
-                        Value: "/Objects/SCADA/UI/Screens/ProduzioneNoDB"
+                        Value: "/Objects/SCADA/UI/Screens/ProduzioneLocale"
                   - Name: AliasNode
                     Type: BaseDataVariableType
                     DataType: NodeId
@@ -2524,7 +2524,7 @@ Children:
                         DataType: NodeId
                         ReferenceType: HasParameter
                         ModellingRule: Optional
-                        Value: "/Objects/SCADA/UI/Screens/ArticoliNoDB"
+                        Value: "/Objects/SCADA/UI/Screens/ArticoliLocale"
                   - Name: AliasNode
                     Type: BaseDataVariableType
                     DataType: NodeId
@@ -6492,7 +6492,7 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 3
-- Name: ProduzioneNoDB
+- Name: ProduzioneLocale
   Id: g=ad74d9aed839fe5a422587bf9c919459
   Supertype: Screen
   ReferenceType: HasComponent
@@ -11350,7 +11350,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       Value: {"LocaleId":"en-US","Text":"Sei sicuro di voler eliminare l'articolo selezionato?"}
-- Name: ArticoliNoDB
+- Name: ArticoliLocale
   Id: g=c94baa87ab6c7b80978deb638943d010
   Supertype: Screen
   ReferenceType: HasComponent

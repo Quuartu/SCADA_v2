@@ -119,4 +119,6 @@ public static class VariablePaths
     //popup_selezionaprogramma
     public const string Pathsp_ProgramSelected                      = "Model/popup_selezionaprogramma/sp_ProgramSelected";
     public const string Pathsp_ProgramList                          = "Model/popup_selezionaprogramma/sp_ProgramList";
+
+    public const string Path_DBEXpress                              = "Model/DB";
 }

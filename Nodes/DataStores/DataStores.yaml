@@ -494,3 +494,18 @@ Children:
   - Class: Reference
     Target: ns=15;i=59
     Direction: Forward
+  - Name: RuntimeNetLogicClienteToReaLocale
+    Type: NetLogic
+    Children:
+    - Class: Method
+      Name: pr_ManageProductionButtonsLocale
+      Children:
+      - Name: ns=0;InputArguments
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"status","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: RuntimeNetLogicAnagraficaLocale
+    Type: NetLogic

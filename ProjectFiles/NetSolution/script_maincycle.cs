@@ -25,10 +25,17 @@ public class script_maincycle : BaseNetLogic
     private RuntimeNetLogicClienteToRea _prod;
     private RuntimeNetLogicAnagrafica _art;
 
+    private RuntimeNetLogicClienteToReaLocale _prodLocale;
+    private RuntimeNetLogicAnagraficaLocale _artLocale;
+
     public override void Start()
     {
         _prod = new RuntimeNetLogicClienteToRea();
         _art = new RuntimeNetLogicAnagrafica();
+
+        _prodLocale = new RuntimeNetLogicClienteToReaLocale();
+        _artLocale = new RuntimeNetLogicAnagraficaLocale();
+
         myPeriodicTask = new PeriodicTask(Maincycle, 250, LogicObject);
         myPeriodicTask.Start();
     }
@@ -68,6 +75,9 @@ public class script_maincycle : BaseNetLogic
         var DB92_CambioProduzioneOK     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK);
         var DB92_CambioProduzioneKO     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO);
         var DB92_AckTerminaProduzione   = Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione);
+
+        var DBExpress = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
+
 
         //casi macchina a stati
         switch ((int)MachineStatus.Value)
@@ -115,28 +125,55 @@ public class script_maincycle : BaseNetLogic
                 //---------------------------------------------------------------
                 MachineStatusText.Value = "Controllo allineamento con PLC-SCADA";
                 //---------------------------------------------------------------
-
-                //sincronizzo il campo status con lo stato corretto dell'ordine che sta girando sul PLC
-                _prod.pr_StatusSyncro(DB92_ODP.Value);
-
-                //se in plc sto lavorando con una ricetta allineo tabella in running
-                if (DB92_ODP.Value > 0)
+                if (DBExpress.Value)
                 {
-                    //Sincronizzo OdlStart
-                    OdlStart.Value = DB92_ODP.Value;
+                    //sincronizzo il campo Status con lo stato corretto dell'ordine che sta girando sul PLC
+                    _prod.pr_StatusSyncro(DB92_ODP.Value);
 
-                    //mando prodotti al plc
-                    SendProductDataToPLC(OdlStart.Value);
+                    //se in plc sto lavorando con una ricetta allineo tabella in running
+                    if (DB92_ODP.Value > 0)
+                    {
+                        //Sincronizzo OdlStart
+                        OdlStart.Value = DB92_ODP.Value;
 
-                    //mi metto in produzione in corso 
-                    ProduzioneInCorso.Value = true;
+                        //mando prodotti al plc
+                        SendProductDataToPLC(OdlStart.Value);
 
-                    //vado in produzione
-                    MachineStatus.Value = 100;
+                        //mi metto in produzione in corso 
+                        ProduzioneInCorso.Value = true;
+
+                        //vado in produzione
+                        MachineStatus.Value = 100;
+                    }
+                    else
+                    {
+                        MachineStatus.Value = 20;
+                    }
                 }
                 else
                 {
-                    MachineStatus.Value = 20;
+                    //sincronizzo il campo /Status con lo stato corretto dell'ordine che sta girando sul PLC
+                    _prodLocale.pr_StatusSyncro_Locale(DB92_ODP.Value);
+
+                    //se in plc sto lavorando con una ricetta allineo tabella in running
+                    if (DB92_ODP.Value > 0)
+                    {
+                        //Sincronizzo OdlStart
+                        OdlStart.Value = DB92_ODP.Value;
+
+                        //mando prodotti al plc
+                        SendProductDataToPLCLocale(OdlStart.Value);
+
+                        //mi metto in produzione in corso 
+                        ProduzioneInCorso.Value = true;
+
+                        //vado in produzione
+                        MachineStatus.Value = 100;
+                    }
+                    else
+                    {
+                        MachineStatus.Value = 20;
+                    }
                 }
 
                 break;
@@ -145,26 +182,49 @@ public class script_maincycle : BaseNetLogic
                 //--------------------------------------------------
                 MachineStatusText.Value = "Attesa avvio produzione";
                 //--------------------------------------------------
-
-                if (ap_start.Value && OdlStart.Value > 0)
+                if (DBExpress.Value)
                 {
-                    //mando dati al plc
-                    if (SendProductDataToPLC(OdlStart.Value))
+                    if (ap_start.Value && OdlStart.Value > 0)
                     {
-                        //vado in produzione in corso
-                        ProduzioneInCorso.Value = true;
+                        //mando dati al plc
+                        if (SendProductDataToPLC(OdlStart.Value))
+                        {
+                            //vado in produzione in corso
+                            ProduzioneInCorso.Value = true;
 
-                        //cambio stato
-                        MachineStatus.Value = 25;
-                    }
-                    else
-                    {
-                        //Dati anagrafica non esistenti, popup e KO diretto
-                        popup.OpenPopUp("Dati anagrafica non esistenti: crea prima l'articolo in Anagrafica", 0);
-                        MachineStatus.Value = 21;
+                            //cambio stato
+                            MachineStatus.Value = 25;
+                        }
+                        else
+                        {
+                            //Dati anagrafica non esistenti, popup e KO diretto
+                            popup.OpenPopUp("Dati anagrafica non esistenti: crea prima l'articolo in Anagrafica", 0);
+                            MachineStatus.Value = 21;
+                        }
                     }
                 }
+                else
+                {
+                    if (ap_start.Value && OdlStart.Value > 0)
+                    {
+                        //mando dati al plc
+                        if (SendProductDataToPLCLocale(OdlStart.Value))
+                        {
+                            //vado in produzione in corso
+                            ProduzioneInCorso.Value = true;
 
+                            //cambio stato
+                            MachineStatus.Value = 25;
+                        }
+                        else
+                        {
+                            //Dati anagrafica non esistenti, popup e KO diretto
+                            popup.OpenPopUp("Dati anagrafica non esistenti: crea prima l'articolo in Anagrafica", 0);
+                            MachineStatus.Value = 21;
+                        }
+                    }
+                }
+                
                 break;
 
             case 21:
@@ -191,18 +251,34 @@ public class script_maincycle : BaseNetLogic
                 //---------------------------------------------------------
                 MachineStatusText.Value = "Invio cambio produzione al PLC";
                 //---------------------------------------------------------
+                if (DBExpress.Value)
+                {
+                    //Handshake PLC - attendo risposta
+                    DB91_CambioProduzione.Value = true;
 
-                //Handshake PLC - attendo risposta
-                DB91_CambioProduzione.Value = true;
+                    //Aggiorno stato in db
+                    _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
 
-                //Aggiorno stato in db
-                _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
+                    //Aggiorno pulsanti
+                    _prod.pr_ManageProductionButtons(MachineStatus.Value);
 
-                //Aggiorno pulsanti
-                _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                    //Cambio stato
+                    MachineStatus.Value = 70;
+                }
+                else
+                {
+                    //Handshake PLC - attendo risposta
+                    DB91_CambioProduzione.Value = true;
 
-                //Cambio stato
-                MachineStatus.Value = 70;
+                    //Aggiorno stato in db
+                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+
+                    //Aggiorno pulsanti
+                    _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
+
+                    //Cambio stato
+                    MachineStatus.Value = 70;
+                }
 
                 break;
 
@@ -256,19 +332,35 @@ public class script_maincycle : BaseNetLogic
                 //-------------------------------------------------------------
                 MachineStatusText.Value = "Attesa RESET segnali da PLC - ok/ko";
                 //-------------------------------------------------------------
-
-                if (!DB92_CambioProduzioneOK.Value && !DB92_CambioProduzioneKO.Value)
+                if (DBExpress.Value)
                 {
-                    //Cambio stato
-                    MachineStatus.Value = 100;
+                    if (!DB92_CambioProduzioneOK.Value && !DB92_CambioProduzioneKO.Value)
+                    {
+                        //Cambio stato
+                        MachineStatus.Value = 100;
 
-                    //Aggiorno status in db
-                    _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
+                        //Aggiorno status in db
+                        _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
 
-                    //Aggiorno pulsanti
-                    _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                        //Aggiorno pulsanti
+                        _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                    }
                 }
+                else
+                {
+                    if (!DB92_CambioProduzioneOK.Value && !DB92_CambioProduzioneKO.Value)
+                    {
+                        //Cambio stato
+                        MachineStatus.Value = 100;
 
+                        //Aggiorno status in db
+                        _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+
+                        //Aggiorno pulsanti
+                        _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
+                    }
+                }
+                
                 break;
 
             case 100:
@@ -347,23 +439,42 @@ public class script_maincycle : BaseNetLogic
                 //----------------------------------------------------------------------------
                 MachineStatusText.Value = "Aggiornamento tabelle e spostamento nello storico";
                 //----------------------------------------------------------------------------
+                if (DBExpress.Value) {
+                    //Aggiorno stato in db
+                    _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
 
-                //Aggiorno stato in db
-                _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
+                    //Aggiorno pulsanti
+                    _prod.pr_ManageProductionButtons(MachineStatus.Value);
 
-                //Aggiorno pulsanti
-                _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                    //sposto su storico e elimino record
+                    _prod.pr_TerminateAllRunning();
+                    _prod.pr_Elimina(OdlStart.Value);
 
-                //sposto su storico e elimino record
-                _prod.pr_TerminateAllRunning();
-                _prod.pr_Elimina(OdlStart.Value);
+                    //reset variabili
+                    ResetHMIProductVar();
+                    ResetPLCProductVar();
 
-                //reset variabili
-                ResetHMIProductVar();
-                ResetPLCProductVar();
+                    MachineStatus.Value = 165;
+                }
+                else
+                {
+                    //Aggiorno stato in db
+                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
 
-                MachineStatus.Value = 165;
+                    //Aggiorno pulsanti
+                    _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
 
+                    //sposto su storico e elimino record
+                    //_prodLocale.pr_TerminateAllRunningLocale();
+                    //_prodLocale.pr_EliminaLocale(OdlStart.Value);
+
+                    //reset variabili
+                    ResetHMIProductVar();
+                    ResetPLCProductVar();
+
+                    MachineStatus.Value = 165;
+                }
+                
                 break;
 
             case 165:
@@ -382,19 +493,34 @@ public class script_maincycle : BaseNetLogic
                 //---------------------------------------------------------------
                 MachineStatusText.Value = "ERRORE CARICAMENTO RICETTA KO DA PLC";
                 //---------------------------------------------------------------
+                if (DBExpress.Value)
+                {
+                    //aggiorno stato su db
+                    _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
 
-                //aggiorno stato su db
-                _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
+                    //aggiorno pulsanti
+                    _prod.pr_ManageProductionButtons(MachineStatus.Value);
 
-                //aggiorno pulsanti
-                _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                    //resetto tutte le variabili
+                    ResetPLCProductVar();
+                    ResetHMIProductVar();
 
-                //resetto tutte le variabili
-                ResetPLCProductVar();
-                ResetHMIProductVar();
+                    MachineStatus.Value = 181;
+                }
+                else
+                {
+                    //aggiorno stato su db
+                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
 
-                MachineStatus.Value = 181;
+                    //aggiorno pulsanti
+                    _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
 
+                    //resetto tutte le variabili
+                    ResetPLCProductVar();
+                    ResetHMIProductVar();
+
+                    MachineStatus.Value = 181;
+                }
                 break;
 
             case 181:
@@ -413,19 +539,36 @@ public class script_maincycle : BaseNetLogic
                 //----------------------------------------------------------------
                 MachineStatusText.Value = "ANNULLAMENTO CARICAMENTO DA OPERATORE";
                 //----------------------------------------------------------------
+                if (DBExpress.Value)
+                {
+                    //aggiorno status
+                    _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
 
-                //aggiorno status
-                _prod.pr_UpdateStatus(OdlStart.Value, MachineStatus.Value);
+                    //aggiorno pulsanti
+                    _prod.pr_ManageProductionButtons(MachineStatus.Value);
 
-                //aggiorno pulsanti
-                _prod.pr_ManageProductionButtons(MachineStatus.Value);
+                    ResetHMIProductVar();
+                    ResetPLCProductVar();
 
-                ResetHMIProductVar();
-                ResetPLCProductVar();
+                    DB91_TerminaProduzione.Value = true;
 
-                DB91_TerminaProduzione.Value = true;
+                    MachineStatus.Value = 191;
+                }
+                else
+                {
+                    //aggiorno status
+                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
 
-                MachineStatus.Value = 191;
+                    //aggiorno pulsanti
+                    _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
+
+                    ResetHMIProductVar();
+                    ResetPLCProductVar();
+
+                    DB91_TerminaProduzione.Value = true;
+
+                    MachineStatus.Value = 191;
+                }
 
                 break;
 
@@ -497,6 +640,29 @@ public class script_maincycle : BaseNetLogic
         //recupero i dati di anagrafica
         Anagrafica articolo = new Anagrafica();
         articolo = _art.aa_GetByProductID(currentProd.Product_ID);
+
+        if (articolo.Product_ID == "" || articolo.Product_ID is null)
+            return false;
+
+        Project.Current.GetVariable(VariablePaths.PathDB91RicettaProduct_ID).Value = articolo.Product_ID;
+        Project.Current.GetVariable(VariablePaths.PathDB91RicettaDescrizione).Value = articolo.Descr;
+        Project.Current.GetVariable(VariablePaths.PathDB91RicettaProgrammaRobot).Value = articolo.Robot_Program;
+
+        return true;
+    }
+
+    private bool SendProductDataToPLCLocale(int odp)
+    {
+        //recupero il nome articolo
+        ClienteToReaLocale currentProd = new ClienteToReaLocale();
+        currentProd = _prodLocale.pr_GetByIdLocale(odp);
+
+        if (currentProd.Production_Command == "" || currentProd.Production_Command is null)
+            return false;
+
+        //recupero i dati di anagrafica
+        AnagraficaLocale articolo = new AnagraficaLocale();
+        articolo = _artLocale.aa_GetByProductIDLocale(currentProd.Product_ID);
 
         if (articolo.Product_ID == "" || articolo.Product_ID is null)
             return false;

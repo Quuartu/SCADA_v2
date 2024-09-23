@@ -13,7 +13,7 @@ Children:
 - File: Configurazioni/Configurazioni.yaml
 - File: popup_selezionaprogramma/popup_selezionaprogramma.yaml
 - File: Storico/Storico.yaml
-- Name: Locale
+- Name: Lingua
   Id: g=4333f7c117d5cf0f6d7352ad71103084
   Type: BaseDataVariableType
   DataType: Boolean
