@@ -7,6 +7,8 @@ Here is the repository containing the implementation of a SCADA platform for a c
 - SSMS version 20
 - Visual Studio Community 2022
 
+### Task provided by the Rea_Robotics_S.R.L team for my internship training
+
 ## How to clone the repository
 #### Cloning in FactoryTalk® Optix™ (preferred)
 1. Click on the green `CODE` button in the top right corner
@@ -32,5 +34,3 @@ Here is the repository containing the implementation of a SCADA platform for a c
 3. Visual Studio Community 2022
    - is an integrated development environment (IDE) developed by Microsoft. It allows the development of programs through programming languages using a single
      workspace environment.
-
-### Task provided by the Rea_Robotics_S.R.L team for my internship training
