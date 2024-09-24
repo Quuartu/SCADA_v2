@@ -412,7 +412,7 @@ Children:
           DataType: String
         - Name: /Date_Insert
           Type: StoreColumn
-          DataType: DateTimePickerInputFormatEnum
+          DataType: DateTime
         - Name: /Date_Elab
           Type: StoreColumn
           DataType: DateTimePickerInputFormatEnum
