@@ -64,6 +64,7 @@ public class script_maincycle : BaseNetLogic
         var MachineStatusText           = Project.Current.GetVariable(VariablePaths.PathMachineStatusText);
         var MachineStatus               = Project.Current.GetVariable(VariablePaths.PathMachineStatus);
         var OdlStart                    = Project.Current.GetVariable(VariablePaths.PathOdlStart);
+        long OdlStartLong               = OdlStart.Value; 
         var ap_start                    = Project.Current.GetVariable(VariablePaths.Pathap_start);
         var pr_ButtonTerminaSelected    = Project.Current.GetVariable(VariablePaths.Pathpr_ButtonTerminaSelected);
         var ResetProduction             = Project.Current.GetVariable(VariablePaths.PathResetProduction);
@@ -159,10 +160,10 @@ public class script_maincycle : BaseNetLogic
                     if (DB92_ODP.Value > 0)
                     {
                         //Sincronizzo OdlStart
-                        OdlStart.Value = DB92_ODP.Value;
+                        OdlStartLong = DB92_ODP.Value;
 
                         //mando prodotti al plc
-                        SendProductDataToPLCLocale(OdlStart.Value);
+                        SendProductDataToPLCLocale(OdlStartLong);
 
                         //mi metto in produzione in corso 
                         ProduzioneInCorso.Value = true;
@@ -205,10 +206,10 @@ public class script_maincycle : BaseNetLogic
                 }
                 else
                 {
-                    if (ap_start.Value && OdlStart.Value > 0)
+                    if (ap_start.Value && OdlStartLong > 0)
                     {
                         //mando dati al plc
-                        if (SendProductDataToPLCLocale(OdlStart.Value))
+                        if (SendProductDataToPLCLocale(OdlStartLong))
                         {
                             //vado in produzione in corso
                             ProduzioneInCorso.Value = true;
@@ -237,6 +238,9 @@ public class script_maincycle : BaseNetLogic
                     //reset richiesta caricamento nuovo prodotto
                     ap_start.Value = false;
                     OdlStart.Value = 0;
+                    
+                    //
+                    OdlStartLong = 0;
 
                     //reset popup
                     popupOK.Value = false;
@@ -271,7 +275,7 @@ public class script_maincycle : BaseNetLogic
                     DB91_CambioProduzione.Value = true;
 
                     //Aggiorno stato in db
-                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+                    _prodLocale.pr_UpdateStatusLocale(OdlStartLong, MachineStatus.Value);
 
                     //Aggiorno pulsanti
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
@@ -354,7 +358,7 @@ public class script_maincycle : BaseNetLogic
                         MachineStatus.Value = 100;
 
                         //Aggiorno status in db
-                        _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+                        _prodLocale.pr_UpdateStatusLocale(OdlStartLong, MachineStatus.Value);
 
                         //Aggiorno pulsanti
                         _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
@@ -459,7 +463,7 @@ public class script_maincycle : BaseNetLogic
                 else
                 {
                     //Aggiorno stato in db
-                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+                    _prodLocale.pr_UpdateStatusLocale(OdlStartLong, MachineStatus.Value);
 
                     //Aggiorno pulsanti
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
@@ -510,7 +514,7 @@ public class script_maincycle : BaseNetLogic
                 else
                 {
                     //aggiorno stato su db
-                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+                    _prodLocale.pr_UpdateStatusLocale(OdlStartLong, MachineStatus.Value);
 
                     //aggiorno pulsanti
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
@@ -557,7 +561,7 @@ public class script_maincycle : BaseNetLogic
                 else
                 {
                     //aggiorno status
-                    _prodLocale.pr_UpdateStatusLocale(OdlStart.Value, MachineStatus.Value);
+                    _prodLocale.pr_UpdateStatusLocale(OdlStartLong, MachineStatus.Value);
 
                     //aggiorno pulsanti
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
@@ -651,7 +655,7 @@ public class script_maincycle : BaseNetLogic
         return true;
     }
 
-    private bool SendProductDataToPLCLocale(int odp)
+    private bool SendProductDataToPLCLocale(long odp)
     {
         //recupero il nome articolo
         ClienteToReaLocale currentProd = new ClienteToReaLocale();

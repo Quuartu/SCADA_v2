@@ -7170,6 +7170,44 @@ Children:
                 Type: DynamicLink
                 DataType: NodePath
                 Value: "../../../../../SelectedItem/&/Status@Value"
+        - Name: MethodContainer4
+          Type: BaseObjectType
+          Children:
+          - Name: ns=2;ObjectPointer
+            Type: NodePointer
+            DataType: NodeId
+            Value: "/Objects/Commands/VariableCommands"
+            Children:
+            - Name: Kind
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: ns=2;Method
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "Set"
+          - Name: InputArguments
+            Type: BaseObjectType
+            Children:
+            - Name: VariableToModify
+              Type: BaseDataVariableType
+              DataType: VariablePointer
+              Description: {"NamespaceIndex":2,"TextId":"SetVariableToModifyDescription"}
+              Value: "/Objects/SCADA/Model/Produzione/rowIdSelected"
+            - Name: Value
+              Type: BaseDataVariableType
+              DataType: Int64
+              Description: {"NamespaceIndex":2,"TextId":"SetValueDescription"}
+              Children:
+              - Name: DynamicLink
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../SelectedItem/&/ID@Value"
+            - Name: ArrayIndex
+              Type: BaseDataVariableType
+              DataType: UInt32
+              Description: {"NamespaceIndex":2,"TextId":"SetArrayIndexDescription"}
+              ValueRank: ScalarOrOneDimension
       - Name: EventArguments
         Type: UserSelectionChanged
         Children:
@@ -8328,12 +8366,12 @@ Children:
         Children:
         - Name: id
           Type: BaseDataVariableType
-          DataType: Int32
+          DataType: Int64
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../../../ClienteToRea/SelectedItem/&/ID"
+            Value: "/Objects/SCADA/Model/Produzione/rowIdSelected"
     - Name: OnCancel
       Type: MethodInvocation
       Children:
@@ -8793,17 +8831,17 @@ Children:
       - Name: DynamicLink
         Type: DynamicLink
         DataType: NodePath
-        Value: "../../ClienteToRea/SelectedItem/&/ID"
+        Value: "/Objects/SCADA/Model/Produzione/rowIdSelected"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 461.0
+      Value: 340.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 80.0
+      Value: 60.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size

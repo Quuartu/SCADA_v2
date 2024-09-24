@@ -64,7 +64,7 @@ public static class VariablePaths
 
     public const string PathMachineStatusText                       = "Model/MacchinaStati/MachineStatusText";
     public const string PathMachineStatus                           = "Model/MacchinaStati/MachineStatus";
-    public const string PathOdlStart                                = "Model/Produzione/OdlStart";
+    public const string PathOdlStart                                = "Model/Produzione/OdlStart"; 
     public const string Pathap_start                                = "Model/Produzione/ap_start";
     public const string Pathpr_ButtonTerminaSelected                = "Model/Produzione/pr_ButtonTerminaSelected";
     public const string PathResetProduction                         = "Model/Produzione/ResetProduction";

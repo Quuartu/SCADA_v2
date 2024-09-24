@@ -144,15 +144,17 @@ public class RecipeController : BaseNetLogic
     public void Insert(string Odp)   
     {
         //creo ID e Data di Inserimento
-        var values = new object[1, 2];
+        var values = new object[1, 3];
         var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
         values[0, 0] = long.Parse(DateTime.Now.ToString("yyMMddHHmmss"));
         values[0, 1] = DateTime.Now;
+        values[0, 2] = 0;
 
         Object[,] ResultSet;
         String[] Header;
-        myStore.Query("UPDATE RecipeSchema2 SET \"/ID\" = " + values[0, 0] + ",\"/Date_Insert\" = '" + values[0, 1] + "' WHERE Name = '" + Odp + "'", out Header, out ResultSet);
+        myStore.Query("UPDATE RecipeSchema2 SET \"/ID\" = " + values[0, 0] + ",\"/Date_Insert\" = '" + values[0, 1] + 
+            "',\"/Status\" = '" + values[0, 2] + "' WHERE Name = '" + Odp + "'", out Header, out ResultSet);
     }
 
     [ExportMethod]
