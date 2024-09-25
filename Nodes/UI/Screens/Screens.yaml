@@ -7043,7 +7043,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/SCADA/DataStores/EmbeddedDatabase1/Tables/RecipeSchema2/Columns/&/Status"
+            Value: "{Item}/&/Status"
         - Name: ns=2;Pairs
           Type: BaseObjectType
           ModellingRule: None
