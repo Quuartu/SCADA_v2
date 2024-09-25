@@ -167,6 +167,19 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#c2fdc2"
+    - Name: Transparent
+      Type: InputBoxStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#06344b"
   - Name: SwitchStyles
     Type: BaseObjectType
     Children:

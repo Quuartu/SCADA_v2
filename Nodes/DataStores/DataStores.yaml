@@ -415,13 +415,13 @@ Children:
           DataType: DateTime
         - Name: /Date_Elab
           Type: StoreColumn
-          DataType: DateTimePickerInputFormatEnum
+          DataType: DateTime
         - Name: /Date_Update
           Type: StoreColumn
-          DataType: DateTimePickerInputFormatEnum
+          DataType: DateTime
         - Name: /Date_End
           Type: StoreColumn
-          DataType: DateTimePickerInputFormatEnum
+          DataType: DateTime
         - Name: /Quantità
           Type: StoreColumn
           DataType: Int32
@@ -521,3 +521,7 @@ Children:
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"id","DataType":{"Id":8},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
   - Name: RuntimeNetLogicAnagraficaLocale
     Type: NetLogic
+  - Name: Filename
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "DB_Locale"

@@ -1471,12 +1471,7 @@ Children:
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
-        Value: "Default"
-        Children:
-        - Name: DynamicLink
-          Type: DynamicLink
-          DataType: NodePath
-          Value: "/Objects/SCADA/UI/DefaultStyleSheet/ButtonStyles/Transparent"
+        Value: "Transparent"
     - Name: Image2
       Type: Image
       Children:
@@ -8326,7 +8321,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 950.0
-  - Name: ConfirmationDialogEliminaClienteToRea
+  - Name: ConfirmationDialogEliminaClienteToReaLocale
     Type: ConfirmationDialogContext
     Children:
     - Name: OnConfirm
@@ -8338,7 +8333,7 @@ Children:
       - Name: ObjectPointer
         Type: NodePointer
         DataType: NodeId
-        Value: "/Objects/SCADA/DataStores/ODBC_PRG_OPTIX/RuntimeNetLogicClienteToRea"
+        Value: {"IdType":2,"Id":"866396445a82801dfd7294ea72d8c8b4","Namespace":7}
         Children:
         - Name: Kind
           Type: PropertyType
@@ -8347,18 +8342,18 @@ Children:
       - Name: Method
         Type: BaseDataVariableType
         DataType: String
-        Value: "pr_Elimina"
+        Value: "Delete"
       - Name: InputArguments
         Type: BaseObjectType
         Children:
-        - Name: id
+        - Name: RecipeName
           Type: BaseDataVariableType
-          DataType: Int32
+          DataType: String
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/SCADA/Model/Produzione/rowIdSelected"
+            Value: "{RecipeSchema2}/Odp"
     - Name: OnCancel
       Type: MethodInvocation
       Children:
@@ -11796,7 +11791,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 200.0
+          Value: 640.0
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -12113,48 +12108,56 @@ Children:
           - Name: MethodsToCall
             Type: BaseObjectType
             Children:
-            - Name: MethodContainer1
+            - Name: MethodContainer2
               Type: BaseObjectType
               Children:
               - Name: ns=2;ObjectPointer
                 Type: NodePointer
                 DataType: NodeId
+                Value: "/Objects/Commands/UICommands"
                 Children:
                 - Name: Kind
                   Type: PropertyType
                   DataType: NodeId
                   Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../../../RecipeController@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
               - Name: ns=2;Method
                 Type: BaseDataVariableType
                 DataType: String
-                Value: "Delete"
+                Value: "OpenDialog"
               - Name: InputArguments
                 Type: BaseObjectType
                 Children:
-                - Name: RecipeName
+                - Name: Dialog
                   Type: BaseDataVariableType
-                  DataType: String
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogDescription"}
+                  Value: "/Objects/SCADA/UI/POPUP_PRG/ConfirmationDialog"
+                - Name: AliasNode
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":3,"TextId":"OpenDialogAliasNodeDescription"}
+                  ValueRank: ScalarOrOneDimension
                   Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "{RecipeSchema1}/Product_ID"
-                    Children:
-                    - Name: Mode
-                      Type: BaseVariableType
-                      DataType: DynamicLinkMode
-                      ModellingRule: Optional
-                      Value: 2
+                    Value: "../../../../../../../../ConfirmationDialogEliminaArticoliLocale@NodeId"
+                - Name: ParentItem
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":3,"TextId":"OpenDialogParentItemDescription"}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../..@NodeId"
+              - Name: OutputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: DialogNodeId
+                  Type: BaseDataVariableType
+                  DataType: NodeId
+                  Description: {"NamespaceIndex":3,"TextId":"OpenDialogDialogNodeIdDescription"}
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -12256,70 +12259,6 @@ Children:
         - Name: WrapFields
           Type: BaseDataVariableType
           DataType: Boolean
-        - Class: Method
-          Name: Delete
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
-          Name: Export
-        - Class: Method
-          Name: Import
-        - Class: Method
-          Name: ApplyFromDB
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
-          Name: ApplyFromEditModel
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
-          Name: LoadFromPLC
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
-          Name: SaveToDB
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
-          Name: SelectFromDB
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
         - Name: RecipeName
           Type: BaseDataVariableType
           DataType: String
@@ -13260,6 +13199,40 @@ Children:
                 Type: PropertyType
                 DataType: UInt16
         - Class: Method
+          Name: ApplyFromDB
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: ApplyFromEditModel
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: Delete
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: Export
+        - Class: Method
+          Name: Import
+        - Class: Method
           Name: Insert
           Children:
           - Name: ns=0;InputArguments
@@ -13279,6 +13252,36 @@ Children:
             ValueRank: OneDimension
             ArrayDimensions: [0]
             Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: LoadFromPLC
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: SaveToDB
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: SelectFromDB
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:
@@ -14009,7 +14012,7 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 950.0
-  - Name: ConfirmationDialogEliminaArticoli
+  - Name: ConfirmationDialogEliminaArticoliLocale
     Type: ConfirmationDialogContext
     Children:
     - Name: OnConfirm
@@ -14021,7 +14024,7 @@ Children:
       - Name: ObjectPointer
         Type: NodePointer
         DataType: NodeId
-        Value: "/Objects/SCADA/DataStores/ODBC_PRG_OPTIX/RuntimeNetLogicAnagrafica"
+        Value: "/Objects/SCADA/Recipes/RecipeController"
         Children:
         - Name: Kind
           Type: PropertyType
@@ -14030,18 +14033,18 @@ Children:
       - Name: Method
         Type: BaseDataVariableType
         DataType: String
-        Value: "aa_Elimina"
+        Value: "Delete"
       - Name: InputArguments
         Type: BaseObjectType
         Children:
-        - Name: id
+        - Name: RecipeName
           Type: BaseDataVariableType
-          DataType: Int32
+          DataType: String
           Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "/Objects/SCADA/Model/Anagrafica/rowIdAnagraficaSelected"
+            Value: "{RecipeSchema1}/Product_ID"
     - Name: OnCancel
       Type: MethodInvocation
       Children:
