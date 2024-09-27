@@ -11786,12 +11786,12 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 1120.0
+          Value: 1112.0
         - Name: TopMargin
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 640.0
+          Value: 630.0
         - Name: Height
           Type: BaseVariableType
           DataType: Size
@@ -11916,63 +11916,34 @@ Children:
               - Name: ns=2;Method
                 Type: BaseDataVariableType
                 DataType: String
-                Value: "SaveToDB"
+                Value: "Insert_Product_in_Anagrafica"
               - Name: InputArguments
                 Type: BaseObjectType
                 Children:
-                - Name: RecipeName
+                - Name: Product_ID
                   Type: BaseDataVariableType
                   DataType: String
                   Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "{RecipeSchema1}/Product_ID"
-                    Children:
-                    - Name: Mode
-                      Type: BaseVariableType
-                      DataType: DynamicLinkMode
-                      ModellingRule: Optional
-                      Value: 2
-                - Name: ErrorPolicy
-                  Type: BaseDataVariableType
-                  DataType: CopyErrorPolicy
-            - Name: MethodContainer2
-              Type: BaseObjectType
-              Children:
-              - Name: ns=2;ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-                - Name: DynamicLink
-                  Type: DynamicLink
-                  DataType: NodePath
-                  Value: "../../../../../RecipeController@NodeId"
-                  Children:
-                  - Name: Mode
-                    Type: BaseVariableType
-                    DataType: DynamicLinkMode
-                    ModellingRule: Optional
-                    Value: 2
-              - Name: ns=2;Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "InsertID_Article"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: Odp
+                    Value: "{RecipeSchema1}/Product_ID@Value"
+                - Name: Descr
                   Type: BaseDataVariableType
                   DataType: String
                   Children:
                   - Name: DynamicLink
                     Type: DynamicLink
                     DataType: NodePath
-                    Value: "{RecipeSchema1}/Product_ID"
+                    Value: "{RecipeSchema1}/Descr@Value"
+                - Name: Robot_Program
+                  Type: BaseDataVariableType
+                  DataType: Int32
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "{RecipeSchema1}/Robot_Program@Value"
           - Name: EventArguments
             Type: MouseClickEvent
             Children:
@@ -13243,16 +13214,6 @@ Children:
             ArrayDimensions: [0]
             Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
         - Class: Method
-          Name: InsertID_Article
-          Children:
-          - Name: ns=0;InputArguments
-            Type: BaseVariableType
-            DataType: Argument
-            ReferenceType: HasProperty
-            ValueRank: OneDimension
-            ArrayDimensions: [0]
-            Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-        - Class: Method
           Name: LoadFromPLC
           Children:
           - Name: ns=0;InputArguments
@@ -13282,6 +13243,16 @@ Children:
             ValueRank: OneDimension
             ArrayDimensions: [0]
             Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+        - Class: Method
+          Name: Insert_Product_in_Anagrafica
+          Children:
+          - Name: ns=0;InputArguments
+            Type: BaseVariableType
+            DataType: Argument
+            ReferenceType: HasProperty
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [{"TypeId":{"Id":296},"Body":{"Name":"Product_ID","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Descr","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Robot_Program","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
       - Name: RecipesEditorUISetup
         Type: NetLogic
         Children:

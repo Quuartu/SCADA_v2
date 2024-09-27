@@ -5598,7 +5598,7 @@ Children:
           ArrayDimensions: [0]
           Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
       - Class: Method
-        Name: InsertID_Article
+        Name: Insert_Product_in_Anagrafica
         Children:
         - Name: ns=0;InputArguments
           Type: BaseVariableType
@@ -5606,7 +5606,7 @@ Children:
           ReferenceType: HasProperty
           ValueRank: OneDimension
           ArrayDimensions: [0]
-          Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+          Value: [{"TypeId":{"Id":296},"Body":{"Name":"Product_ID","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Descr","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Robot_Program","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
     - Name: RecipesEditorUISetup
       Type: NetLogic
       Children:
@@ -5948,7 +5948,6 @@ Children:
         Type: BaseVariableType
         DataType: ComboBoxModeEnum
         ModellingRule: Optional
-        Value: 2
       - Name: DisplayValuePath
         Type: BaseDataVariableType
         DataType: LocalizedText

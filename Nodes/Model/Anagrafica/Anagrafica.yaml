@@ -8,6 +8,7 @@ Children:
   - Name: ID
     Type: BaseDataVariableType
     DataType: Int64
+    Value: -9223372036854775808
   - Name: Product_ID
     Id: g=00d6617c4d348a585e53722880c45611
     Type: BaseDataVariableType

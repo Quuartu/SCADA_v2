@@ -12,11 +12,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
 using FTOptix.Store;
+using System.Xml.Linq;
 
 #endregion
 
 public class RecipeController : BaseNetLogic
 {
+
+    PopUpNetLogic popup = new PopUpNetLogic();
 
     public override void Start()
     {
@@ -158,17 +161,32 @@ public class RecipeController : BaseNetLogic
     }
 
     [ExportMethod]
-    public void InsertID_Article(string Odp)
+    public void Insert_Product_in_Anagrafica(string Product_ID, string Descr, int Robot_Program)
     {
-        //creo ID 
-        var values = new object[1, 1];
-        var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+        try
+        {
+            // Inserimento nella tabella
+            var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+            var myTable = myStore.Tables.Get<Table>("RecipeSchema1");
+            string[] columns = { "Name", "/Descr", "/Robot_Program", "/Product_ID" };
+            var values = new object[1, 4];
+            values[0, 0] = Product_ID;
+            values[0, 1] = Descr;
+            values[0, 2] = Robot_Program;
+            values[0, 3] = Product_ID;
 
-        values[0, 0] = long.Parse(DateTime.Now.ToString("yyMMddHHmmss"));
+            // Eseguire la query di inserimento
+            myTable.Insert(columns, values);
 
-        Object[,] ResultSet;
-        String[] Header;
-        myStore.Query("UPDATE RecipeSchema1 SET \"/ID\" = " + values[0, 0] + " WHERE Name = '" + Odp + "'", out Header, out ResultSet);
+            // Se l'operazione è andata a buon fine
+            Log.Info("RecipeSchema1", "Inserimento riuscito: " + values[0, 1]);
+        }
+        catch (Exception ex)
+        {
+            // In caso di errore, viene catturata l'eccezione e viene stampato il messaggio d'errore
+            Log.Error("RecipeSchema1", "Errore durante l'inserimento: " + ex.Message);
+            popup.OpenPopUp(ex.Message, 0);
+        }
     }
 
     [ExportMethod]

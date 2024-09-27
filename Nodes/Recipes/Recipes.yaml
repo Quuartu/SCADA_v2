@@ -8,9 +8,6 @@ Children:
   - Name: Root
     Type: BaseObjectType
     Children:
-    - Name: ID
-      Type: BaseDataVariableType
-      DataType: Int64
     - Name: Product_ID
       Type: BaseDataVariableType
       DataType: String
@@ -74,12 +71,9 @@ Children:
       Type: PropertyType
       DataType: NodeId
   - Name: EditModel
-    Id: g=188e0d2f83d86a9f3078ce27df856905
+    Id: g=e6325b2248e25805ba33c40dffd2fab7
     Type: BaseObjectType
     Children:
-    - Name: ID
-      Type: BaseDataVariableType
-      DataType: Int64
     - Name: Product_ID
       Type: BaseDataVariableType
       DataType: String
@@ -1190,16 +1184,6 @@ Children:
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
   - Class: Method
-    Name: InsertID_Article
-    Children:
-    - Name: ns=0;InputArguments
-      Type: BaseVariableType
-      DataType: Argument
-      ReferenceType: HasProperty
-      ValueRank: OneDimension
-      ArrayDimensions: [0]
-      Value: [{"TypeId":{"Id":296},"Body":{"Name":"Odp","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
-  - Class: Method
     Name: LoadFromPLC
     Children:
     - Name: ns=0;InputArguments
@@ -1229,3 +1213,13 @@ Children:
       ValueRank: OneDimension
       ArrayDimensions: [0]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"RecipeName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"ErrorPolicy","DataType":{"Id":40,"Namespace":25},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: Insert_Product_in_Anagrafica
+    Children:
+    - Name: ns=0;InputArguments
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"Product_ID","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Descr","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"Robot_Program","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
