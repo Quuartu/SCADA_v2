@@ -4,6 +4,16 @@ Children:
 - Name: DB91_CambioProduzione
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver2/S7TIAPROFINETStation1/Tags/51D20_PLC/DB91 - HMIToPlc/b_Rcp_CambioProd"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: DB91_TerminaProduzione
   Type: BaseDataVariableType
   DataType: Boolean

@@ -1,0 +1,18 @@
+Name: TagImporter
+Type: S7TiaProfinetTagImporter
+OwnerId: ns=2;g=e5af3ca8257016e795527748a8c8a334
+Children:
+- Name: IgnoredPLCItems
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: IgnoredHMIItems
+  Type: BaseDataVariableType
+  DataType: NodeId
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: FilePath
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: "file:///E:/PLC/PRG28-22_ElleEmme_V02_20231214/PRG28-22_ElleEmme_V02_20231214.ap17"

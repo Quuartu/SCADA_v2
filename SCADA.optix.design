@@ -31,16 +31,21 @@ Project:
    Uri: 'urn:FTOptix:S7TiaProfinetTagImporter'
    Module: FTOptix.S7TiaProfinetTagImporter
    Version: 1.0
+  9:
+   Uri: 'urn:FTOptix:Core:Net'
+   Module: FTOptix.Core.Net
+   Version: 1.2
  Statistics:
-  TotalNodeCount: 3
-  Objects: 1
+  TotalNodeCount: 7
+  Objects: 2
   ObjectTypes: 0
-  Variables: 2
+  Variables: 5
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
   References: 0
   ReferenceTypes: 0
-  Files: 1
+  Files: 2
  Nodes:
  - File: DesignTimeNodes/CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/TagImporter.yaml
+ - File: DesignTimeNodes/CommDrivers/S7TIAPROFINETDriver2/S7TIAPROFINETStation1/TagImporter.yaml
