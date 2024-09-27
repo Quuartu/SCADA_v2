@@ -144,20 +144,35 @@ public class RecipeController : BaseNetLogic
 
 
     [ExportMethod]
-    public void Insert(string Odp)   
+    public void Insert_newProduction(string Odp, string NomeArticolo, int quantità)   
     {
-        //creo ID e Data di Inserimento
-        var values = new object[1, 3];
-        var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+        try
+        {
+            // Inserimento nella tabella
+            var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+            var myTable = myStore.Tables.Get<Table>("RecipeSchema2");
+            string[] columns = { "Name", "/Odp", "/NomeArticolo", "/Date_Insert", "/Quantità", "/Status" };
+            var values = new object[1, 6];
 
-        values[0, 0] = long.Parse(DateTime.Now.ToString("yyMMddHHmmss"));
-        values[0, 1] = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK");
-        values[0, 2] = 0;
+            values[0, 0] = Odp;
+            values[0, 1] = Odp;
+            values[0, 2] = NomeArticolo;
+            values[0, 3] = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK"); 
+            values[0, 4] = quantità;
+            values[0, 5] = 0;
 
-        Object[,] ResultSet;
-        String[] Header;
-        myStore.Query("UPDATE RecipeSchema2 SET \"/ID\" = " + values[0, 0] + ",\"/Date_Insert\" = '" + values[0, 1] + 
-            "',\"/Status\" = '" + values[0, 2] + "' WHERE Name = '" + Odp + "'", out Header, out ResultSet);
+            // Eseguire la query di inserimento
+            myTable.Insert(columns, values);
+
+            // Se l'operazione è andata a buon fine
+            Log.Info("RecipeSchema2", "Inserimento riuscito: " + values[0, 1]);
+        }
+        catch (Exception ex)
+        {
+            // In caso di errore, viene catturata l'eccezione e viene stampato il messaggio d'errore
+            Log.Error("RecipeSchema2", "Errore durante l'inserimento: " + ex.Message);
+            popup.OpenPopUp(ex.Message, 0);
+        }
     }
 
     [ExportMethod]

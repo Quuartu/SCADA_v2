@@ -369,10 +369,6 @@ Children:
         - Name: Name
           Type: StoreColumn
           DataType: String
-        - Name: /ID
-          Type: StoreColumn
-          DataType: Int64
-          Value: -9223372036854775808
         - Name: /Odp
           Type: StoreColumn
           DataType: String
