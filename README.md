@@ -22,6 +22,9 @@ Here is the repository containing the implementation of a SCADA platform for a c
 1. Click on the green `CODE` button in the top right corner
 2. Click on the `Download ZIP` button
 
+#### First Use & Features
+First of all, connect to the SQLExpress database if you want to use the online DB. Secondly, you can create two folders: one for the InserimentoAnagraficaSuDB function, and insert the path into the `RunTimeNetLogic1` script if you want to use the feature for file insertion, and another for the InserimentoProduzioneSuDB function, again inserting the path into the 'RunTimeNetLogic2' script. Once this is completed, the program will be ready, and if you want to modify or import your own local DB, simply insert it as the `DB_Locale.sqlite` file in the folder `...\AppData\Local\Rockwell Automation\FactoryTalk Optix\Emulator\Projects\SCADA\ApplicationFiles` when the project doesn't running
+
 ## Software Used
 1. FactoryTalk® Optix™ by Rockwell Automation
    - combines cloud-based software to create innovative projects and scale them through Responsive Design techniques, allowing use even on physically remote
