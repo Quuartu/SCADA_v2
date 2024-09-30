@@ -36,16 +36,15 @@ Project:
    Module: FTOptix.Core.Net
    Version: 1.2
  Statistics:
-  TotalNodeCount: 7
-  Objects: 2
+  TotalNodeCount: 4
+  Objects: 1
   ObjectTypes: 0
-  Variables: 5
+  Variables: 3
   VariableTypes: 0
   DataTypes: 0
   Methods: 0
   References: 0
   ReferenceTypes: 0
-  Files: 2
+  Files: 1
  Nodes:
- - File: DesignTimeNodes/CommDrivers/S7TIAPROFINETDriver1/S7TIAPROFINETStation1/TagImporter.yaml
- - File: DesignTimeNodes/CommDrivers/S7TIAPROFINETDriver2/S7TIAPROFINETStation1/TagImporter.yaml
+ - File: DesignTimeNodes/CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/TagImporter.yaml

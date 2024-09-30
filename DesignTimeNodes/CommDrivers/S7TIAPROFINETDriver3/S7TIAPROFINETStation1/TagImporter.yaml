@@ -1,6 +1,6 @@
 Name: TagImporter
 Type: S7TiaProfinetTagImporter
-OwnerId: ns=2;g=a88fa766122c4b35ccf4ffaae531d4a2
+OwnerId: ns=2;g=5fcc3ed95e1e91bcafcbfed555befdf7
 Children:
 - Name: IgnoredPLCItems
   Type: BaseDataVariableType
@@ -12,3 +12,7 @@ Children:
   DataType: NodeId
   ValueRank: OneDimension
   ArrayDimensions: [0]
+- Name: FilePath
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: "file:///C:/Users/davide.quartucci/Desktop/PRG10021 [202304]_v2.1_noVisione/PRG10021 [202304]_v2.1_noVisione.ap16"

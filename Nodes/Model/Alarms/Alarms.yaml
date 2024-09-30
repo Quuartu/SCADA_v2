@@ -4,21 +4,832 @@ Children:
 - Name: Alm1
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_1"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Alm2
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_2"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Alm3
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_3"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Alm4
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_4"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Alm5
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_5"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm6
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_6"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm7
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_7"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm8
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_8"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm9
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_9"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm10
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_10"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm11
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_11"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm12
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_12"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm13
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_13"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm14
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_14"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm15
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_15"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm16
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_16"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm17
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_17"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm18
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_18"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm19
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_19"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm20
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_20"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm21
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_21"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm22
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_22"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm23
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_23"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm24
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_24"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm25
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_25"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm26
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_26"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm27
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_27"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm28
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_28"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm29
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_29"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm30
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_30"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm31
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_31"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Alm32
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_32"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Wrn1
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_1"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: Wrn2
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_2"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn3
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_3"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn4
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_4"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn5
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_5"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn6
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_6"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn7
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_7"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn8
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_8"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn9
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_9"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn10
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_10"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn11
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_11"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn12
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_12"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn13
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_13"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn14
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_14"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn15
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_15"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn16
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_16"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn17
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_17"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn18
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_18"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn19
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_19"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn20
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_20"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn21
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_21"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn22
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_22"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn23
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_23"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn24
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_24"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn25
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_25"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn26
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_26"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn27
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_27"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn28
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_28"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn29
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_29"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn30
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_30"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn31
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_31"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: Wrn32
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_32"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

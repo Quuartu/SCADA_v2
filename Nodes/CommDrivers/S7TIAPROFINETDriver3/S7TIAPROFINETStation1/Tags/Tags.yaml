@@ -1,0 +1,3485 @@
+Name: Tags
+Type: FolderType
+Children:
+- Name: PRG10021
+  Type: TagStructure
+  DataType: Structure
+  Value: 
+   {
+    "Type": 22,
+    "Body": {
+     "TypeId": {
+      "IdType": 0,
+      "Id": 0,
+      "Namespace": -1
+     },
+     "Body":    {}
+    }
+   }
+  Children:
+  - Name: Standard
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: '90-HMI'
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: 'DB92-PLCtoHMI'
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+        Children:
+        - Name: RicettaInCorso
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: ODP
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.ODP"
+          - Name: PrgRobot
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.PrgRobot"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: PrgPressa
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.PrgPressa"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: NumPrgPressa
+            Type: S7TiaProfinetTag
+            DataType: Byte
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.NumPrgPressa"
+          - Name: QtaRichiesta
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.QtaRichiesta"
+          - Name: QtaRiordino
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.QtaRiordino"
+          - Name: CodArticolo
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.CodArticolo"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: RBT
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: CodiceAttrezzaggio
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.CodiceAttrezzaggio"
+            - Name: Pos_TOOL
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Pos_TOOL"
+            - Name: Code_ActGripper
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Code_ActGripper"
+            - Name: Num_ReqGripper
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_ReqGripper"
+            - Name: Num_PiegheTotali
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_PiegheTotali"
+            - Name: Num_AltezzaMatrice
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_AltezzaMatrice"
+            - Name: Num_SpessorePezzo
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_SpessorePezzo"
+            - Name: Code_Pallet
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Code_Pallet"
+            - Name: Num_Righe
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_Righe"
+            - Name: Num_Colonne
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_Colonne"
+            - Name: Num_Strati
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_Strati"
+            - Name: Num_InterasseRighe
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_InterasseRighe"
+            - Name: Num_InterasseColonne
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_InterasseColonne"
+            - Name: Num_InterasseStrati
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_InterasseStrati"
+            - Name: Num_PesoLamiera
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RicettaInCorso.RBT.Num_PesoLamiera"
+        - Name: InviaProgrammaAPressa
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.InviaProgrammaAPressa"
+        - Name: AckCambioProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.AckCambioProduzione"
+        - Name: AckTerminaProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.AckTerminaProduzione"
+        - Name: AckRiordinoProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.AckRiordinoProduzione"
+        - Name: CambioProduzioneOK
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CambioProduzioneOK"
+        - Name: CambioProduzioneKO
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CambioProduzioneKO"
+        - Name: ProduzioneInCorso
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ProduzioneInCorso"
+        - Name: ProduzioneInPausa
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ProduzioneInPausa"
+        - Name: CambioProgrammaPressaInCorso
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CambioProgrammaPressaInCorso"
+        - Name: PezzoPersoPopup
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.PezzoPersoPopup"
+        - Name: CaricatoreVuoto
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CaricatoreVuoto"
+        - Name: PalletPieni
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.PalletPieni"
+        - Name: Emergenza1
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.Emergenza1"
+        - Name: Emergenza2
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.Emergenza2"
+        - Name: NumeroPiega
+          Type: S7TiaProfinetTag
+          DataType: Byte
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.NumeroPiega"
+        - Name: PezziPrelevati
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.PezziPrelevati"
+        - Name: PezziDepositati
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.PezziDepositati"
+        - Name: PezziScarti
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.PezziScarti"
+        - Name: TempoCicloSEC_DINT
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.TempoCicloSEC_DINT"
+        - Name: TempoCicloMIN_DINT
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.TempoCicloMIN_DINT"
+        - Name: TempoCicloHOUR_DINT
+          Type: S7TiaProfinetTag
+          DataType: UInt32
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.TempoCicloHOUR_DINT"
+        - Name: MisuraSpessoreAttuale
+          Type: S7TiaProfinetTag
+          DataType: Float
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MisuraSpessoreAttuale"
+        - Name: MisuraSpessorePezzo
+          Type: S7TiaProfinetTag
+          DataType: Float
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MisuraSpessorePezzo"
+        - Name: AngoloPiega
+          Type: S7TiaProfinetTag
+          DataType: Float
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.AngoloPiega"
+        - Name: ControlloSpessoreOK
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ControlloSpessoreOK"
+        - Name: ControlloSpessoreKO
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ControlloSpessoreKO"
+        - Name: StatoRBT
+          Type: S7TiaProfinetTag
+          DataType: Byte
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.StatoRBT"
+        - Name: MotorOnRBT
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MotorOnRBT"
+        - Name: OperatingMode
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.OperatingMode"
+        - Name: Livebit
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.Livebit"
+        - Name: SalvagniniSignal
+          Type: S7TiaProfinetTag
+          DataType: UInt16
+          ValueRank: OneDimension
+          ArrayDimensions: [5]
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.SalvagniniSignal"
+          - Name: StartArrayIndex
+            Type: BaseDataVariableType
+            DataType: UInt32
+            ValueRank: OneDimension
+            ArrayDimensions: [0]
+            Value: [1]
+        - Name: RichiestaCambioProduzioneAlRobot
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RichiestaCambioProduzioneAlRobot"
+        - Name: RobotCambioProduzioneOK
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RobotCambioProduzioneOK"
+        - Name: RobotCambioProduzioneKO
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.RobotCambioProduzioneKO"
+        - Name: NuovoCaratterAlRobot
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.NuovoCaratterAlRobot"
+        - Name: CarattereLettoDalRobot
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CarattereLettoDalRobot"
+        - Name: FineStringaAlRobot
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.FineStringaAlRobot"
+        - Name: FineStringaDalRobot
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.FineStringaDalRobot"
+        - Name: CarattereInviato
+          Type: S7TiaProfinetTag
+          DataType: Byte
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.CarattereInviato"
+        - Name: ReqLoadProg1
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ReqLoadProg1"
+        - Name: ReqLoadProg2
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ReqLoadProg2"
+        - Name: SecomeaON
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.SecomeaON"
+        - Name: ReqAprePopUP
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.ReqAprePopUP"
+        - Name: MANUALI_RIBALTATORE
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_RIBAL_MuoveInlavoro
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInlavoro.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInlavoro.SpiaCmdManuale"
+          - Name: Cmd_RIBAL_MuoveInRiposo
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInRiposo.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInRiposo.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_3
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_3.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_3.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_4
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_4.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_4.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_5
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_5.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_5.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_6
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_6.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_6.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RIBALTATORE.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: MANUALI_RBT
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_RBT_NuvoPallet
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_NuvoPallet.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_NuvoPallet.SpiaCmdManuale"
+          - Name: Cmd_RBT_ResetPalletPieno
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_ResetPalletPieno.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_ResetPalletPieno.SpiaCmdManuale"
+          - Name: Cmd_RBT_DryRun
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_DryRun.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_DryRun.SpiaCmdManuale"
+          - Name: Cmd_RBT_PrelievoDISABILITATO
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_PrelievoDISABILITATO.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_PrelievoDISABILITATO.SpiaCmdManuale"
+          - Name: Cmd_RBT_AprendimentoPieghe
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_AprendimentoPieghe.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_AprendimentoPieghe.SpiaCmdManuale"
+          - Name: Cmd_RBT_ApprendimentoPunti
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_ApprendimentoPunti.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_RBT_ApprendimentoPunti.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_RBT.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: MANUALI_SPESSORE
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_SPSR_Misurazione
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Misurazione.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Misurazione.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Calibrazione
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Calibrazione.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Calibrazione.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Retry
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Retry.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Retry.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Bad
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Bad.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Bad.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Good
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Good.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_SPSR_Good.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_6
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_6.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_6.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.MANUALI_SPESSORE.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: INPUT_fromSYS
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: iStatoImpianto
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.iStatoImpianto"
+          - Name: Impianto
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: nonInEmergenza
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.nonInEmergenza"
+            - Name: ReqIngressoRbtGenerale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.ReqIngressoRbtGenerale"
+            - Name: FineSvuotamento
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.FineSvuotamento"
+            - Name: SvuotamentoInCorso
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.SvuotamentoInCorso"
+            - Name: ReqStop
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.ReqStop"
+            - Name: CicloGenInCorso
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.CicloGenInCorso"
+            - Name: PresenzaWrn
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.PresenzaWrn"
+            - Name: PresenzaAlm
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.PresenzaAlm"
+            - Name: UsStatoimpianto
+              Type: S7TiaProfinetTag
+              DataType: Int16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB92-PLCtoHMI.INPUT_fromSYS.Impianto.UsStatoimpianto"
+      - Name: 'DB91-HMItoPLC'
+        Type: TagStructure
+        DataType: Structure
+        Value: 
+         {
+          "Type": 22,
+          "Body": {
+           "TypeId": {
+            "IdType": 0,
+            "Id": 0,
+            "Namespace": -1
+           },
+           "Body":    {}
+          }
+         }
+        Children:
+        - Name: NuovaRicetta
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: ODP
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.ODP"
+          - Name: PrgRobot
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.PrgRobot"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: PrgPressa
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.PrgPressa"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: NumPrgPressa
+            Type: S7TiaProfinetTag
+            DataType: Byte
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.NumPrgPressa"
+          - Name: QtaRichiesta
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.QtaRichiesta"
+          - Name: QtaRiordino
+            Type: S7TiaProfinetTag
+            DataType: UInt32
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.QtaRiordino"
+          - Name: CodArticolo
+            Type: S7TiaProfinetTag
+            DataType: String
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.CodArticolo"
+            - Name: Encoding
+              Type: BaseDataVariableType
+              DataType: Encoding
+            - Name: MaximumLength
+              Type: BaseDataVariableType
+              DataType: Int32
+              Value: 254
+          - Name: RBT
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: CodiceAttrezzaggio
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.CodiceAttrezzaggio"
+            - Name: Pos_TOOL
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Pos_TOOL"
+            - Name: Code_ActGripper
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Code_ActGripper"
+            - Name: Num_ReqGripper
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_ReqGripper"
+            - Name: Num_PiegheTotali
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_PiegheTotali"
+            - Name: Num_AltezzaMatrice
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_AltezzaMatrice"
+            - Name: Num_SpessorePezzo
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_SpessorePezzo"
+            - Name: Code_Pallet
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Code_Pallet"
+            - Name: Num_Righe
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_Righe"
+            - Name: Num_Colonne
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_Colonne"
+            - Name: Num_Strati
+              Type: S7TiaProfinetTag
+              DataType: Byte
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_Strati"
+            - Name: Num_InterasseRighe
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_InterasseRighe"
+            - Name: Num_InterasseColonne
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_InterasseColonne"
+            - Name: Num_InterasseStrati
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_InterasseStrati"
+            - Name: Num_PesoLamiera
+              Type: S7TiaProfinetTag
+              DataType: UInt16
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.NuovaRicetta.RBT.Num_PesoLamiera"
+        - Name: CambioProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.CambioProduzione"
+        - Name: TerminaProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.TerminaProduzione"
+        - Name: RiordinoProduzione
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.RiordinoProduzione"
+        - Name: AckPezzoPersoPopup
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckPezzoPersoPopup"
+        - Name: AckInvioProgrammaPressa
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckInvioProgrammaPressa"
+        - Name: AckProgrammaPressaInviatoOK
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckProgrammaPressaInviatoOK"
+        - Name: AckProgrammaPressaInviatoKO
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckProgrammaPressaInviatoKO"
+        - Name: AckReqLoadProgramOK
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckReqLoadProgramOK"
+        - Name: AckReqLoadProgramKO
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AckReqLoadProgramKO"
+        - Name: Livebit
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.Livebit"
+        - Name: AbilitaSecomea
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.AbilitaSecomea"
+        - Name: B_DoppioStile
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.B_DoppioStile"
+        - Name: B_PresenzaOffline
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.B_PresenzaOffline"
+        - Name: SceltaOPER_Spessore
+          Type: S7TiaProfinetTag
+          DataType: Int16
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.SceltaOPER_Spessore"
+        - Name: SceltaTipoMisuraSpessore
+          Type: S7TiaProfinetTag
+          DataType: Boolean
+          Children:
+          - Name: SymbolName
+            Type: BaseDataVariableType
+            DataType: String
+            Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.SceltaTipoMisuraSpessore"
+        - Name: MANUALI_RIBALTATORE
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_RIBAL_MuoveInlavoro
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInlavoro.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInlavoro.SpiaCmdManuale"
+          - Name: Cmd_RIBAL_MuoveInRiposo
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInRiposo.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_RIBAL_MuoveInRiposo.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_3
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_3.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_3.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_4
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_4.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_4.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_5
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_5.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_5.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_6
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_6.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_6.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RIBALTATORE.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: MANUALI_RBT
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_RBT_NuvoPallet
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_NuvoPallet.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_NuvoPallet.SpiaCmdManuale"
+          - Name: Cmd_RBT_ResetPalletPieno
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_ResetPalletPieno.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_ResetPalletPieno.SpiaCmdManuale"
+          - Name: Cmd_RBT_DryRun
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_DryRun.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_DryRun.SpiaCmdManuale"
+          - Name: Cmd_RBT_PrelievoDISABILITATO
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_PrelievoDISABILITATO.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_PrelievoDISABILITATO.SpiaCmdManuale"
+          - Name: Cmd_RBT_AprendimentoPieghe
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_AprendimentoPieghe.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_AprendimentoPieghe.SpiaCmdManuale"
+          - Name: Cmd_RBT_ApprendimentoPunti
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_ApprendimentoPunti.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_RBT_ApprendimentoPunti.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_RBT.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: MANUALI_SPESSORE
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: Cmd_SPSR_Misurazione
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Misurazione.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Misurazione.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Calibrazione
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Calibrazione.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Calibrazione.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Retry
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Retry.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Retry.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Bad
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Bad.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Bad.SpiaCmdManuale"
+          - Name: Cmd_SPSR_Good
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Good.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_SPSR_Good.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_6
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_6.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_6.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_7
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_7.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_7.SpiaCmdManuale"
+          - Name: Cmd_Disponibile_8
+            Type: TagStructure
+            DataType: Structure
+            Value: 
+             {
+              "Type": 22,
+              "Body": {
+               "TypeId": {
+                "IdType": 0,
+                "Id": 0,
+                "Namespace": -1
+               },
+               "Body":    {}
+              }
+             }
+            Children:
+            - Name: Comando
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_8.Comando"
+            - Name: SpiaCmdManuale
+              Type: S7TiaProfinetTag
+              DataType: Boolean
+              Children:
+              - Name: SymbolName
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.MANUALI_SPESSORE.Cmd_Disponibile_8.SpiaCmdManuale"
+        - Name: OUTPUT_toSYS
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: bStartCiclo
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bStartCiclo"
+          - Name: bStopCiclo
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bStopCiclo"
+          - Name: bAutomatico
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bAutomatico"
+          - Name: bTacitaSirena
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bTacitaSirena"
+          - Name: bResetAllarmi
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetAllarmi"
+          - Name: bResetAutomatico
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetAutomatico"
+          - Name: bResetCiclo
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetCiclo"
+          - Name: bResetMemorieB3
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetMemorieB3"
+          - Name: bResetmemorieRIBAL
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetmemorieRIBAL"
+          - Name: bResetMemorieRBT
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bResetMemorieRBT"
+          - Name: bInversioneSegno
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSYS.bInversioneSegno"
+        - Name: OUTPUT_toSPESSORE
+          Type: TagStructure
+          DataType: Structure
+          Value: 
+           {
+            "Type": 22,
+            "Body": {
+             "TypeId": {
+              "IdType": 0,
+              "Id": 0,
+              "Namespace": -1
+             },
+             "Body":    {}
+            }
+           }
+          Children:
+          - Name: AbilitazioneMisura
+            Type: S7TiaProfinetTag
+            DataType: Boolean
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.AbilitazioneMisura"
+          - Name: rMisuraDistanza1
+            Type: S7TiaProfinetTag
+            DataType: Float
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.rMisuraDistanza1"
+          - Name: rMisuraDistanza2
+            Type: S7TiaProfinetTag
+            DataType: Float
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.rMisuraDistanza2"
+          - Name: TolleranzaSpessore
+            Type: S7TiaProfinetTag
+            DataType: Float
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.TolleranzaSpessore"
+          - Name: rSpessoreDiConfigurazione
+            Type: S7TiaProfinetTag
+            DataType: Float
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.rSpessoreDiConfigurazione"
+          - Name: OffSETLetturaSpessore
+            Type: S7TiaProfinetTag
+            DataType: Float
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.OffSETLetturaSpessore"
+          - Name: NrAcquisizLettura
+            Type: S7TiaProfinetTag
+            DataType: Int16
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.NrAcquisizLettura"
+          - Name: NumRispostaOPERAT
+            Type: S7TiaProfinetTag
+            DataType: Int16
+            Children:
+            - Name: SymbolName
+              Type: BaseDataVariableType
+              DataType: String
+              Value: "PRG10021.Blocks.Standard.90-HMI.DB91-HMItoPLC.OUTPUT_toSPESSORE.NumRispostaOPERAT"
+  - Name: Supporto
+    Type: TagStructure
+    DataType: Structure
+    Value: 
+     {
+      "Type": 22,
+      "Body": {
+       "TypeId": {
+        "IdType": 0,
+        "Id": 0,
+        "Namespace": -1
+       },
+       "Body":    {}
+      }
+     }
+    Children:
+    - Name: DB15_All_Wrn
+      Type: TagStructure
+      DataType: Structure
+      Value: 
+       {
+        "Type": 22,
+        "Body": {
+         "TypeId": {
+          "IdType": 0,
+          "Id": 0,
+          "Namespace": -1
+         },
+         "Body":    {}
+        }
+       }
+      Children:
+      - Name: w_Alm_1
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_1"
+      - Name: w_Alm_2
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_2"
+      - Name: w_Alm_3
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_3"
+      - Name: w_Alm_4
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_4"
+      - Name: w_Alm_5
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_5"
+      - Name: w_Alm_6
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_6"
+      - Name: w_Alm_7
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_7"
+      - Name: w_Alm_8
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_8"
+      - Name: w_Alm_9
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_9"
+      - Name: w_Alm_10
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_10"
+      - Name: w_Alm_11
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_11"
+      - Name: w_Alm_12
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_12"
+      - Name: w_Alm_13
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_13"
+      - Name: w_Alm_14
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_14"
+      - Name: w_Alm_15
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_15"
+      - Name: w_Alm_16
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_16"
+      - Name: w_Alm_17
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_17"
+      - Name: w_Alm_18
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_18"
+      - Name: w_Alm_19
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_19"
+      - Name: w_Alm_20
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_20"
+      - Name: w_Alm_21
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_21"
+      - Name: w_Alm_22
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_22"
+      - Name: w_Alm_23
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_23"
+      - Name: w_Alm_24
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_24"
+      - Name: w_Alm_25
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_25"
+      - Name: w_Alm_26
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_26"
+      - Name: w_Alm_27
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_27"
+      - Name: w_Alm_28
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_28"
+      - Name: w_Alm_29
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_29"
+      - Name: w_Alm_30
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_30"
+      - Name: w_Alm_31
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_31"
+      - Name: w_Alm_32
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Alm_32"
+      - Name: w_Wrn_1
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_1"
+      - Name: w_Wrn_2
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_2"
+      - Name: w_Wrn_3
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_3"
+      - Name: w_Wrn_4
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_4"
+      - Name: w_Wrn_5
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_5"
+      - Name: w_Wrn_6
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_6"
+      - Name: w_Wrn_7
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_7"
+      - Name: w_Wrn_8
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_8"
+      - Name: w_Wrn_9
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_9"
+      - Name: w_Wrn_10
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_10"
+      - Name: w_Wrn_11
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_11"
+      - Name: w_Wrn_12
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_12"
+      - Name: w_Wrn_13
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_13"
+      - Name: w_Wrn_14
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_14"
+      - Name: w_Wrn_15
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_15"
+      - Name: w_Wrn_16
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_16"
+      - Name: w_Wrn_17
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_17"
+      - Name: w_Wrn_18
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_18"
+      - Name: w_Wrn_19
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_19"
+      - Name: w_Wrn_20
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_20"
+      - Name: w_Wrn_21
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_21"
+      - Name: w_Wrn_22
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_22"
+      - Name: w_Wrn_23
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_23"
+      - Name: w_Wrn_24
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_24"
+      - Name: w_Wrn_25
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_25"
+      - Name: w_Wrn_26
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_26"
+      - Name: w_Wrn_27
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_27"
+      - Name: w_Wrn_28
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_28"
+      - Name: w_Wrn_29
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_29"
+      - Name: w_Wrn_30
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_30"
+      - Name: w_Wrn_31
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_31"
+      - Name: w_Wrn_32
+        Type: S7TiaProfinetTag
+        DataType: UInt16
+        Children:
+        - Name: SymbolName
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "PRG10021.Blocks.Supporto.DB15_All_Wrn.w_Wrn_32"

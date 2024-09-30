@@ -3,16 +3,173 @@ Type: FolderType
 Children:
 - Name: DB92_ODP
   Type: BaseDataVariableType
-  DataType: Int64
+  DataType: UInt32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/ODP"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_PrgRobot
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/PrgRobot"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_PrgPressa
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/PrgPressa"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_NumPrgPressa
+  Type: BaseDataVariableType
+  DataType: Byte
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/NumPrgPressa"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_QtaRichiesta
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/QtaRichiesta"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_QtaRiordino
+  Type: BaseDataVariableType
+  DataType: UInt32
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/QtaRiordino"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_CodArticolo
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/CodArticolo"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: DB92_CambioProduzioneOK
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/CambioProduzioneOK"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: DB92_CambioProduzioneKO
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/CambioProduzioneKO"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: DB92_AckTerminaProduzione
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/AckTerminaProduzione"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - Name: DB92_ProduzioneInCorso
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/ProduzioneInCorso"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_InviaProgrammaAPressa
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/InviaProgrammaAPressa"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB92_Livebit
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/Livebit"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2

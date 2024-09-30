@@ -8,7 +8,7 @@ Children:
   - Name: DynamicLink
     Type: DynamicLink
     DataType: NodePath
-    Value: "../../../../CommDrivers/S7TIAPROFINETDriver2/S7TIAPROFINETStation1/Tags/51D20_PLC/DB91 - HMIToPlc/b_Rcp_CambioProd"
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/CambioProduzione"
     Children:
     - Name: Mode
       Type: BaseVariableType
@@ -17,4 +17,183 @@ Children:
 - Name: DB91_TerminaProduzione
   Type: BaseDataVariableType
   DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/TerminaProduzione"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_RiordinoProduzione
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/RiordinoProduzione"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckPezzoPersoPopup
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckPezzoPersoPopup"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckInvioProgrammaPressa
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckInvioProgrammaPressa"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckProgrammaPressaInviatoOK
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckProgrammaPressaInviatoOK"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckProgrammaPressaInviatoKO
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckProgrammaPressaInviatoKO"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckReqLoadProgramOK
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckReqLoadProgramOK"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AckReqLoadProgramKO
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AckReqLoadProgramKO"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_Livebit
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/Livebit"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_AbilitaSecomea
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/AbilitaSecomea"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_B_DoppioStile
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/B_DoppioStile"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_B_PresenzaOffline
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/B_PresenzaOffline"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_SceltaOPER_Spessore
+  Type: BaseDataVariableType
+  DataType: Int16
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/SceltaOPER_Spessore"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
+- Name: DB91_SceltaTipoMisuraSpessore
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Children:
+  - Name: DynamicLink
+    Type: DynamicLink
+    DataType: NodePath
+    Value: "../../../../CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/SceltaTipoMisuraSpessore"
+    Children:
+    - Name: Mode
+      Type: BaseVariableType
+      DataType: DynamicLinkMode
+      Value: 2
 - File: Ricetta/Ricetta.yaml

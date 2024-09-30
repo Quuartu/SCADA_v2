@@ -1,4 +1,0 @@
-Name: S7TIAPROFINETDriver2
-Type: S7TiaProfinetDriver
-Children:
-- File: S7TIAPROFINETStation1/S7TIAPROFINETStation1.yaml
