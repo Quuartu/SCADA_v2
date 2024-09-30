@@ -27,6 +27,7 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
           variabili di modello 
         */
         //DB91
+
         var modello000 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_CambioProduzione");
         var modello001 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_TerminaProduzione");
         var modello002 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_RiordinoProduzione");

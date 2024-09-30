@@ -106,6 +106,7 @@ public class script_maincycle : BaseNetLogic
 
                 break;
             case 1:
+               
                 //------------------------------------------------
                 MachineStatusText.Value = "Stato iniziale (IDLE)";
                 //------------------------------------------------
@@ -627,7 +628,7 @@ public class script_maincycle : BaseNetLogic
         Project.Current.GetVariable(VariablePaths.PathDB91_TerminaProduzione).Value = false;
 
         //azzera valori ricetta
-        Project.Current.GetVariable(VariablePaths.PathDB91RicettaProduct_ID).Value = "";
+        Project.Current.GetVariable(VariablePaths.PathDB91RicettaProduct_ID).Value = 0;
         Project.Current.GetVariable(VariablePaths.PathDB91RicettaDescrizione).Value = "";
         Project.Current.GetVariable(VariablePaths.PathDB91RicettaProgrammaRobot).Value = 0;
     }
