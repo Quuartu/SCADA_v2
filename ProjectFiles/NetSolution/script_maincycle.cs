@@ -17,6 +17,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.Alarm;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using System.Runtime.Intrinsics.Arm;
 #endregion
 
 public class script_maincycle : BaseNetLogic
@@ -38,7 +39,8 @@ public class script_maincycle : BaseNetLogic
 
         myPeriodicTask = new PeriodicTask(Maincycle, 250, LogicObject);
         myPeriodicTask.Start();
-    }
+
+}
 
     public override void Stop()
     {
@@ -76,6 +78,11 @@ public class script_maincycle : BaseNetLogic
         var DB92_CambioProduzioneOK     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK);
         var DB92_CambioProduzioneKO     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO);
         var DB92_AckTerminaProduzione   = Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione);
+        var DB92_PezziDepositati        = Project.Current.GetVariable(VariablePaths.PathDB92_PezziDepositati);
+        var DB92_PezziScarti            = Project.Current.GetVariable(VariablePaths.PathDB92_PezziScarti);
+
+        var Mem_PezziDepositati         = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziDepositati); 
+        var Mem_PezziScarti             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti); 
 
         var DBExpress = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
 
@@ -373,8 +380,31 @@ public class script_maincycle : BaseNetLogic
                 MachineStatusText.Value = "IN LAVORO";
                 //------------------------------------
 
-                //Aggiorno quantità pezzi
-                //TO DO...
+                //Aggiorno quantità pezzi prodotti
+                if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value) 
+                {
+                    var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+                    // Parte fissa della query
+                    string queryPart1 = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = ";
+                    Object[,] ResultSet;
+                    String[] Header;
+                    // Concatenazione con i valori dinamici
+                    string query = queryPart1 + "'" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    myStore.Query(query, out Header, out ResultSet);
+                    Mem_PezziDepositati.Value = DB92_PezziDepositati.Value;
+                } 
+                if (DB92_PezziScarti.Value != Mem_PezziScarti.Value)
+                {
+                    var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+                    // Parte fissa della query
+                    string queryPart1 = "UPDATE RecipeSchema2 SET \"/Total_Reject\" = ";
+                    Object[,] ResultSet;
+                    String[] Header;
+                    // Concatenazione con i valori dinamici
+                    string query = queryPart1 + "'" + DB92_PezziScarti.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    myStore.Query(query, out Header, out ResultSet);
+                    Mem_PezziScarti.Value = DB92_PezziScarti.Value;
+                }
 
                 //Richiesta fine produzione
                 if (pr_ButtonTerminaSelected.Value)

@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [116,3],
+    "Dimensions": [117,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -126,6 +126,7 @@ Children:
      "Date_elab","Date_Elab","Data_Elab",
      "Date_Update","Date_Update","Data_Update",
      "Production_Command","Production_Command","Ordine_di_Produzione",
-     "Status","Status","Stato"
+     "Status","Status","Stato",
+     "COMANDI MANUALI","MANUAL CONTROLS","COMANDI MANUALI"
     ]
    }

@@ -76,6 +76,8 @@ public static class VariablePaths
     public const string PathDB92_CambioProduzioneKO                 = "Model/Drivers/DB92/DB92_CambioProduzioneKO";
     public const string PathDB92_AckTerminaProduzione               = "Model/Drivers/DB92/DB92_AckTerminaProduzione";
     public const string PathDB92_ProduzioneInCorso                  = "Model/Drivers/DB92/DB92_ProduzioneInCorso";
+    public const string PathDB92_PezziDepositati                    = "Model/Drivers/DB92/DB92_PezziDepositati";
+    public const string PathDB92_PezziScarti                        = "Model/Drivers/DB92/DB92_PezziScarti";
 
     //ricetta
     public const string PathDB91RicettaProduct_ID                   = "Model/Drivers/DB91/Ricetta/Product_ID";
@@ -121,4 +123,7 @@ public static class VariablePaths
     public const string Pathsp_ProgramList                          = "Model/popup_selezionaprogramma/sp_ProgramList";
 
     public const string Path_DBEXpress                              = "Model/DB";
+
+    public const string Path_Mem_PezziDepositati                    = "Model/Mem_PezziDepositati";
+    public const string Path_Mem_PezziScarti                        = "Model/Mem_PezziScarti";
 }

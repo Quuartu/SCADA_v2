@@ -23,3 +23,9 @@ Children:
   Type: BaseDataVariableType
   DataType: Boolean
   Value: true
+- Name: Mem_PezziDepositati
+  Type: BaseDataVariableType
+  DataType: UInt32
+- Name: Mem_PezziScarti
+  Type: BaseDataVariableType
+  DataType: UInt32

@@ -64,6 +64,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var modello060 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_ProduzioneInCorso");
         var modello061 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_InviaProgrammaAPressa");
         var modello062 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_Livebit");
+        var modello063 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_PezziDepositati");
+        var modello064 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_PezziScarti");
         // Allarmi
         var modello080 = Project.Current.GetVariable("Model/Alarms/Alm1");
         var modello081 = Project.Current.GetVariable("Model/Alarms/Alm2");
@@ -169,6 +171,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var varPLC060 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/ProduzioneInCorso");
         var varPLC061 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/InviaProgrammaAPressa");
         var varPLC062 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/Livebit");
+        var varPLC063 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/PezziDepositati");
+        var varPLC064 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/PezziScarti");
         // Allarmi
         var varPLC080 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_1");
         var varPLC081 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_2");
@@ -271,6 +275,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         modello060.SetDynamicLink(varPLC060, DynamicLinkMode.ReadWrite);
         modello061.SetDynamicLink(varPLC061, DynamicLinkMode.ReadWrite);
         modello062.SetDynamicLink(varPLC062, DynamicLinkMode.ReadWrite);
+        modello063.SetDynamicLink(varPLC063, DynamicLinkMode.ReadWrite);
+        modello064.SetDynamicLink(varPLC064, DynamicLinkMode.ReadWrite);
         modello080.SetDynamicLink(varPLC080, DynamicLinkMode.ReadWrite);
         modello081.SetDynamicLink(varPLC081, DynamicLinkMode.ReadWrite);
         modello082.SetDynamicLink(varPLC082, DynamicLinkMode.ReadWrite);
