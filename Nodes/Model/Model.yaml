@@ -29,3 +29,6 @@ Children:
 - Name: Mem_PezziScarti
   Type: BaseDataVariableType
   DataType: UInt32
+- Name: Mem_QtaRiordino
+  Type: BaseDataVariableType
+  DataType: Int32

@@ -3,3 +3,7 @@ Type: FolderType
 Children:
 - File: DB91/DB91.yaml
 - File: DB92/DB92.yaml
+- Name: Extra_Produzione
+  Id: g=0f6edc1e5680e56b786267e688ecaf99
+  Type: BaseDataVariableType
+  DataType: Boolean

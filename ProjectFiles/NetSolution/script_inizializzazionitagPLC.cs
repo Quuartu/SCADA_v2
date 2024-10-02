@@ -62,6 +62,8 @@ public static class VariablePaths
     public const string PathPopupYes                                = "Model/Popup/PopupYes";
     public const string PathPopupNo                                 = "Model/Popup/PopupNo";
 
+    public const string PathOpenEXTRA                               = "Model/Popup/OpenPopUpExtraProduzione";
+
     public const string PathMachineStatusText                       = "Model/MacchinaStati/MachineStatusText";
     public const string PathMachineStatus                           = "Model/MacchinaStati/MachineStatus";
     public const string PathOdlStart                                = "Model/Produzione/OdlStart"; 
@@ -71,6 +73,7 @@ public static class VariablePaths
 
     public const string PathDB91_CambioProduzione                   = "Model/Drivers/DB91/DB91_CambioProduzione";
     public const string PathDB91_TerminaProduzione                  = "Model/Drivers/DB91/DB91_TerminaProduzione";
+    public const string PathDB91_RiordinoProduzione                 = "Model/Drivers/DB91/DB91_RiordinoProduzione";
     public const string PathDB92_ODP                                = "Model/Drivers/DB92/DB92_ODP";
     public const string PathDB92_CambioProduzioneOK                 = "Model/Drivers/DB92/DB92_CambioProduzioneOK";
     public const string PathDB92_CambioProduzioneKO                 = "Model/Drivers/DB92/DB92_CambioProduzioneKO";
@@ -78,6 +81,7 @@ public static class VariablePaths
     public const string PathDB92_ProduzioneInCorso                  = "Model/Drivers/DB92/DB92_ProduzioneInCorso";
     public const string PathDB92_PezziDepositati                    = "Model/Drivers/DB92/DB92_PezziDepositati";
     public const string PathDB92_PezziScarti                        = "Model/Drivers/DB92/DB92_PezziScarti";
+    public const string PathDB92_QtaRiordino                        = "Model/Drivers/DB92/DB92_QtaRiordino";
 
     //ricetta
     public const string PathDB91RicettaProduct_ID                   = "Model/Drivers/DB91/Ricetta/Product_ID";
@@ -126,4 +130,7 @@ public static class VariablePaths
 
     public const string Path_Mem_PezziDepositati                    = "Model/Mem_PezziDepositati";
     public const string Path_Mem_PezziScarti                        = "Model/Mem_PezziScarti";
+    public const string Path_Mem_QtaRiordino                        = "Model/Mem_QtaRiordino";
+    public const string Path_ExtraProduzione                        = "Model/Drivers/Extra_Produzione";
+    public const string Path_QuantityExtraProduction                = "Model/Produzione/Quantity_ExtraProduction";
 }

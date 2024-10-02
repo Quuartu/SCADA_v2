@@ -22,3 +22,7 @@ Children:
   Id: g=d264b93421aec7cf504bf492a91ec907
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: OpenPopUpExtraProduzione
+  Id: g=e258934f7892aa08d81c8b2fdbc95018
+  Type: BaseDataVariableType
+  DataType: Boolean

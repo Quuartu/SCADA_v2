@@ -18,6 +18,7 @@ using FTOptix.Alarm;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
 using System.Runtime.Intrinsics.Arm;
+using System.Reflection.PortableExecutable;
 #endregion
 
 public class script_maincycle : BaseNetLogic
@@ -74,17 +75,24 @@ public class script_maincycle : BaseNetLogic
 
         var DB91_CambioProduzione       = Project.Current.GetVariable(VariablePaths.PathDB91_CambioProduzione);
         var DB91_TerminaProduzione      = Project.Current.GetVariable(VariablePaths.PathDB91_TerminaProduzione);
+        var DB91_RiordinoProduzione     = Project.Current.GetVariable(VariablePaths.PathDB91_RiordinoProduzione);
+
         var DB92_ODP                    = Project.Current.GetVariable(VariablePaths.PathDB92_ODP);
         var DB92_CambioProduzioneOK     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK);
         var DB92_CambioProduzioneKO     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO);
         var DB92_AckTerminaProduzione   = Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione);
         var DB92_PezziDepositati        = Project.Current.GetVariable(VariablePaths.PathDB92_PezziDepositati);
         var DB92_PezziScarti            = Project.Current.GetVariable(VariablePaths.PathDB92_PezziScarti);
+        var DB92_QtaRiordino            = Project.Current.GetVariable(VariablePaths.PathDB92_QtaRiordino);
 
         var Mem_PezziDepositati         = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziDepositati); 
-        var Mem_PezziScarti             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti); 
+        var Mem_PezziScarti             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti);
+        var Mem_QtaRiordino             = Project.Current.GetVariable(VariablePaths.Path_Mem_QtaRiordino);
 
-        var DBExpress = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
+        var Extra_Produzione            = Project.Current.GetVariable(VariablePaths.Path_ExtraProduzione);
+        var Quantity_ExtraProduzione    = Project.Current.GetVariable(VariablePaths.Path_QuantityExtraProduction);
+
+        var DBExpress                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
 
 
         //casi macchina a stati
@@ -294,6 +302,33 @@ public class script_maincycle : BaseNetLogic
 
                 break;
 
+            case 50:
+                //------------------------------------------------------------------------------------
+                MachineStatusText.Value = "Attesa richiesta caricamento progamma pressa da PLC/Robot";
+                //------------------------------------------------------------------------------------
+
+                //???
+
+                break;
+
+            case 55:
+                //-----------------------------------------------------------------------
+                MachineStatusText.Value = "Caricamento progamma in pressa e invio ok/ko al PLC";
+                //-----------------------------------------------------------------------
+
+                //???
+
+                break;
+
+            case 60:
+                //------------------------------------------------------
+                MachineStatusText.Value = "Attesa reset Richiesta caricamento pressa da PLC";
+                //------------------------------------------------------
+                
+                //???
+                
+                break;
+
             case 70:
                 //------------------------------------------------------
                 MachineStatusText.Value = "Attesa esito da PLC - ok/ko";
@@ -380,39 +415,116 @@ public class script_maincycle : BaseNetLogic
                 MachineStatusText.Value = "IN LAVORO";
                 //------------------------------------
 
-                //Aggiorno quantità pezzi prodotti
-                if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value) 
+                var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+
+                // Aggiorno quantità pezzi prodotti, scarti e quantità riordino
+                if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value || DB92_PezziScarti.Value != Mem_PezziScarti.Value || DB92_QtaRiordino.Value != Mem_QtaRiordino.Value)
                 {
-                    var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
-                    // Parte fissa della query
-                    string queryPart1 = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = ";
                     Object[,] ResultSet;
                     String[] Header;
-                    // Concatenazione con i valori dinamici
-                    string query = queryPart1 + "'" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
-                    myStore.Query(query, out Header, out ResultSet);
-                    Mem_PezziDepositati.Value = DB92_PezziDepositati.Value;
-                } 
-                if (DB92_PezziScarti.Value != Mem_PezziScarti.Value)
-                {
-                    var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
-                    // Parte fissa della query
-                    string queryPart1 = "UPDATE RecipeSchema2 SET \"/Total_Reject\" = ";
-                    Object[,] ResultSet;
-                    String[] Header;
-                    // Concatenazione con i valori dinamici
-                    string query = queryPart1 + "'" + DB92_PezziScarti.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
-                    myStore.Query(query, out Header, out ResultSet);
-                    Mem_PezziScarti.Value = DB92_PezziScarti.Value;
+
+                    // Aggiorno quantità pezzi prodotti
+                    if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value)
+                    {
+                        string query = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = '" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                        myStore.Query(query, out Header, out ResultSet);
+                        Mem_PezziDepositati.Value = DB92_PezziDepositati.Value;
+                    }
+                    // Aggiorno quantità scarti
+                    if (DB92_PezziScarti.Value != Mem_PezziScarti.Value)
+                    {
+                        string query = "UPDATE RecipeSchema2 SET \"/Total_Reject\" = '" + DB92_PezziScarti.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                        myStore.Query(query, out Header, out ResultSet);
+                        Mem_PezziScarti.Value = DB92_PezziScarti.Value;
+                    }
+                    // Aggiorno quantità di riordino
+                    if (DB92_QtaRiordino.Value != Mem_QtaRiordino.Value)
+                    {
+                        string query = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = '" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                        myStore.Query(query, out Header, out ResultSet);
+                        Mem_QtaRiordino.Value = DB92_QtaRiordino.Value;
+                    }
                 }
 
-                //Richiesta fine produzione
+                Object[,] ResultSetExtra;
+                String[] HeaderExtra;
+                string queryPartE = "SELECT \"/Quantità\", \"/Extra_Production\" FROM RecipeSchema2";
+                string queryE = queryPartE + " WHERE \"/ID\" = '" + OdlStartLong + "'";
+                myStore.Query(queryE, out HeaderExtra, out ResultSetExtra);
+                int quantityRequested = Convert.ToInt32(ResultSetExtra[0, 0]);
+                int extraProduction = Convert.ToInt32(ResultSetExtra[0, 1]);
+
+                //Richiesta per extra-produzione
+                if (DB92_PezziDepositati.Value >= quantityRequested + extraProduction)
+                {
+                    //Cambio stato
+                    MachineStatus.Value = 110;
+                }
+
+                //Richiesta fine produzione 
                 if (pr_ButtonTerminaSelected.Value)
                 {
                     pr_ButtonTerminaSelected.Value = false;
 
                     //Cambio stato
                     MachineStatus.Value = 148;
+                }
+
+                break;
+
+            case 110:
+                //------------------------------------------------------------
+                MachineStatusText.Value = "Popup di conferma extra-produzione";
+                //------------------------------------------------------------
+
+                //popup di conferma chiusura ordine
+                var openExtra = Project.Current.GetVariable(VariablePaths.PathOpenEXTRA);
+                openExtra.Value = true;
+
+                //Cambio stato
+                MachineStatus.Value = 111;
+
+                break;
+
+            case 111:
+                //-------------------------------------------------------------
+                MachineStatusText.Value = "Attesa di conferma extra-produzione";
+                //-------------------------------------------------------------
+
+                var myStoreE = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+
+                //Richiesta fine produzione 
+                if (pr_ButtonTerminaSelected.Value)
+                {
+                    pr_ButtonTerminaSelected.Value = false;
+
+                    DB91_TerminaProduzione.Value = true;
+                    //Cambio stato
+                    MachineStatus.Value = 150;
+                }
+
+                //Ritorno in produzione
+                if (Extra_Produzione.Value)
+                {
+                    Extra_Produzione.Value = false;
+                    DB91_RiordinoProduzione.Value = true;
+
+                    Object[,] ResultSetOldExtra;
+                    String[] HeaderOldExtra;
+                    string queryPartOldE = "SELECT \"/Extra_Production\" FROM RecipeSchema2";
+                    string queryOldE = queryPartOldE + " WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    myStoreE.Query(queryOldE, out HeaderOldExtra, out ResultSetOldExtra);
+                    int OldExtraProduction = Convert.ToInt32(ResultSetOldExtra[0, 0]);
+                    Object[,] ResultSet;
+                    String[] Header;
+
+                    Quantity_ExtraProduzione.Value = Quantity_ExtraProduzione.Value + OldExtraProduction;
+
+                    string query = "UPDATE RecipeSchema2 SET \"/Extra_Production\" = '" + Quantity_ExtraProduzione.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    myStoreE.Query(query, out Header, out ResultSet);
+                    
+                    //Cambio stato
+                    MachineStatus.Value = 100;
                 }
 
                 break;

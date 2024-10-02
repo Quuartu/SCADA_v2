@@ -6883,10 +6883,11 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Extra_Production"}
+          Value: {"LocaleId":"en-US","Text":"Extra_Production"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
+          Value: -1.0
         - Name: HeaderAlignment
           Type: BaseDataVariableType
           DataType: TextHorizontalAlignment
@@ -7307,6 +7308,14 @@ Children:
         - Name: Severity
           Type: PropertyType
           DataType: UInt16
+    - Name: AllowMultiSelection
+      Type: BaseDataVariableType
+      DataType: Boolean
+      AccessLevel: Read
+    - Name: SortOrder
+      Type: BaseDataVariableType
+      DataType: SortOrderEnum
+      ModellingRule: Optional
   - Name: BtnNuovoClienteToReaGrid
     Type: Button
     Children:
@@ -8321,90 +8330,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 950.0
-  - Name: ConfirmationDialogEliminaClienteToReaLocale
-    Type: ConfirmationDialogContext
-    Children:
-    - Name: OnConfirm
-      Type: MethodInvocation
-      Children:
-      - Class: Reference
-        Target: ns=2;i=98
-        Direction: Forward
-      - Name: ObjectPointer
-        Type: NodePointer
-        DataType: NodeId
-        Value: {"IdType":2,"Id":"866396445a82801dfd7294ea72d8c8b4","Namespace":7}
-        Children:
-        - Name: Kind
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/ObjectTypes/BaseObjectType"
-      - Name: Method
-        Type: BaseDataVariableType
-        DataType: String
-        Value: "Delete"
-      - Name: InputArguments
-        Type: BaseObjectType
-        Children:
-        - Name: RecipeName
-          Type: BaseDataVariableType
-          DataType: String
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "{RecipeSchema2}/Odp"
-    - Name: OnCancel
-      Type: MethodInvocation
-      Children:
-      - Class: Reference
-        Target: ns=2;i=98
-        Direction: Forward
-      - Name: ObjectPointer
-        Type: NodePointer
-        DataType: NodeId
-        Children:
-        - Name: Kind
-          Type: PropertyType
-          DataType: NodeId
-          Value: "/Types/ObjectTypes/BaseObjectType"
-      - Name: Method
-        Type: BaseDataVariableType
-        DataType: String
-    - Name: Message
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: StringFormatter1
-        Type: StringFormatter
-        Children:
-        - Name: Format
-          Type: BaseDataVariableType
-          DataType: LocalizedText
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: {"NamespaceIndex":7,"TextId":"Procedere con l'eliminazione della produzione {0}?"}
-        - Name: ns=2;Source0
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "/Objects/SCADA/Model/Produzione/rowIdSelected"
-            Children:
-            - Name: Mode
-              Type: BaseVariableType
-              DataType: DynamicLinkMode
-              ModellingRule: Optional
-              Value: 2
-        - Name: Mode
-          Type: PropertyType
-          DataType: DynamicLinkMode
-          ReferenceType: HasComponent
-          ModellingRule: Optional
-          Value: 2
   - Name: ConfirmationDialogAvviaClienteToRea
     Type: ConfirmationDialogContext
     Children:
@@ -19261,7 +19186,7 @@ Children:
       DataType: Color
       ModellingRule: Optional
       Value: "#06344b"
-  - Name: Panel1
+  - Name: PannelExpress
     Type: Panel
     Children:
     - Name: Width
@@ -19369,7 +19294,7 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 23.0
-  - Name: Panel2
+  - Name: PannelFullScreen
     Type: Panel
     Children:
     - Name: Width
