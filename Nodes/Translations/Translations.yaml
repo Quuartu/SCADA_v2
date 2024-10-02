@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [117,3],
+    "Dimensions": [130,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -23,7 +23,7 @@ Children:
      "LoginChangePasswordFormUserNotFound","User not found","Utente non trovato",
      "Password","Password","",
      "Login","Login","",
-     "Your password is expired. Please enter a new one","Your password is expired.\nPlease enter a new one.","La password è scaduta. Inseriscine una nuova",
+     "Your password is expired. Please enter a new one","Your password is expired. Please enter a new one.","La password è scaduta. Inseriscine una nuova",
      "LoginFormAuthenticationFailed","Authentication failed","Autenticazione fallita",
      "Change password","Change password","Cambia password",
      "Old password","Old password","Vecchia password",
@@ -127,6 +127,19 @@ Children:
      "Date_Update","Date_Update","Data_Update",
      "Production_Command","Production_Command","Ordine_di_Produzione",
      "Status","Status","Stato",
-     "COMANDI MANUALI","MANUAL CONTROLS","COMANDI MANUALI"
+     "COMANDI MANUALI","MANUAL CONTROLS","COMANDI MANUALI",
+     "Confermi di voler avviare l'extra produzione?","Do you confirm that you want to start extra production?","Confermi di voler avviare l'extra produzione?",
+     "Confermi di voler avviare la produzione {0}?","Do you confirm that you want to start production {0}?","Confermi di voler avviare la produzione {0}?",
+     "Configurazioni","Configurations","Configurazioni",
+     "Extra Produzione","Extra Production","Extra Produzione",
+     "Extra_Produzione","Extra_Production","Extra_Produzione",
+     "Produzione Extra:","Extra Production:","Produzione Extra:",
+     "ProduzioneInCorso","ProductionInProgress","ProduzioneInCorso",
+     "Quantità Prodotta:","Quantity produced:","Quantità Prodotta:",
+     "ResetProduction","ResetProduction","ResetProduzione",
+     "Sei sicuro di voler eliminare il seguente ordine?","Are you sure you want to delete the following order?","Sei sicuro di voler eliminare il seguente ordine?",
+     "Sei sicuro di voler eliminare l'articolo selezionato?","Are you sure you want to delete the selected item?","Sei sicuro di voler eliminare l'articolo selezionato?",
+     "STATO MACCHINA","STATE MACHINE","STATO MACCHINA",
+     "Totale Scarti","Total Scraps","Totale Scarti"
     ]
    }

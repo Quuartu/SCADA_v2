@@ -23,6 +23,9 @@ Children:
   Type: BaseDataVariableType
   DataType: Boolean
   Value: true
+- Name: ExtraP
+  Type: BaseDataVariableType
+  DataType: Boolean
 - Name: Mem_PezziDepositati
   Type: BaseDataVariableType
   DataType: UInt32

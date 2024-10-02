@@ -1282,7 +1282,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Configurazioni"}
+        Value: {"NamespaceIndex":7,"TextId":"Configurazioni"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -3331,6 +3331,192 @@ Children:
         DataType: TextVerticalAlignment
         ModellingRule: Optional
         Value: 1
+    - Name: StatusLed1
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 850.0
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#34f924f2"
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/DB"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#3efb3e"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#f8e71c"
+      - Name: CornerRadius
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Blink
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: StatusLed2
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 850.0
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#34f924f2"
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/DB"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#f8e71c"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#3efb3e"
+      - Name: CornerRadius
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Blink
+        Type: BaseDataVariableType
+        DataType: Boolean
+    - Name: Label2
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"OBDC / SQLite : Communication Established"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 850.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 140.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#ffffff"
+      - Name: WordWrap
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ModellingRule: Optional
+        Value: true
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 40.0
+      - Name: TextVerticalAlignment
+        Type: BaseVariableType
+        DataType: TextVerticalAlignment
+        ModellingRule: Optional
+        Value: 1
   - Name: PanelLoaderScreens
     Type: PanelLoader
     Children:
@@ -3451,17 +3637,16 @@ Children:
     - Name: Path
       Type: BaseDataVariableType
       DataType: ResourceUri
-      Value: "ns=7;%PROJECTDIR%/Impianto.png"
+      Value: "ns=7;%PROJECTDIR%/prg10021.png"
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
+      Value: 50.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
@@ -3476,58 +3661,55 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
+      Value: 50.0
     - Name: BottomMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 100.0
+      Value: 50.0
     - Name: Height
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 660.0
+      Value: 60.0
     - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 1110.0
-    - Name: Ellipse1
-      Type: Ellipse
+      Value: -90.0
+    - Name: PolyLine1
+      Type: PolyLine
       Children:
-      - Name: Width
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 20.0
-      - Name: Height
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 20.0
-      - Name: BorderThickness
+      - Name: LineThickness
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
         Value: 1.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 320.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 490.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 760.0
+        Value: 510.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
-      - Name: Blink
+        Value: 410.0
+      - Name: Path
         Type: BaseDataVariableType
-        DataType: Boolean
+        DataType: String
         ModellingRule: Optional
-      - Name: FillColor
-        Type: BaseDataVariableType
-        DataType: Color
-        ModellingRule: Optional
+        Value: "M 310.000000 0.000000 L 0.000000 490.000000"
     - Name: Ellipse2
       Type: Ellipse
       Children:
@@ -3550,22 +3732,105 @@ Children:
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 760.0
+        Value: 820.0
       - Name: TopMargin
         Type: BaseVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 260.0
+        Value: 400.0
+      - Name: Blink
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/Produzione/ProduzioneInCorso"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: true
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#34f924f2"
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/Produzione/ProduzioneInCorso"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#3efb3e"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#f8e71c"
+    - Name: Ellipse1
+      Type: Ellipse
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 820.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 400.0
       - Name: Blink
         Type: BaseDataVariableType
         DataType: Boolean
         ModellingRule: Optional
-        Value: true
       - Name: FillColor
         Type: BaseDataVariableType
         DataType: Color
         ModellingRule: Optional
-        Value: "#34f924f2"
   - Name: HorizontalAlignment
     Type: BaseVariableType
     DataType: HorizontalAlignment
@@ -3574,154 +3839,6 @@ Children:
     Type: BaseVariableType
     DataType: VerticalAlignment
     ModellingRule: Optional
-  - Name: Ellipse3
-    Type: Ellipse
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: BorderThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 580.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 520.0
-    - Name: Blink
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-  - Name: Ellipse4
-    Type: Ellipse
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: BorderThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 580.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 520.0
-    - Name: Blink
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-      Value: true
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-      Value: "#f8e71c"
-  - Name: Ellipse2
-    Type: Ellipse
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: BorderThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 800.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 610.0
-    - Name: Blink
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-      Value: true
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-      Value: "#34f924f2"
-  - Name: Ellipse1
-    Type: Ellipse
-    Children:
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: Height
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 20.0
-    - Name: BorderThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 800.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 610.0
-    - Name: Blink
-      Type: BaseDataVariableType
-      DataType: Boolean
-      ModellingRule: Optional
-    - Name: FillColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
   - Name: PannelloStato
     Type: Panel
     Children:
@@ -4008,7 +4125,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"STATO MACCHINA"}
+          Value: {"NamespaceIndex":7,"TextId":"STATO MACCHINA"}
         - Name: TextHorizontalAlignment
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
@@ -4066,6 +4183,36 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 3
+  - Name: PolyLine1
+    Type: PolyLine
+    Children:
+    - Name: LineThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1.0
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 560.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 1020.0
+    - Name: Path
+      Type: BaseDataVariableType
+      DataType: String
+      ModellingRule: Optional
 - Name: Produzione
   Id: g=1b26b501cdd080a487235a03a43de7b0
   Supertype: Screen
@@ -4466,7 +4613,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Extra_Production"}
+          Value: {"NamespaceIndex":7,"TextId":"Extra_Produzione"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -6067,7 +6214,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Confermi di voler avviare la produzione {0}?"}
+          Value: {"NamespaceIndex":7,"TextId":"Confermi di voler avviare la produzione {0}?"}
         - Name: ns=2;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -6429,7 +6576,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"STATO MACCHINA"}
+          Value: {"NamespaceIndex":7,"TextId":"STATO MACCHINA"}
         - Name: TextHorizontalAlignment
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
@@ -6883,7 +7030,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"en-US","Text":"Extra_Production"}
+          Value: {"NamespaceIndex":7,"TextId":"Extra_Produzione"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -8392,7 +8539,7 @@ Children:
           DataType: LocalizedText
           ReferenceType: HasParameter
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Confermi di voler avviare la produzione {0}?"}
+          Value: {"NamespaceIndex":7,"TextId":"Confermi di voler avviare la produzione {0}?"}
         - Name: ns=2;Source0
           Type: BaseDataVariableType
           DataType: BaseDataType
@@ -8754,7 +8901,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"STATO MACCHINA"}
+          Value: {"NamespaceIndex":7,"TextId":"STATO MACCHINA"}
         - Name: TextHorizontalAlignment
           Type: BaseVariableType
           DataType: TextHorizontalAlignment
@@ -8812,70 +8959,6 @@ Children:
           DataType: VerticalAlignment
           ModellingRule: Optional
           Value: 3
-  - Name: TextBox1
-    Type: TextBox
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/SCADA/Model/Drivers/DB92/DB92_PezziDepositati"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 110.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 820.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 60.0
-  - Name: TextBox2
-    Type: TextBox
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/SCADA/CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/PezziDepositati"
-        Children:
-        - Name: Mode
-          Type: BaseVariableType
-          DataType: DynamicLinkMode
-          ModellingRule: Optional
-          Value: 2
-    - Name: Width
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 110.0
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 970.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 60.0
 - Name: Articoli
   Id: g=9393c538ff47886c9647ba067b331f75
   Supertype: Screen
@@ -11469,7 +11552,7 @@ Children:
     - Name: Message
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"LocaleId":"en-US","Text":"Sei sicuro di voler eliminare l'articolo selezionato?"}
+      Value: {"NamespaceIndex":7,"TextId":"Sei sicuro di voler eliminare l'articolo selezionato?"}
 - Name: ArticoliLocale
   Id: g=c94baa87ab6c7b80978deb638943d010
   Supertype: Screen
@@ -14025,7 +14108,7 @@ Children:
     - Name: Message
       Type: BaseDataVariableType
       DataType: LocalizedText
-      Value: {"LocaleId":"en-US","Text":"Sei sicuro di voler eliminare l'articolo selezionato?"}
+      Value: {"NamespaceIndex":7,"TextId":"Sei sicuro di voler eliminare l'articolo selezionato?"}
   - Name: TextBox1
     Type: TextBox
     Children:
@@ -19420,6 +19503,132 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "{Session}/Groups/Sviluppatori"
+  - Name: PannelExtraProd
+    Type: Panel
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 280.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 90.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 270.0
+    - Name: Rectangle1
+      Type: Rectangle
+      Children:
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: BorderThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 1.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: VerticalAlignment
+        Type: BaseVariableType
+        DataType: VerticalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#06344b"
+      - Name: CornerRadius
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Groups/Sviluppatori"
+    - Name: Checkbox1
+      Type: CheckBox
+      Children:
+      - Name: Checked
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/SCADA/Model/ExtraP"
+          Children:
+          - Name: Mode
+            Type: BaseVariableType
+            DataType: DynamicLinkMode
+            ModellingRule: Optional
+            Value: 2
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"NamespaceIndex":7,"TextId":"Extra Produzione"}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 240.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 23.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Groups/Sviluppatori"
 - Name: StoricoAllarmi
   Id: g=c8dda8e718b574278da9eac994586a55
   Supertype: Screen
@@ -19876,7 +20085,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Totale Scarti"}
+          Value: {"NamespaceIndex":7,"TextId":"Totale Scarti"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size
@@ -19912,7 +20121,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"LocaleId":"it-IT","Text":"Extra Produzione"}
+          Value: {"NamespaceIndex":7,"TextId":"Extra Produzione"}
         - Name: Width
           Type: BaseDataVariableType
           DataType: Size

@@ -488,7 +488,7 @@ public class script_maincycle : BaseNetLogic
 
             case 111:
                 //-------------------------------------------------------------
-                MachineStatusText.Value = "Attesa di conferma extra-produzione";
+                MachineStatusText.Value = "Attesa di conferma";
                 //-------------------------------------------------------------
 
                 var myStoreE = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");

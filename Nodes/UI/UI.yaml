@@ -180,6 +180,25 @@ Children:
         Type: BaseDataVariableType
         DataType: Color
         Value: "#06344b"
+    - Name: InputBoxStyle2
+      Type: InputBoxStyle
+      Children:
+      - Name: BorderColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#020202"
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#020202"
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 14.0
   - Name: SwitchStyles
     Type: BaseObjectType
     Children:
