@@ -104,3 +104,9 @@ Children:
     Type: BehaviourStartPriorityVariableType
     DataType: Byte
     Value: 180
+- Name: RuntimeNetLogic3
+  Id: g=85fad7b6a68ce456d18c327c1e57346d
+  Type: NetLogic
+  Children:
+  - Class: Method
+    Name: prova
