@@ -182,7 +182,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
                 }
                 else
                 {
-                    short status_running = 100;
+                    int status_running = 100;
                     if (result[i, (result.GetLength(1) - 1)].Equals(status_running))
                     {
                         //esegui query
