@@ -432,6 +432,51 @@ Children:
         - Name: /Robot_Program
           Type: StoreColumn
           DataType: Int32
+    - Name: RecipeSchema3
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=15;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=15;i=20
+        Direction: Forward
+      - Name: Columns
+        Type: BaseObjectType
+        Children:
+        - Name: Name
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Production_Command
+          Type: StoreColumn
+          DataType: String
+        - Name: /Product_ID
+          Type: StoreColumn
+          DataType: String
+        - Name: /dt_start
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /dt_end
+          Type: StoreColumn
+          DataType: DateTime
+        - Name: /Quantity_Requested
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Quantity_Produced
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Total_Reject
+          Type: StoreColumn
+          DataType: Int32
+        - Name: /Extra_Production
+          Type: StoreColumn
+          DataType: Int32
   - Class: Reference
     Target: ns=27;i=30
     Direction: Forward
@@ -514,9 +559,21 @@ Children:
         ValueRank: OneDimension
         ArrayDimensions: [0]
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"id","DataType":{"Id":8},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+    - Class: Method
+      Name: pr_EliminaLocale
+      Children:
+      - Name: ns=0;InputArguments
+        Type: BaseVariableType
+        DataType: Argument
+        ReferenceType: HasProperty
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+        Value: [{"TypeId":{"Id":296},"Body":{"Name":"id","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
   - Name: RuntimeNetLogicAnagraficaLocale
     Type: NetLogic
   - Name: Filename
     Type: BaseDataVariableType
     DataType: String
     Value: "DB_Locale"
+  - Name: RuntimeNetLogicReaToClienteStoricoLocale
+    Type: NetLogic

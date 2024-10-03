@@ -151,8 +151,8 @@ public class RecipeController : BaseNetLogic
             // Inserimento nella tabella
             var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
             var myTable = myStore.Tables.Get<Table>("RecipeSchema2");
-            string[] columns = { "Name", "/Odp", "/NomeArticolo", "/Date_Insert", "/Quantità", "/Status" };
-            var values = new object[1, 6];
+            string[] columns = { "Name", "/Odp", "/NomeArticolo", "/Date_Insert", "/Quantità", "/Extra_Production", "/Total_Reject", "/Status" };
+            var values = new object[1, 8];
 
             values[0, 0] = Odp;
             values[0, 1] = Odp;
@@ -160,6 +160,8 @@ public class RecipeController : BaseNetLogic
             values[0, 3] = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fffffffK"); 
             values[0, 4] = quantità;
             values[0, 5] = 0;
+            values[0, 6] = 0;
+            values[0, 7] = 0;
 
             // Eseguire la query di inserimento
             myTable.Insert(columns, values);

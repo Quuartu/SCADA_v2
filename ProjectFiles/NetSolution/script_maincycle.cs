@@ -612,8 +612,8 @@ public class script_maincycle : BaseNetLogic
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
 
                     //sposto su storico e elimino record
-                    //_prodLocale.pr_TerminateAllRunningLocale();
-                    //_prodLocale.pr_EliminaLocale(OdlStart.Value);
+                    _prodLocale.pr_TerminateAllRunningLocale();
+                    _prodLocale.pr_EliminaLocale(OdlStart.Value);
 
                     //reset variabili
                     ResetHMIProductVar();

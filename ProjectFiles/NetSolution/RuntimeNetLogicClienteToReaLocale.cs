@@ -37,7 +37,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     /// </summary>
     private Table _table;
 
-    //private RuntimeNetLogicReaToClienteStorico _storicoprod;
+    private RuntimeNetLogicReaToClienteStoricoLocale _storicoprod;
 
     public override void Start()
     {
@@ -49,6 +49,24 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
         // Insert code to be executed when the user-defined logic is stopped
     }
 
+
+    /// <summary>
+    /// Pulsante Elimina: prende in ingresso l'id prodotto da eliminare
+    /// </summary>
+    [ExportMethod]
+    public void pr_EliminaLocale(int id)
+    {
+        _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
+        // Perform the query
+        _store.Query($"DELETE FROM {TABLE_NAME} WHERE \"/ID\" = {id}", out _, out _);
+        Project.Current.GetVariable(VariablePaths.PathQueryProduzione).Value = $"SELECT * FROM {TABLE_NAME}";
+        //Project.Current.GetVariable("Model/Produzione/QueryProduzione").Value = $"SELECT t.*, CASE t.Status when 0 THEN 'DA ELABORARE' WHEN 25 then 'IN AVVIO' WHEN 100 then 'IN LAVORO' when 180 then 'ERRORE KO PLC' when 190 then 'ANNULLAMENTO DA USER' end FROM {TABLE_NAME} t";
+
+        //ripulisci, solo pulsanti Nuovo e Storico Produzione sono abilitati
+        pr_UndoLocale();
+
+    }
+
     /// <summary>
     /// Avvia produzione
     /// </summary>
@@ -58,6 +76,22 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
         Project.Current.GetVariable(VariablePaths.PathOdlStart).Value = id;
         Project.Current.GetVariable(VariablePaths.Pathap_start).Value = true;
     }
+
+    /// <summary>
+    /// Resetta le variabili della pagina
+    /// </summary>
+    private void pr_UndoLocale()
+    {
+        //reset dei pulsanti della pagina di produzione
+        Project.Current.GetVariable(VariablePaths.PathProduzioneAvviaEnabled).Value = false;
+        Project.Current.GetVariable(VariablePaths.PathProduzioneEliminaEnabled).Value = false;
+        Project.Current.GetVariable(VariablePaths.PathProduzioneTerminaEnabled).Value = false;
+
+        //reset delle text box
+        Project.Current.GetVariable(VariablePaths.PathProduzioneNuovaProduzioneOdp).Value = "";
+        Project.Current.GetVariable(VariablePaths.PathProduzioneNuovaProduzioneNomeArticolo).Value = "";
+    }
+
 
     /// <summary>
     /// Controlla l'abilitazione dei pulsanti a seconda dello stato
@@ -225,6 +259,36 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
             Log.Warning($"Error pr_GetByIdLocale: {ex}");
             return prod;
         }
+    }
+
+    /// <summary>
+    /// Recupera i dati delle produzioni terminate e li sposta nello storico
+    /// </summary>
+    public void pr_TerminateAllRunningLocale()
+    {
+        object[,] result;
+        _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
+        _store.Query($"SELECT * FROM {TABLE_NAME} WHERE \"/Status\" = 160", out _, out result);
+
+        if (result.GetLength(0) == 0 || result.GetLength(1) == 0)
+        {
+            Log.Warning("pr_TerminateAllRunning no record found");
+            return;
+        }
+
+        ReaToClienteLocale prod = new ReaToClienteLocale();
+        prod.Production_Command = "" + result[0, 0];
+        prod.Product_ID = (string)result[0, 3];
+        prod.dt_start = (DateTime?)result[0, 4];
+        prod.dt_end = DateTime.Now;
+        prod.Quantity_Requested = (long)result[0, 8];
+        prod.Quantity_Produced = (long)result[0, 9];
+        prod.Total_Reject = (long)result[0, 11];
+        prod.Extra_Production = (long)result[0, 10];
+
+        _storicoprod = new RuntimeNetLogicReaToClienteStoricoLocale();
+        _storicoprod.sp_InsertLocale(prod);
+
     }
 
 }
