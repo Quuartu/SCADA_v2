@@ -414,62 +414,95 @@ public class script_maincycle : BaseNetLogic
                 //------------------------------------
                 MachineStatusText.Value = "IN LAVORO";
                 //------------------------------------
+                // Seleziona il data store e i nomi dei campi in base a DBExpress.Value
+                var myStore = DBExpress.Value
+                    ? Project.Current.Get<Store>("DataStores/ODBC_PRG_OPTIX")
+                    : Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
-                var myStore = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+                string tableName = DBExpress.Value ? "CLIENTE_TO_REA" : "RecipeSchema2";
+                string idField = DBExpress.Value ? "ID" : "\"/ID\"";
+                string quantityProducedField = DBExpress.Value ? "Quantity_Produced" : "\"/Quantity_Produced\"";
+                string totalRejectField = DBExpress.Value ? "Total_Reject" : "\"/Total_Reject\"";
+                string quantityRequestedField = DBExpress.Value ? "Quantity_Requested" : "\"/Quantità\"";
+                string extraProductionField = DBExpress.Value ? "Extra_Production" : "\"/Extra_Production\"";
 
-                // Aggiorno quantità pezzi prodotti, scarti e quantità riordino
-                if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value || DB92_PezziScarti.Value != Mem_PezziScarti.Value || DB92_QtaRiordino.Value != Mem_QtaRiordino.Value)
+                // Aggiorna le quantità se necessario
+                if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value ||
+                    DB92_PezziScarti.Value != Mem_PezziScarti.Value ||
+                    DB92_QtaRiordino.Value != Mem_QtaRiordino.Value)
+                {
+                    AggiornaQuantita(myStore, tableName, idField, quantityProducedField, totalRejectField);
+                }
+
+                // Verifica se è stata raggiunta la quantità richiesta più l'extra produzione
+                ControllaExtraProduzione(myStore, tableName, idField, quantityRequestedField, extraProductionField);
+
+                // Gestisce la richiesta di fine produzione
+                if (pr_ButtonTerminaSelected.Value)
+                {
+                    pr_ButtonTerminaSelected.Value = false;
+                    MachineStatus.Value = 148; // Codice di stato per "fine produzione"
+                }
+
+                // Funzione per aggiornare le quantità
+                void AggiornaQuantita(
+                    Store store,
+                    string table,
+                    string idFieldName,
+                    string quantityProducedFieldName,
+                    string totalRejectFieldName)
                 {
                     Object[,] ResultSet;
                     String[] Header;
 
-                    // Aggiorno quantità pezzi prodotti
+                    // Aggiorna quantità pezzi prodotti
                     if (DB92_PezziDepositati.Value != Mem_PezziDepositati.Value)
                     {
-                        string query = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = '" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
-                        myStore.Query(query, out Header, out ResultSet);
+                        string query = $"UPDATE {table} SET {quantityProducedFieldName} = '{(uint)DB92_PezziDepositati.Value}' WHERE {idFieldName} = '{OdlStartLong}'";
+                        store.Query(query, out Header, out ResultSet);
                         Mem_PezziDepositati.Value = DB92_PezziDepositati.Value;
                     }
-                    // Aggiorno quantità scarti
+
+                    // Aggiorna quantità scarti
                     if (DB92_PezziScarti.Value != Mem_PezziScarti.Value)
                     {
-                        string query = "UPDATE RecipeSchema2 SET \"/Total_Reject\" = '" + DB92_PezziScarti.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
-                        myStore.Query(query, out Header, out ResultSet);
+                        string query = $"UPDATE {table} SET {totalRejectFieldName} = '{(uint)DB92_PezziScarti.Value}' WHERE {idFieldName} = '{OdlStartLong}'";
+                        store.Query(query, out Header, out ResultSet);
                         Mem_PezziScarti.Value = DB92_PezziScarti.Value;
                     }
-                    // Aggiorno quantità di riordino
+
+                    // Aggiorna quantità di riordino
                     if (DB92_QtaRiordino.Value != Mem_QtaRiordino.Value)
                     {
-                        string query = "UPDATE RecipeSchema2 SET \"/Quantity_Produced\" = '" + DB92_PezziDepositati.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
-                        myStore.Query(query, out Header, out ResultSet);
+                        string query = $"UPDATE {table} SET {quantityProducedFieldName} = '{(uint)DB92_PezziDepositati.Value}' WHERE {idFieldName} = '{OdlStartLong}'";
+                        store.Query(query, out Header, out ResultSet);
                         Mem_QtaRiordino.Value = DB92_QtaRiordino.Value;
                     }
                 }
 
-                Object[,] ResultSetExtra;
-                String[] HeaderExtra;
-                string queryPartE = "SELECT \"/Quantità\", \"/Extra_Production\" FROM RecipeSchema2";
-                string queryE = queryPartE + " WHERE \"/ID\" = '" + OdlStartLong + "'";
-                myStore.Query(queryE, out HeaderExtra, out ResultSetExtra);
-                int quantityRequested = Convert.ToInt32(ResultSetExtra[0, 0]);
-                int extraProduction = Convert.ToInt32(ResultSetExtra[0, 1]);
-
-                //Richiesta per extra-produzione
-                if (DB92_PezziDepositati.Value >= quantityRequested + extraProduction)
+                // Funzione per controllare l'extra produzione
+                void ControllaExtraProduzione(
+                    Store store,
+                    string table,
+                    string idFieldName,
+                    string quantityRequestedFieldName,
+                    string extraProductionFieldName)
                 {
-                    //Cambio stato
-                    MachineStatus.Value = 110;
+                    Object[,] ResultSetExtra;
+                    String[] HeaderExtra;
+
+                    string query = $"SELECT {quantityRequestedFieldName}, {extraProductionFieldName} FROM {table} WHERE {idFieldName} = '{OdlStartLong}'";
+                    store.Query(query, out HeaderExtra, out ResultSetExtra);
+
+                    int quantityRequested = Convert.ToInt32(ResultSetExtra[0, 0]);
+                    int extraProduction = Convert.ToInt32(ResultSetExtra[0, 1]);
+
+                    // Richiesta per extra-produzione
+                    if (DB92_PezziDepositati.Value >= quantityRequested + extraProduction)
+                    {
+                        MachineStatus.Value = 110; // Codice di stato per "extra produzione raggiunta"
+                    }
                 }
-
-                //Richiesta fine produzione 
-                if (pr_ButtonTerminaSelected.Value)
-                {
-                    pr_ButtonTerminaSelected.Value = false;
-
-                    //Cambio stato
-                    MachineStatus.Value = 148;
-                }
-
                 break;
 
             case 110:
@@ -490,43 +523,48 @@ public class script_maincycle : BaseNetLogic
                 //-------------------------------------------------------------
                 MachineStatusText.Value = "Attesa di conferma";
                 //-------------------------------------------------------------
+                // Seleziona il data store e i nomi dei campi in base a DBExpress.Value
+                var myStoreE = DBExpress.Value
+                    ? Project.Current.Get<Store>("DataStores/ODBC_PRG_OPTIX")
+                    : Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
 
-                var myStoreE = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+                string tableNamePopup = DBExpress.Value ? "CLIENTE_TO_REA" : "RecipeSchema2";
+                string idFieldPopup = DBExpress.Value ? "ID" : "\"/ID\"";
+                string extraProductionFieldPopup = DBExpress.Value ? "Extra_Production" : "\"/Extra_Production\"";
 
-                //Richiesta fine produzione 
+                // Richiesta fine produzione
                 if (pr_ButtonTerminaSelected.Value)
                 {
                     pr_ButtonTerminaSelected.Value = false;
-
                     DB91_TerminaProduzione.Value = true;
-                    //Cambio stato
                     MachineStatus.Value = 150;
                 }
 
-                //Ritorno in produzione
+                // Ritorno in produzione
                 if (Extra_Produzione.Value)
                 {
                     Extra_Produzione.Value = false;
                     DB91_RiordinoProduzione.Value = true;
 
+                    // Recupera il valore di Extra_Production
                     Object[,] ResultSetOldExtra;
                     String[] HeaderOldExtra;
-                    string queryPartOldE = "SELECT \"/Extra_Production\" FROM RecipeSchema2";
-                    string queryOldE = queryPartOldE + " WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    string queryOldE = $"SELECT {extraProductionFieldPopup} FROM {tableNamePopup} WHERE {idFieldPopup} = '{OdlStartLong}'";
                     myStoreE.Query(queryOldE, out HeaderOldExtra, out ResultSetOldExtra);
                     int OldExtraProduction = Convert.ToInt32(ResultSetOldExtra[0, 0]);
+
+                    // Aggiorna Quantity_ExtraProduzione
+                    Quantity_ExtraProduzione.Value += OldExtraProduction;
+
+                    // Aggiorna il database
                     Object[,] ResultSet;
                     String[] Header;
-
-                    Quantity_ExtraProduzione.Value = Quantity_ExtraProduzione.Value + OldExtraProduction;
-
-                    string query = "UPDATE RecipeSchema2 SET \"/Extra_Production\" = '" + Quantity_ExtraProduzione.Value + "' WHERE \"/ID\" = '" + OdlStartLong + "'";
+                    string query = $"UPDATE {tableNamePopup} SET {extraProductionFieldPopup} = '{(uint)Quantity_ExtraProduzione.Value}' WHERE {idFieldPopup} = '{OdlStartLong}'";
                     myStoreE.Query(query, out Header, out ResultSet);
-                    
-                    //Cambio stato
+
+                    // Cambio stato
                     MachineStatus.Value = 100;
                 }
-
                 break;
 
             case 148:
