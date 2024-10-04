@@ -36,3 +36,4 @@ Children:
 - Name: Mem_QtaRiordino
   Type: BaseDataVariableType
   DataType: Int32
+- File: TestConnection/TestConnection.yaml

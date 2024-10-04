@@ -133,4 +133,6 @@ public static class VariablePaths
     public const string Path_Mem_QtaRiordino                        = "Model/Mem_QtaRiordino";
     public const string Path_ExtraProduzione                        = "Model/Drivers/Extra_Produzione";
     public const string Path_QuantityExtraProduction                = "Model/Produzione/Quantity_ExtraProduction";
+
+    public const string Path_LedSQLite                              = "Model/TestConnection/LedSQLite";
 }

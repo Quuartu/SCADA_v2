@@ -19,10 +19,14 @@ using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
 using System.Runtime.Intrinsics.Arm;
 using System.Reflection.PortableExecutable;
+using System.Timers;
+using System.Threading;
 #endregion
 
 public class script_maincycle : BaseNetLogic
 {
+    private static System.Timers.Timer timer;
+
     private PeriodicTask myPeriodicTask;
     private RuntimeNetLogicClienteToRea _prod;
     private RuntimeNetLogicAnagrafica _art;
@@ -32,6 +36,11 @@ public class script_maincycle : BaseNetLogic
 
     public override void Start()
     {
+        timer = new System.Timers.Timer(10000); // 10000 millisecondi = 10 secondi
+        // Fa partire il timer
+        timer.AutoReset = true;  // Imposta AutoReset a true per eseguire ripetutamente
+        timer.Enabled = true;
+
         _prod = new RuntimeNetLogicClienteToRea();
         _art = new RuntimeNetLogicAnagrafica();
 
@@ -41,7 +50,7 @@ public class script_maincycle : BaseNetLogic
         myPeriodicTask = new PeriodicTask(Maincycle, 250, LogicObject);
         myPeriodicTask.Start();
 
-}
+    }
 
     public override void Stop()
     {
@@ -94,6 +103,9 @@ public class script_maincycle : BaseNetLogic
 
         var DBExpress                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
 
+        var LedSQLite                   = Project.Current.GetVariable(VariablePaths.Path_LedSQLite);
+        //timer.Elapsed += OnTimedEvent;
+
 
         //casi macchina a stati
         switch ((int)MachineStatus.Value)
@@ -142,6 +154,7 @@ public class script_maincycle : BaseNetLogic
                 //---------------------------------------------------------------
                 MachineStatusText.Value = "Controllo allineamento con PLC-SCADA";
                 //---------------------------------------------------------------
+
                 if (DBExpress.Value)
                 {
                     //sincronizzo il campo Status con lo stato corretto dell'ordine che sta girando sul PLC
@@ -858,4 +871,26 @@ public class script_maincycle : BaseNetLogic
 
         return true;
     }
+/*
+    private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+    {
+        LedSQLite.Value = TestDBLocale();
+    }
+
+    private bool TestDBLocale()
+    {
+        object[,] TextConnection;
+        var _store = Project.Current.Get<Store>("DataStores/EmbeddedDatabase1");
+        try
+        {
+            _store.Query($"SELECT 1", out _, out TextConnection);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Connection error: {ex.Message}");
+            return false;
+        }
+    }
+ */
 }

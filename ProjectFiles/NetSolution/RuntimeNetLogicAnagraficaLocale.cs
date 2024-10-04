@@ -37,6 +37,7 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
     /// </summary>
     private Table _table;
 
+
     public override void Start()
     {
         // Insert code to be executed when the user-defined logic is started
@@ -44,8 +45,6 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
         {
             _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
             _table = _store.Tables.Get<Table>(TABLE_NAME);
-
-            //Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = $"SELECT * FROM {TABLE_NAME}";
         }
         catch (Exception ex)
         {

@@ -3271,8 +3271,32 @@ Children:
       - Name: FillColor
         Type: BaseDataVariableType
         DataType: Color
-        ModellingRule: Optional
         Value: "#34f924f2"
+        Children:
+        - Name: ConditionalConverter1
+          Type: ConditionalConverter
+          Children:
+          - Name: Condition
+            Type: BaseDataVariableType
+            DataType: Boolean
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "/Objects/SCADA/Model/Drivers/DB92/DB92_Livebit"
+          - Name: TrueValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#3efb3e"
+          - Name: FalseValue
+            Type: BaseDataVariableType
+            DataType: Color
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: "#ff3333"
       - Name: CornerRadius
         Type: BaseDataVariableType
         DataType: Size

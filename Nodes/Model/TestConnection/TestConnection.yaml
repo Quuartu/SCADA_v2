@@ -1,0 +1,6 @@
+Name: TestConnection
+Type: FolderType
+Children:
+- Name: LedSQLite
+  Type: BaseDataVariableType
+  DataType: Boolean
