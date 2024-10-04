@@ -4,3 +4,6 @@ Children:
 - Name: LedSQLite
   Type: BaseDataVariableType
   DataType: Boolean
+- Name: LedSQLexpress
+  Type: BaseDataVariableType
+  DataType: Boolean
