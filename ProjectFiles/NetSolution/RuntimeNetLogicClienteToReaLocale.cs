@@ -175,25 +175,25 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
 
             for (int i = 0; i < result.GetLength(0); i++)
             {
-                if (result[i, 0].Equals(id))
+                if (result[i, 1].Equals(id))
                 {
                     //esegui query
                     _store.Query($"UPDATE {TABLE_NAME} SET \"/Status\"=100 WHERE \"/ID\"={id}", out _, out _);
                 }
                 else
                 {
-                    int status_running = 100;
+                    long status_running = 100;
                     if (result[i, (result.GetLength(1) - 1)].Equals(status_running))
                     {
                         //esegui query
-                        _store.Query($"UPDATE {TABLE_NAME} SET \"/Status\"= 0 WHERE \"/ID\"={result[i, 0]}", out _, out _);
+                        _store.Query($"UPDATE {TABLE_NAME} SET \"/Status\"= 0 WHERE \"/ID\"={result[i, 1]}", out _, out _);
                     }
 
                     status_running = 25;
                     if (result[i, (result.GetLength(1) - 1)].Equals(status_running))
                     {
                         //esegui query
-                        _store.Query($"UPDATE {TABLE_NAME} SET \"/Status\"= 0 WHERE \"/ID\"= {result[i, 0]}", out _, out _);
+                        _store.Query($"UPDATE {TABLE_NAME} SET \"/Status\"= 0 WHERE \"/ID\"= {result[i, 1]}", out _, out _);
                     }
                 }
             }
