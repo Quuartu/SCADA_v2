@@ -305,7 +305,7 @@ public class script_maincycle : BaseNetLogic
 
             case 50:
                 //------------------------------------------------------------------------------------
-                MachineStatusText.Value = "Attesa richiesta caricamento progamma pressa da PLC/Robot";
+                MachineStatusText.Value = "Attesa richiesta caricamento programma pressa da PLC/Robot";
                 //------------------------------------------------------------------------------------
 
                 //???
