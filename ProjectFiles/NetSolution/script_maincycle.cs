@@ -60,40 +60,45 @@ public class script_maincycle : BaseNetLogic
         //script_inizializzazionitagPLC.PLC_AllineamentoVariabili_DB91();
         //script_inizializzazionitagPLC.PLC_AllineamentoVariabili_DB92();
 
-        PopUpNetLogic popup             = new PopUpNetLogic();
-        var popupOK                     = Project.Current.GetVariable(VariablePaths.PathPopupOK);
-        var popupYes                    = Project.Current.GetVariable(VariablePaths.PathPopupYes);
-        var popupNo                     = Project.Current.GetVariable(VariablePaths.PathPopupNo);
+        PopUpNetLogic popup                             = new PopUpNetLogic();
+        var popupOK                                     = Project.Current.GetVariable(VariablePaths.PathPopupOK);
+        var popupYes                                    = Project.Current.GetVariable(VariablePaths.PathPopupYes);
+        var popupNo                                     = Project.Current.GetVariable(VariablePaths.PathPopupNo);
 
-        var MachineStatusText           = Project.Current.GetVariable(VariablePaths.PathMachineStatusText);
-        var MachineStatus               = Project.Current.GetVariable(VariablePaths.PathMachineStatus);
-        var OdlStart                    = Project.Current.GetVariable(VariablePaths.PathOdlStart);
-        long OdlStartLong               = OdlStart.Value; 
-        var ap_start                    = Project.Current.GetVariable(VariablePaths.Pathap_start);
-        var pr_ButtonTerminaSelected    = Project.Current.GetVariable(VariablePaths.Pathpr_ButtonTerminaSelected);
-        var ResetProduction             = Project.Current.GetVariable(VariablePaths.PathResetProduction);
-        var ProduzioneInCorso           = Project.Current.GetVariable(VariablePaths.PathProduzioneInCorso);
+        var MachineStatusText                           = Project.Current.GetVariable(VariablePaths.PathMachineStatusText);
+        var MachineStatus                               = Project.Current.GetVariable(VariablePaths.PathMachineStatus);
+        var OdlStart                                    = Project.Current.GetVariable(VariablePaths.PathOdlStart);
+        long OdlStartLong                               = OdlStart.Value; 
+        var ap_start                                    = Project.Current.GetVariable(VariablePaths.Pathap_start);
+        var pr_ButtonTerminaSelected                    = Project.Current.GetVariable(VariablePaths.Pathpr_ButtonTerminaSelected);
+        var ResetProduction                             = Project.Current.GetVariable(VariablePaths.PathResetProduction);
+        var ProduzioneInCorso                           = Project.Current.GetVariable(VariablePaths.PathProduzioneInCorso);
 
-        var DB91_CambioProduzione       = Project.Current.GetVariable(VariablePaths.PathDB91_CambioProduzione);
-        var DB91_TerminaProduzione      = Project.Current.GetVariable(VariablePaths.PathDB91_TerminaProduzione);
-        var DB91_RiordinoProduzione     = Project.Current.GetVariable(VariablePaths.PathDB91_RiordinoProduzione);
+        var DB91_CambioProduzione                       = Project.Current.GetVariable(VariablePaths.PathDB91_CambioProduzione);
+        var DB91_TerminaProduzione                      = Project.Current.GetVariable(VariablePaths.PathDB91_TerminaProduzione);
+        var DB91_RiordinoProduzione                     = Project.Current.GetVariable(VariablePaths.PathDB91_RiordinoProduzione);
+        var DB91_AckInvioProgrammaPressa                = Project.Current.GetVariable(VariablePaths.PathDB91_AckInvioProgrammaPressa);
+        var DB91_AckProgrammaPressaInviatoOK            = Project.Current.GetVariable(VariablePaths.PathDB91_AckProgrammaPressaInviatoOK);
+        var DB91_AckProgrammaPressaInviatoKO            = Project.Current.GetVariable(VariablePaths.PathDB91_AckProgrammaPressaInviatoKO);
 
-        var DB92_ODP                    = Project.Current.GetVariable(VariablePaths.PathDB92_ODP);
-        var DB92_CambioProduzioneOK     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK);
-        var DB92_CambioProduzioneKO     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO);
-        var DB92_AckTerminaProduzione   = Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione);
-        var DB92_PezziDepositati        = Project.Current.GetVariable(VariablePaths.PathDB92_PezziDepositati);
-        var DB92_PezziScarti            = Project.Current.GetVariable(VariablePaths.PathDB92_PezziScarti);
-        var DB92_QtaRiordino            = Project.Current.GetVariable(VariablePaths.PathDB92_QtaRiordino);
+        var DB92_ODP                                    = Project.Current.GetVariable(VariablePaths.PathDB92_ODP);
+        var DB92_CambioProduzioneOK                     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK);
+        var DB92_CambioProduzioneKO                     = Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO);
+        var DB92_AckTerminaProduzione                   = Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione);
+        var DB92_PezziDepositati                        = Project.Current.GetVariable(VariablePaths.PathDB92_PezziDepositati);
+        var DB92_PezziScarti                            = Project.Current.GetVariable(VariablePaths.PathDB92_PezziScarti);
+        var DB92_QtaRiordino                            = Project.Current.GetVariable(VariablePaths.PathDB92_QtaRiordino);
+        var DB92_InviaProgrammaAPressa                  = Project.Current.GetVariable(VariablePaths.PathDB92_InviaProgrammaAPressa);
 
-        var Mem_PezziDepositati         = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziDepositati); 
-        var Mem_PezziScarti             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti);
-        var Mem_QtaRiordino             = Project.Current.GetVariable(VariablePaths.Path_Mem_QtaRiordino);
+        var Mem_PezziDepositati                         = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziDepositati); 
+        var Mem_PezziScarti                             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti);
+        var Mem_QtaRiordino                             = Project.Current.GetVariable(VariablePaths.Path_Mem_QtaRiordino);
 
-        var Extra_Produzione            = Project.Current.GetVariable(VariablePaths.Path_ExtraProduzione);
-        var Quantity_ExtraProduzione    = Project.Current.GetVariable(VariablePaths.Path_QuantityExtraProduction);
+        var Extra_Produzione                            = Project.Current.GetVariable(VariablePaths.Path_ExtraProduzione);
+        var Quantity_ExtraProduzione                    = Project.Current.GetVariable(VariablePaths.Path_QuantityExtraProduction);
 
-        var DBExpress                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
+        var DBExpress                                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
+        var PressaError                             = Project.Current.GetVariable(VariablePaths.Path_PressaError);
 
         //casi macchina a stati
         switch ((int)MachineStatus.Value)
@@ -284,7 +289,7 @@ public class script_maincycle : BaseNetLogic
                     _prod.pr_ManageProductionButtons(MachineStatus.Value);
 
                     //Cambio stato
-                    MachineStatus.Value = 70;
+                    MachineStatus.Value = 50;
                 }
                 else
                 {
@@ -298,7 +303,7 @@ public class script_maincycle : BaseNetLogic
                     _prodLocale.pr_ManageProductionButtonsLocale(MachineStatus.Value);
 
                     //Cambio stato
-                    MachineStatus.Value = 70;
+                    MachineStatus.Value = 50;
                 }
 
                 break;
@@ -308,7 +313,16 @@ public class script_maincycle : BaseNetLogic
                 MachineStatusText.Value = "Attesa richiesta caricamento programma pressa da PLC/Robot";
                 //------------------------------------------------------------------------------------
 
-                //???
+                //attesa che dal robot/PLC arrivi richiesta di caricare dati in pressa
+                if (DB92_InviaProgrammaAPressa.Value == true)
+                {
+                    MachineStatus.Value = 55;
+                    PressaError.Value = false;
+                }
+                if (DB92_CambioProduzioneKO.Value)
+                {
+                    MachineStatus.Value = 180;
+                }
 
                 break;
 
@@ -317,7 +331,26 @@ public class script_maincycle : BaseNetLogic
                 MachineStatusText.Value = "Caricamento progamma in pressa e invio ok/ko al PLC";
                 //-----------------------------------------------------------------------
 
-                //???
+                /*
+                
+                //se caricamento dati in pressa eseguito correttamente / a PLC
+                if (GestioneCaricamentoPressa()) {
+                    DB91_AckInvioProgrammaPressa.Value = true;
+                    DB91_AckProgrammaPressaInviatoOK.Value = true;
+                    DB91_AckProgrammaPressaInviatoKO.Value = false;
+                } else
+                {
+                    //caricamento non andato a buon fine  / a PLC
+                    DB91_AckInvioProgrammaPressa.Value = true;
+                    DB91_AckProgrammaPressaInviatoOK.Value = false;
+                    DB91_AckProgrammaPressaInviatoKO.Value = true;
+                    PressaError.Value = true;
+                }
+                
+                */
+
+                //cambio stato
+                MachineStatus.Value = 60;
 
                 break;
 
@@ -325,9 +358,23 @@ public class script_maincycle : BaseNetLogic
                 //------------------------------------------------------
                 MachineStatusText.Value = "Attesa reset Richiesta caricamento pressa da PLC";
                 //------------------------------------------------------
-                
-                //???
-                
+                if ( !DB92_InviaProgrammaAPressa.Value ) {
+                    // se non ho caricato correttamente file in pressa
+                    if (PressaError.Value) {
+                        //cambio stato
+                        MachineStatus.Value = 190;
+                        PressaError.Value = false;
+                    }
+                    else
+                    {
+                        MachineStatus.Value = 70;
+                    }
+                    //Azzeramento comandi pressa
+                    DB91_AckInvioProgrammaPressa.Value = false;
+                    DB91_AckProgrammaPressaInviatoKO.Value = false;
+                    DB91_AckProgrammaPressaInviatoOK.Value = false;
+                }
+
                 break;
 
             case 70:

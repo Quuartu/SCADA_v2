@@ -37,3 +37,6 @@ Children:
   Type: BaseDataVariableType
   DataType: Int32
 - File: TestConnection/TestConnection.yaml
+- Name: PressaError
+  Type: BaseDataVariableType
+  DataType: Boolean

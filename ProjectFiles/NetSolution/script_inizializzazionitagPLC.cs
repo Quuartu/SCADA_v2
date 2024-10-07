@@ -74,6 +74,10 @@ public static class VariablePaths
     public const string PathDB91_CambioProduzione                   = "Model/Drivers/DB91/DB91_CambioProduzione";
     public const string PathDB91_TerminaProduzione                  = "Model/Drivers/DB91/DB91_TerminaProduzione";
     public const string PathDB91_RiordinoProduzione                 = "Model/Drivers/DB91/DB91_RiordinoProduzione";
+    public const string PathDB91_AckInvioProgrammaPressa            = "Model/Drivers/DB91/DB91_AckInvioProgrammaPressa";
+    public const string PathDB91_AckProgrammaPressaInviatoOK        = "Model/Drivers/DB91/DB91_AckProgrammaPressaInviatoOK";
+    public const string PathDB91_AckProgrammaPressaInviatoKO = "Model/Drivers/DB91/DB91_AckProgrammaPressaInviatoKO";
+
     public const string PathDB92_ODP                                = "Model/Drivers/DB92/DB92_ODP";
     public const string PathDB92_CambioProduzioneOK                 = "Model/Drivers/DB92/DB92_CambioProduzioneOK";
     public const string PathDB92_CambioProduzioneKO                 = "Model/Drivers/DB92/DB92_CambioProduzioneKO";
@@ -82,6 +86,7 @@ public static class VariablePaths
     public const string PathDB92_PezziDepositati                    = "Model/Drivers/DB92/DB92_PezziDepositati";
     public const string PathDB92_PezziScarti                        = "Model/Drivers/DB92/DB92_PezziScarti";
     public const string PathDB92_QtaRiordino                        = "Model/Drivers/DB92/DB92_QtaRiordino";
+    public const string PathDB92_InviaProgrammaAPressa              = "Model/Drivers/DB92/DB92_InviaProgrammaAPressa";
 
     //ricetta
     public const string PathDB91RicettaProduct_ID                   = "Model/Drivers/DB91/Ricetta/Product_ID";
@@ -127,6 +132,7 @@ public static class VariablePaths
     public const string Pathsp_ProgramList                          = "Model/popup_selezionaprogramma/sp_ProgramList";
 
     public const string Path_DBEXpress                              = "Model/DB";
+    public const string Path_PressaError                            = "Model/PressaError";
 
     public const string Path_Mem_PezziDepositati                    = "Model/Mem_PezziDepositati";
     public const string Path_Mem_PezziScarti                        = "Model/Mem_PezziScarti";
