@@ -42,6 +42,7 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
     public override void Start()
     {
         // Insert code to be executed when the user-defined logic is started
+        Project.Current.GetVariable(VariablePaths.PathQueryProduzione).Value = $"SELECT * FROM {TABLE_NAME}";
     }
 
     public override void Stop()
@@ -159,6 +160,26 @@ public class RuntimeNetLogicClienteToReaLocale : BaseNetLogic
         if (Project.Current.GetVariable(VariablePaths.PathProduzioneInCorso).Value)
         {
             AvviaEnabled.Value = false;
+        }
+    }
+
+    /// <summary>
+    /// Esegue la query filtrata nella tabella Produzione (ClienteToRea)
+    /// </summary>
+    [ExportMethod]
+    public void pr_FilterQueryLocale(string filter)
+    {
+        if (Project.Current.GetVariable(VariablePaths.PathProduzioneFilterActive).Value)
+        {
+            _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
+            _store.Query($"SELECT * FROM {TABLE_NAME} WHERE \"/Odp\" LIKE '%{filter}%'", out _, out _);
+            Project.Current.GetVariable(VariablePaths.PathQueryProduzione).Value = $"SELECT * FROM {TABLE_NAME} WHERE \"/Odp\" LIKE '%{filter}%'";
+        }
+        else
+        {
+            Project.Current.GetVariable(VariablePaths.PathProduzioneTextFilter).Value = "";
+            Project.Current.GetVariable(VariablePaths.PathQueryProduzione).Value = $"SELECT * FROM {TABLE_NAME}";
+            //Project.Current.GetVariable("Model/Produzione/QueryProduzione").Value = $"SELECT t.*, CASE t.Status when 0 THEN 'DA ELABORARE' WHEN 25 then 'IN AVVIO' WHEN 100 then 'IN LAVORO' when 180 then 'ERRORE KO PLC' when 190 then 'ANNULLAMENTO DA USER' end FROM {TABLE_NAME} t";
         }
     }
 

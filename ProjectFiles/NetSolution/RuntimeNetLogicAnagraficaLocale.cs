@@ -45,6 +45,8 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
         {
             _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
             _table = _store.Tables.Get<Table>(TABLE_NAME);
+
+            Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = $"SELECT * FROM {TABLE_NAME}";
         }
         catch (Exception ex)
         {
@@ -89,6 +91,29 @@ public class RuntimeNetLogicAnagraficaLocale : BaseNetLogic
         {
             Log.Warning($"Error pr_GetByIdLocale: {ex}");
             return art;
+        }
+    }
+
+    /// <summary>
+    /// Filtra la query
+    /// </summary>
+    [ExportMethod]
+    public void aa_FilterQueryLocale(string filter)
+    {
+        string query = "";
+
+        if (Project.Current.GetVariable(VariablePaths.PathAnagraficaFilterActive).Value)
+        {
+            _store = Project.Current.Get<Store>(DATASTORE_DATABASE);
+            query = $"SELECT * FROM {TABLE_NAME} WHERE \"/Product_ID\" LIKE '%{filter}%' OR \"/Descr\" LIKE '%{filter}%'";
+            _store.Query(query, out _, out _);
+            Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = query;
+        }
+        else
+        {
+            query = $"SELECT * FROM {TABLE_NAME}";
+            Project.Current.GetVariable(VariablePaths.PathAnagraficaTextFilter).Value = "";
+            Project.Current.GetVariable(VariablePaths.PathQueryAnagrafica).Value = query;
         }
     }
 }
