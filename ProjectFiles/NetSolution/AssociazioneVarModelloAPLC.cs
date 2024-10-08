@@ -26,8 +26,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         /*------------------------------------------------
           variabili di modello 
         */
+        
         //DB91
-
         var modello000 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_CambioProduzione");
         var modello001 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_TerminaProduzione");
         var modello002 = Project.Current.GetVariable("Model/Drivers/DB91/DB91_RiordinoProduzione");
@@ -50,6 +50,7 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var modello019 = Project.Current.GetVariable("Model/Drivers/DB91/Ricetta/QtaRichiesta");
         var modello020 = Project.Current.GetVariable("Model/Drivers/DB91/Ricetta/QtaRiordino");
         var modello021 = Project.Current.GetVariable("Model/Drivers/DB91/Ricetta/CodArticolo");
+
         // DB92
         var modello050 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_ODP");
         var modello051 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_PrgRobot");
@@ -66,7 +67,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var modello062 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_Livebit");
         var modello063 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_PezziDepositati");
         var modello064 = Project.Current.GetVariable("Model/Drivers/DB92/DB92_PezziScarti");
-        // Allarmi
+
+        // Allarmi/Warning
         var modello080 = Project.Current.GetVariable("Model/Alarms/Alm1");
         var modello081 = Project.Current.GetVariable("Model/Alarms/Alm2");
         var modello082 = Project.Current.GetVariable("Model/Alarms/Alm3");
@@ -131,9 +133,11 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var modello141 = Project.Current.GetVariable("Model/Alarms/Wrn30");
         var modello142 = Project.Current.GetVariable("Model/Alarms/Wrn31");
         var modello143 = Project.Current.GetVariable("Model/Alarms/Wrn32");
+        
         /*------------------------------------------------
-          variabili di PLC
+           variabili di PLC
         */
+        
         // DB91
         var varPLC000 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/CambioProduzione");
         var varPLC001 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/TerminaProduzione");
@@ -157,6 +161,7 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var varPLC019 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/NuovaRicetta/QtaRichiesta");
         var varPLC020 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/NuovaRicetta/QtaRiordino");
         var varPLC021 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB91-HMItoPLC/NuovaRicetta/CodArticolo");  
+        
         // DB92
         var varPLC050 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/ODP");
         var varPLC051 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/RicettaInCorso/PrgRobot");
@@ -173,7 +178,8 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var varPLC062 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/Livebit");
         var varPLC063 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/PezziDepositati");
         var varPLC064 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Standard/90-HMI/DB92-PLCtoHMI/PezziScarti");
-        // Allarmi
+        
+        // Allarmi/Warning
         var varPLC080 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_1");
         var varPLC081 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_2");
         var varPLC082 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Alm_3");
@@ -238,8 +244,10 @@ public class AssociazioneVarModelloAPLC : BaseNetLogic
         var varPLC141 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_30");
         var varPLC142 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_31");
         var varPLC143 = Project.Current.GetVariable("CommDrivers/S7TIAPROFINETDriver3/S7TIAPROFINETStation1/Tags/PRG10021/Supporto/DB15_All_Wrn/w_Wrn_32");
-        //------------------------------------------------
-         
+
+        /*------------------------------------------------
+           dinamicLink per Optix
+        */
         modello000.SetDynamicLink(varPLC000, DynamicLinkMode.ReadWrite);
         modello001.SetDynamicLink(varPLC001, DynamicLinkMode.ReadWrite);
         modello002.SetDynamicLink(varPLC002, DynamicLinkMode.ReadWrite);

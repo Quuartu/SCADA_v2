@@ -31,20 +31,6 @@ public class script_inizializzazionitagPLC : BaseNetLogic
     {
         // Insert code to be executed when the user-defined logic is stopped
     }
-
-    public static void PLC_AllineamentoVariabili_DB91()
-    {
-        //Project.Current.GetVariable("").Value = Project.Current.GetVariable(VariablePaths.PathDB91_CambioProduzione).Value;
-        //Project.Current.GetVariable("").Value = Project.Current.GetVariable(VariablePaths.PathDB91_TerminaProduzione).Value;
-    }
-
-    public static void PLC_AllineamentoVariabili_DB92()
-    {
-        //Project.Current.GetVariable(VariablePaths.PathDB92_ODP).Value = Project.Current.GetVariable("").Value;
-        //Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneOK).Value = Project.Current.GetVariable("").Value;
-        //Project.Current.GetVariable(VariablePaths.PathDB92_CambioProduzioneKO).Value = Project.Current.GetVariable("").Value;
-        //Project.Current.GetVariable(VariablePaths.PathDB92_AckTerminaProduzione).Value = Project.Current.GetVariable("").Value;
-    }
 }
 
 public static class VariablePaths

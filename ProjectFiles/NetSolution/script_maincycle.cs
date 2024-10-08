@@ -57,9 +57,6 @@ public class script_maincycle : BaseNetLogic
     private void StateMachine()
     {
         //inizializzo variabili plc
-        //script_inizializzazionitagPLC.PLC_AllineamentoVariabili_DB91();
-        //script_inizializzazionitagPLC.PLC_AllineamentoVariabili_DB92();
-
         PopUpNetLogic popup                             = new PopUpNetLogic();
         var popupOK                                     = Project.Current.GetVariable(VariablePaths.PathPopupOK);
         var popupYes                                    = Project.Current.GetVariable(VariablePaths.PathPopupYes);
@@ -90,6 +87,8 @@ public class script_maincycle : BaseNetLogic
         var DB92_QtaRiordino                            = Project.Current.GetVariable(VariablePaths.PathDB92_QtaRiordino);
         var DB92_InviaProgrammaAPressa                  = Project.Current.GetVariable(VariablePaths.PathDB92_InviaProgrammaAPressa);
 
+        var PressaError                                 = Project.Current.GetVariable(VariablePaths.Path_PressaError);
+
         var Mem_PezziDepositati                         = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziDepositati); 
         var Mem_PezziScarti                             = Project.Current.GetVariable(VariablePaths.Path_Mem_PezziScarti);
         var Mem_QtaRiordino                             = Project.Current.GetVariable(VariablePaths.Path_Mem_QtaRiordino);
@@ -98,7 +97,6 @@ public class script_maincycle : BaseNetLogic
         var Quantity_ExtraProduzione                    = Project.Current.GetVariable(VariablePaths.Path_QuantityExtraProduction);
 
         var DBExpress                                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
-        var PressaError                             = Project.Current.GetVariable(VariablePaths.Path_PressaError);
 
         //casi macchina a stati
         switch ((int)MachineStatus.Value)
@@ -251,9 +249,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 21:
-                //--------------------------------------------------
+                //-----------------------------------------------------------
                 MachineStatusText.Value = "Dati di anagrafica non esistenti";
-                //--------------------------------------------------
+                //-----------------------------------------------------------
 
                 if (popupOK.Value)
                 {
@@ -309,9 +307,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 50:
-                //------------------------------------------------------------------------------------
+                //-------------------------------------------------------------------------------------
                 MachineStatusText.Value = "Attesa richiesta caricamento programma pressa da PLC/Robot";
-                //------------------------------------------------------------------------------------
+                //-------------------------------------------------------------------------------------
 
                 //attesa che dal robot/PLC arrivi richiesta di caricare dati in pressa
                 if (DB92_InviaProgrammaAPressa.Value == true)
@@ -327,9 +325,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 55:
-                //-----------------------------------------------------------------------
+                //------------------------------------------------------------------------------
                 MachineStatusText.Value = "Caricamento progamma in pressa e invio ok/ko al PLC";
-                //-----------------------------------------------------------------------
+                //------------------------------------------------------------------------------
 
                 /*
                 
@@ -340,7 +338,7 @@ public class script_maincycle : BaseNetLogic
                     DB91_AckProgrammaPressaInviatoKO.Value = false;
                 } else
                 {
-                    //caricamento non andato a buon fine  / a PLC
+                    //caricamento non andato a buon fine / a PLC
                     DB91_AckInvioProgrammaPressa.Value = true;
                     DB91_AckProgrammaPressaInviatoOK.Value = false;
                     DB91_AckProgrammaPressaInviatoKO.Value = true;
@@ -355,9 +353,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 60:
-                //------------------------------------------------------
+                //---------------------------------------------------------------------------
                 MachineStatusText.Value = "Attesa reset Richiesta caricamento pressa da PLC";
-                //------------------------------------------------------
+                //---------------------------------------------------------------------------
                 if ( !DB92_InviaProgrammaAPressa.Value ) {
                     // se non ho caricato correttamente file in pressa
                     if (PressaError.Value) {
@@ -408,9 +406,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 71:
-                //--------------------------------------------------
+                //-------------------------------------------------
                 MachineStatusText.Value = "KO da PLC: dati errati";
-                //--------------------------------------------------
+                //-------------------------------------------------
 
                 if (popupOK.Value)
                 {
@@ -424,9 +422,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 80:
-                //-------------------------------------------------------------
+                //--------------------------------------------------------------
                 MachineStatusText.Value = "Attesa RESET segnali da PLC - ok/ko";
-                //-------------------------------------------------------------
+                //--------------------------------------------------------------
                 if (DBExpress.Value)
                 {
                     if (!DB92_CambioProduzioneOK.Value && !DB92_CambioProduzioneKO.Value)
@@ -554,9 +552,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 110:
-                //------------------------------------------------------------
+                //-------------------------------------------------------------
                 MachineStatusText.Value = "Popup di conferma extra-produzione";
-                //------------------------------------------------------------
+                //-------------------------------------------------------------
 
                 //popup di conferma chiusura ordine
                 var openExtra = Project.Current.GetVariable(VariablePaths.PathOpenEXTRA);
@@ -568,9 +566,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 111:
-                //-------------------------------------------------------------
+                //---------------------------------------------
                 MachineStatusText.Value = "Attesa di conferma";
-                //-------------------------------------------------------------
+                //---------------------------------------------
                 // Seleziona il data store e i nomi dei campi in base a DBExpress.Value
                 var myStoreE = DBExpress.Value
                     ? Project.Current.Get<Store>("DataStores/ODBC_PRG_OPTIX")
@@ -806,9 +804,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 191:
-                //-------------------------------------------------
+                //--------------------------------------------------------
                 MachineStatusText.Value = "Attesa fine produzione da PLC";
-                //-------------------------------------------------
+                //--------------------------------------------------------
 
                 if (DB92_AckTerminaProduzione.Value)
                 {
@@ -820,9 +818,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 199:
-                //-------------------------------------------------------------------------------------------
+                //----------------------------------------------------------------------
                 MachineStatusText.Value = "Termina produzione completata correttamente";
-                //-------------------------------------------------------------------------------------------
+                //----------------------------------------------------------------------
 
                 if (!DB92_AckTerminaProduzione.Value)
                 {
