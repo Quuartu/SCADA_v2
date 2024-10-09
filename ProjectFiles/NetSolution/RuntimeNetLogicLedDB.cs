@@ -17,6 +17,7 @@ using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
 using System.Timers;
+using FTOptix.Report;
 #endregion
 
 public class RuntimeNetLogicLedDB : BaseNetLogic

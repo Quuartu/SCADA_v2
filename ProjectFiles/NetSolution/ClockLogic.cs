@@ -15,6 +15,7 @@ using FTOptix.Store;
 using FTOptix.ODBCStore;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class ClockLogic : BaseNetLogic

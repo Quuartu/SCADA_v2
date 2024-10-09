@@ -5,6 +5,7 @@ using FTOptix.UI;
 using UAManagedCore;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class LoginChangePasswordButtonLogic : BaseNetLogic

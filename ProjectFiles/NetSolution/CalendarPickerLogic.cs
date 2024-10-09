@@ -5,6 +5,7 @@ using FTOptix.NetLogic;
 using UAManagedCore;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class CalendarPickerLogic : BaseNetLogic

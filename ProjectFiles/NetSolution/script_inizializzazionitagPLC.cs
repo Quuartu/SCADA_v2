@@ -17,6 +17,7 @@ using FTOptix.EventLogger;
 using FTOptix.Core;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class script_inizializzazionitagPLC : BaseNetLogic
@@ -119,6 +120,13 @@ public static class VariablePaths
 
     public const string Path_DBEXpress                              = "Model/DB";
     public const string Path_PressaError                            = "Model/PressaError";
+    public const string Path_sPressProgramName                      = "Model/Configurazioni/FTPpressa/ftp_sPressProgramName";
+    public const string Path_sPressGroup                            = "Model/Configurazioni/FTPpressa/ftp_sPressGroup";
+    public const string Path_config_pressPathIn                     = "Model/Configurazioni/FTPpressa/ftp_config_pressPathIn";
+    public const string Path_config_pressPathOut                    = "Model/Configurazioni/FTPpressa/ftp_config_pressPathOut";
+    public const string Path_config_pressExt                        = "Model/Configurazioni/FTPpressa/ftp_pressExt";
+    public const string Path_config_pressUser                       = "Model/Configurazioni/FTPpressa/ftp_pressUser";
+    public const string Path_config_pressPswd                       = "Model/Configurazioni/FTPpressa/ftp_pressPswd";
 
     public const string Path_Mem_PezziDepositati                    = "Model/Mem_PezziDepositati";
     public const string Path_Mem_PezziScarti                        = "Model/Mem_PezziScarti";

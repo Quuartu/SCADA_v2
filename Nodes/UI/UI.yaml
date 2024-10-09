@@ -199,6 +199,8 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 14.0
+    - Name: InputBoxStyle3
+      Type: InputBoxStyle
   - Name: SwitchStyles
     Type: BaseObjectType
     Children:
@@ -784,3 +786,4 @@ Children:
 - File: POPUP_PRG/POPUP_PRG.yaml
 - File: Configurazioni/Configurazioni.yaml
 - File: Templates/Templates.yaml
+- File: FileSelectorDialog/FileSelectorDialog.yaml

@@ -74,7 +74,7 @@ Children:
   - Name: RecipeSchema
     Type: NodePointer
     DataType: NodeId
-    Value: {"IdType":2,"Id":"047ede631a78598231bc7f4bd6cbc0df","Namespace":7}
+    Value: "/Objects/SCADA/Recipes/RecipeSchema1"
     Children:
     - Name: Kind
       Type: PropertyType

@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [130,3],
+    "Dimensions": [143,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -140,6 +140,19 @@ Children:
      "Sei sicuro di voler eliminare il seguente ordine?","Are you sure you want to delete the following order?","Sei sicuro di voler eliminare il seguente ordine?",
      "Sei sicuro di voler eliminare l'articolo selezionato?","Are you sure you want to delete the selected item?","Sei sicuro di voler eliminare l'articolo selezionato?",
      "STATO MACCHINA","STATE MACHINE","STATO MACCHINA",
-     "Totale Scarti","Total Scraps","Totale Scarti"
+     "Totale Scarti","Total Scraps","Totale Scarti",
+     "ApplicationFolder","Application folder","",
+     "ShowHiddenFilesDescription","Toggle visibility of hidden files","",
+     "Filename","File name","",
+     "StartingPathDescription","Which folder to display when opening the Dialog","",
+     "FullPathDescription","Full path of the selected file (returned when clicking \"Confirm\")","",
+     "ExtensionDescription","Configure a semicolumn separaded list of extension to filter the valid files (e.g: *.pdf;*.txt)","",
+     "ProjectFolder","Project folder","",
+     "Cancel","Cancel","",
+     "AccessFullFileSystemDescription","Toggle access to the whole FileSystem (only for Windows and Ubuntu)","",
+     "AccessNetworkDrivesDescription","Toggle access to network drives (only for Windows and Ubuntu)","",
+     "FileNameInput","File name:","",
+     "Confirm","Confirm","",
+     "Size","Size",""
     ]
    }

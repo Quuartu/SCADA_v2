@@ -19,6 +19,7 @@ using FTOptix.Core;
 using FTOptix.System;
 using System.IO;
 using System.Timers;
+using FTOptix.Report;
 #endregion
 
 public class RuntimeNetLogic1 : BaseNetLogic

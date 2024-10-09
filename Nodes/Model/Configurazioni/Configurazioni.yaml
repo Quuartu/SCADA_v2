@@ -1,6 +1,38 @@
 Name: Configurazioni
 Type: FolderType
 Children:
+- Name: FTPpressa
+  Id: g=f33cea268abd4656db3098db6c2d3195
+  Type: BaseObjectType
+  Children:
+  - Name: ftp_sPressProgramName
+    Id: g=d3fee88f33856ffe0b3e3aab25cf35fb
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_sPressGroup
+    Id: g=19c47014c143c288a41da947b69c08e4
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_config_pressPathIn
+    Id: g=a9e351d7560b73c80a889a0b99c90629
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_config_pressPathOut
+    Id: g=f1c767fae86a65d4b1127c3564f2bb66
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_pressExt
+    Id: g=8677668cf3b5121170203ed44a59eb6a
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_pressUser
+    Id: g=1d736a3b796846ac87a213d986206843
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: ftp_pressPswd
+    Id: g=cab0491d68eb1ac346305a4f25b1c498
+    Type: BaseDataVariableType
+    DataType: String
 - Name: FTPRobot
   Id: g=b9970f5ad20be023ecae0987358eef4d
   Type: BaseObjectType

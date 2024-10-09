@@ -13,6 +13,7 @@ using System.Linq;
 using FTOptix.HMIProject;
 #endregion
 using System.Globalization;
+using FTOptix.Report;
 
 public class RecipeImportExport : BaseNetLogic
 {

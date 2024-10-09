@@ -2,25 +2,20 @@
 using System;
 using UAManagedCore;
 using OpcUa = UAManagedCore.OpcUa;
+using FTOptix.SQLiteStore;
 using FTOptix.HMIProject;
-using FTOptix.NetLogic;
-using FTOptix.Alarm;
 using FTOptix.UI;
+using FTOptix.DataLogger;
 using FTOptix.NativeUI;
 using FTOptix.Store;
-using FTOptix.ODBCStore;
-using FTOptix.S7TiaProfinet;
+using FTOptix.Report;
 using FTOptix.Retentivity;
 using FTOptix.CoreBase;
-using FTOptix.CommunicationDriver;
-using FTOptix.EventLogger;
+using FTOptix.NetLogic;
 using FTOptix.Core;
-using FTOptix.SQLiteStore;
-using FTOptix.Recipe;
-using FTOptix.Report;
 #endregion
 
-public class Base_file : BaseNetLogic
+public class FileSelectorButtonsLogic : BaseNetLogic
 {
     public override void Start()
     {
@@ -32,8 +27,12 @@ public class Base_file : BaseNetLogic
         // Insert code to be executed when the user-defined logic is stopped
     }
 
-    public static void ReadWriteDBOnFile()
+    [ExportMethod]
+    public void ExecuteCallback()
     {
-
+        var fileSelectorDialog = Owner.Owner.Owner.Owner as FTOptix.UI.Dialog;
+        Owner.Owner.Owner.Owner.GetVariable("FullPath").Value = Owner.Owner.Owner.GetVariable("TmpFile").Value;
+        fileSelectorDialog.Get<MethodInvocation>("FileSelectedCallback").Invoke();
+        fileSelectorDialog.Close();
     }
 }

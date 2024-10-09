@@ -14,6 +14,7 @@ using FTOptix.CommunicationDriver;
 using FTOptix.CoreBase;
 using FTOptix.Core;
 using System.Diagnostics;
+using FTOptix.Report;
 #endregion
 
 public class OpenWindowsExplorer : BaseNetLogic

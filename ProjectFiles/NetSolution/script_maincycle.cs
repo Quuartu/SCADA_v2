@@ -20,6 +20,11 @@ using FTOptix.Recipe;
 using System.Runtime.Intrinsics.Arm;
 using System.Reflection.PortableExecutable;
 using System.Threading;
+using System.IO;
+using System.Security.Cryptography;
+using System.Net;
+using FluentFTP;
+using FTOptix.Report;
 #endregion
 
 public class script_maincycle : BaseNetLogic
@@ -329,10 +334,8 @@ public class script_maincycle : BaseNetLogic
                 MachineStatusText.Value = "Caricamento progamma in pressa e invio ok/ko al PLC";
                 //------------------------------------------------------------------------------
 
-                /*
-                
                 //se caricamento dati in pressa eseguito correttamente / a PLC
-                if (GestioneCaricamentoPressa()) {
+                if (GestioneCaricamentoPressa(OdlStartLong)) {
                     DB91_AckInvioProgrammaPressa.Value = true;
                     DB91_AckProgrammaPressaInviatoOK.Value = true;
                     DB91_AckProgrammaPressaInviatoKO.Value = false;
@@ -344,8 +347,6 @@ public class script_maincycle : BaseNetLogic
                     DB91_AckProgrammaPressaInviatoKO.Value = true;
                     PressaError.Value = true;
                 }
-                
-                */
 
                 //cambio stato
                 MachineStatus.Value = 60;
@@ -902,6 +903,229 @@ public class script_maincycle : BaseNetLogic
         Project.Current.GetVariable(VariablePaths.PathDB91RicettaDescrizione).Value = articolo.Descr;
         Project.Current.GetVariable(VariablePaths.PathDB91RicettaProgrammaRobot).Value = articolo.Robot_Program;
 
+        return true;
+    }
+
+    //GESTIONE PROGRAMMA PRESSA
+    private string sPressProgramName    = Project.Current.GetVariable(VariablePaths.Path_sPressProgramName).Value;     // Nome del programma della pressa *
+    private string sPressGroup          = Project.Current.GetVariable(VariablePaths.Path_sPressGroup).Value;           // Gruppo del programma della pressa *
+    private string config_pressPathIn   = Project.Current.GetVariable(VariablePaths.Path_config_pressPathIn).Value;    // Percorso di input per la pressa *
+    private string config_pressPathOut  = Project.Current.GetVariable(VariablePaths.Path_config_pressPathOut).Value;   // Percorso di output per la pressa *
+    private string config_pressExt      = Project.Current.GetVariable(VariablePaths.Path_config_pressExt).Value;       // Estensione del file della pressa *
+    private string config_pressUser     = Project.Current.GetVariable(VariablePaths.Path_config_pressUser).Value;      // Username per la connessione FTP *
+    private string config_pressPswd     = Project.Current.GetVariable(VariablePaths.Path_config_pressPswd).Value;      // Password per la connessione FTP *
+    private bool   config_pressToMount;                                                                                // Flag che indica se montare il volume
+
+    public bool GestioneCaricamentoPressa(long OdlStart)
+    {
+        try
+        {
+            // Verifica preliminare sull'ID prodotto (OdlStart è una variabile globale)
+            long ProdID = OdlStart;
+            if (ProdID == 0)
+            {
+                // Mostra errore se l'ID del prodotto è 0
+                ShowError("Errore", "Impossibile caricare l'ordine zero.");
+                return false;
+            }
+
+            // Recupera il gruppo e il nome del file da caricare
+            string FileGroup = sPressGroup;
+            string FileSrc = sPressProgramName + config_pressExt; // Nome del file con estensione
+
+            // Costruisce il percorso completo della sorgente del file
+            string FullPath = Path.Combine(config_pressPathIn, FileGroup);
+
+            // Verifica se è possibile montare il volume di rete (connessione FTP)
+            if (!MountNetworkDrive(FullPath))
+            {
+                // Mostra errore se non è possibile connettersi
+                ShowError("Errore", $"Volume non raggiungibile: {FullPath}");
+                config_pressToMount = true;
+                return false;
+            }
+
+            // Verifica se il file esiste nel percorso indicato
+            if (!File.Exists(Path.Combine(FullPath, FileSrc)))
+            {
+                // Mostra errore se il file non è trovato
+                ShowError("Errore", $"File non trovato! Percorso: {FullPath}\\{FileSrc}");
+                return false;
+            }
+
+            // Copia il file nella destinazione (pressa)
+            if (!CopyFile(FileSrc, "0", config_pressExt, FullPath, config_pressPathOut))
+            {
+                // Mostra errore se la copia fallisce
+                ShowError("Errore", "Errore durante la copia del file sulla pressa.");
+                return false;
+            }
+
+            // Verifica che la lunghezza del file sorgente e del file copiato siano uguali
+            if (!CheckFileConsistency(FullPath, FileSrc, config_pressPathOut, "0"))
+            {
+                // Mostra errore se i file non sono consistenti
+                ShowError("Errore", "File non esistente sulla pressa.");
+                return false;
+            }
+
+            // Se tutto va bene, ritorna true
+            return true;
+        }
+        catch (Exception ex)
+        {
+            // Gestione generale degli errori
+            ShowError("Errore", "Errore caricamento pressa: " + ex.Message);
+            return false;
+        }
+    }
+
+    // Funzione che si occupa di montare il volume di rete (connessione FTP)
+    private bool MountNetworkDrive(string path)
+    {
+        try
+        {
+            // Estrazione dell'unità e del percorso
+            string drive = path.Substring(0, 2);
+            string folder = path.Substring(2).Replace("\\", "/"); // Per FluentFTP usa "/" come separatore
+
+            // Creazione del client FTP
+            using (var ftpClient = new FtpClient("ftp://" + drive)) // L'indirizzo del server FTP
+            {
+                ftpClient.Credentials = new System.Net.NetworkCredential(config_pressUser, config_pressPswd);
+
+                // Connessione al server FTP
+                ftpClient.Connect();
+
+                // Verifica se la directory esiste
+                if (ftpClient.DirectoryExists(folder))
+                {
+                    Console.WriteLine("Volume montato correttamente.");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Directory non trovata.");
+                    return false;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Gestione errori di connessione
+            Console.WriteLine($"Errore connessione FTP: {ex.Message}");
+            return false;
+        }
+    }
+
+    // Funzione che copia un file da una sorgente a una destinazione
+    private bool CopyFile(string src, string dest, string ext, string srcPath, string destPath)
+    {
+        try
+        {
+            // Costruisce i percorsi completi per il file sorgente e destinazione
+            string srcFile = Path.Combine(srcPath, src + ext);
+            string destFile = Path.Combine(destPath, dest + ext);
+
+            // Se il file sorgente esiste, lo copia nella destinazione
+            if (File.Exists(srcFile))
+            {
+                File.Copy(srcFile, destFile, true);  // True per sovrascrivere eventuali file esistenti
+                return true;
+            }
+            return false;
+        }
+        catch (Exception ex)
+        {
+            // Gestione degli errori durante la copia del file
+            Console.WriteLine($"Errore copia file: {ex.Message}");
+            return false;
+        }
+    }
+
+    // Funzione che controlla se la lunghezza del file sorgente e quello copiato coincidono
+    private bool CheckFileConsistency(string srcPath, string srcFile, string destPath, string destFile)
+    {
+        try
+        {
+            // Ottiene la lunghezza del file sorgente e di quello copiato
+            long lenIn = new FileInfo(Path.Combine(srcPath, srcFile)).Length;
+            long lenOut = new FileInfo(Path.Combine(destPath, destFile + config_pressExt)).Length;
+            return lenIn == lenOut;  // Verifica se le lunghezze sono uguali
+        }
+        catch (Exception ex)
+        {
+            // Gestione degli errori durante la verifica della lunghezza dei file
+            Console.WriteLine($"Errore verifica file: {ex.Message}");
+            return false;
+        }
+    }
+
+    // Funzione che mostra un errore sulla UI (simulato con Console.WriteLine)
+    private void ShowError(string title, string message)
+    {
+        // Simula una finestra pop-up che mostra l'errore
+        Console.WriteLine($"{title}: {message}");
+    }
+
+    public int SaveProgramPressBrake()
+    {
+        try
+        {
+            // Verifica che il nome del programma della pressa non sia vuoto
+            if (string.IsNullOrEmpty(sPressProgramName))
+            {
+                ShowError("Errore", "Manca il nome del file pressa da salvare!");
+                return 3; // 3 = Errore salvataggio
+            }
+
+            //// Verifica che il codice dell'articolo non sia vuoto
+            //if (string.IsNullOrEmpty(sCodiceArticolo))
+            //{
+            //    ShowError("Errore", "Errore: CodArticolo vuoto!");
+            //    return 3; // 3 = Errore salvataggio
+            //}
+
+            // Chiede conferma all'operatore per salvare il programma
+            var result = ShowConfirmation("Conferma", $"Salvare eventuali modifiche apportate al programma pressa '{sPressProgramName}'?");
+
+            // Se l'operatore conferma il salvataggio
+            if (result == true)
+            {
+                string Src = "0";
+                string Dest = sPressProgramName;
+                string PathOutSave = Path.Combine(config_pressPathIn, sPressGroup);
+                string PathSrcRead = config_pressPathOut;
+
+                // Copia il programma dalla cartella di output a quella di input
+                if (CopyFile(Src, Dest, config_pressExt, PathSrcRead, PathOutSave))
+                {
+                    return 1; // 1 = Salvato con successo
+                }
+                else
+                {
+                    return 3; // 3 = Errore salvataggio
+                }
+            }
+            else
+            {
+                return 2; // 2 = Non salvare
+            }
+        }
+        catch (Exception ex)
+        {
+            // Gestione degli errori
+            ShowError("Errore", "Errore salvataggio programma pressa: " + ex.Message);
+            return 3; // 3 = Errore salvataggio
+        }
+    }
+
+    // Funzione che simula la richiesta di conferma all'operatore
+    private bool ShowConfirmation(string title, string message)
+    {
+        // Simula una finestra di conferma (sì/no) per l'operatore
+        Console.WriteLine($"{title}: {message}");
+        // Per semplicità, restituisce sempre true (conferma)
         return true;
     }
 }

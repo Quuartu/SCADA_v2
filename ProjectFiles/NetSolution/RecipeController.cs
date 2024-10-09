@@ -13,6 +13,7 @@ using System.Linq;
 using System.Globalization;
 using FTOptix.Store;
 using System.Xml.Linq;
+using FTOptix.Report;
 
 #endregion
 

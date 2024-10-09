@@ -23,6 +23,7 @@ using System.Globalization;
 using System.Timers;
 using System.IO;
 using System.Runtime.Intrinsics.Arm;
+using FTOptix.Report;
 #endregion
 
 public class RuntimeNetLogic2 : BaseNetLogic

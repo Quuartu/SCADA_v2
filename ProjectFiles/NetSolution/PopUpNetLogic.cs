@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using FTOptix.EventLogger;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class PopUpNetLogic : BaseNetLogic

@@ -16,6 +16,7 @@ using FTOptix.Retentivity;
 using FTOptix.CoreBase;
 using FTOptix.CommunicationDriver;
 using FTOptix.Core;
+using FTOptix.Report;
 #endregion
 
 public class AssociazioneVarModelloAPLC : BaseNetLogic

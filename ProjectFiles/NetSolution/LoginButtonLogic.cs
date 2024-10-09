@@ -7,6 +7,7 @@ using System;
 using UAManagedCore;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class LoginButtonLogic : BaseNetLogic

@@ -19,6 +19,7 @@ using FTOptix.S7TiaProfinet;
 using FTOptix.CommunicationDriver;
 using FTOptix.SQLiteStore;
 using FTOptix.Recipe;
+using FTOptix.Report;
 #endregion
 
 public class AlarmBannerLogic : BaseNetLogic
