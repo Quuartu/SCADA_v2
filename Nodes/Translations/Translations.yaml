@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [143,3],
+    "Dimensions": [149,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -153,6 +153,12 @@ Children:
      "AccessNetworkDrivesDescription","Toggle access to network drives (only for Windows and Ubuntu)","",
      "FileNameInput","File name:","",
      "Confirm","Confirm","",
-     "Size","Size",""
+     "Size","Size","",
+     "Connected to Station:","Connected to Station:","Connesso alla stazione:",
+     "Server","Server","Server",
+     "Username","Username","Nome utente",
+     "DBMS Type","DBMS Type","Tipo DBMS",
+     "Connected"," Connected"," Connesso",
+     "Database","Database","Database"
     ]
    }

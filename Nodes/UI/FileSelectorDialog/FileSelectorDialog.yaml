@@ -14,7 +14,7 @@ Children:
   - Name: IsDirectory
     Type: BaseDataVariableType
     DataType: Boolean
-- Name: FileSelectorPdf
+- Name: FileSelector
   Id: g=af2413199e58cc9c059d8f08069e1620
   Supertype: Dialog
   ReferenceType: HasComponent
@@ -896,11 +896,11 @@ Children:
     Type: BaseDataVariableType
     DataType: ResourceUri
     Description: {"NamespaceIndex":7,"TextId":"StartingPathDescription"}
-    Value: "%PROJECTDIR%\\"
+    Value: "%USERPROFILE%"
   - Name: FullPath
     Type: BaseDataVariableType
     DataType: ResourceUri
-    Description: {"NamespaceIndex":7,"TextId":"FullPathDescription"}
+    Description: {"LocaleId":"en-US","Text":"Full path of the selected file (returned when clicking \"Confirm\")"}
     Children:
     - Name: DynamicLink
       Type: DynamicLink
@@ -921,6 +921,7 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"NamespaceIndex":7,"TextId":"AccessNetworkDrivesDescription"}
+    Value: true
   - Name: FileSelectedCallback
     Type: MethodInvocation
     Children:
@@ -942,7 +943,20 @@ Children:
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"NamespaceIndex":7,"TextId":"AccessFullFileSystemDescription"}
+    Value: true
   - Name: ShowHiddenFiles
     Type: BaseDataVariableType
     DataType: Boolean
     Description: {"NamespaceIndex":7,"TextId":"ShowHiddenFilesDescription"}
+  - Name: MoveTarget
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"

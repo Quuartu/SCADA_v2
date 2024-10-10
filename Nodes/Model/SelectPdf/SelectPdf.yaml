@@ -1,0 +1,6 @@
+Name: SelectPdf
+Type: FolderType
+Children:
+- Name: SelectedPath
+  Type: BaseDataVariableType
+  DataType: ResourceUri

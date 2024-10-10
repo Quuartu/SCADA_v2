@@ -102,14 +102,28 @@ public class script_maincycle : BaseNetLogic
         var Quantity_ExtraProduzione                    = Project.Current.GetVariable(VariablePaths.Path_QuantityExtraProduction);
 
         var DBExpress                                   = Project.Current.GetVariable(VariablePaths.Path_DBEXpress);
+        var FolderSelected                              = Project.Current.GetVariable(VariablePaths.Path_FolderSelected);
+        var PathFolderTemp                              = Project.Current.GetVariable(VariablePaths.Path_PathFolderTemp);
+
+        var ftp_NomeCartella = Project.Current.GetVariable(VariablePaths.Path_ftp_NomeCartella);
+        var ftp_IndirizzoIP = Project.Current.GetVariable(VariablePaths.Path_ftp_IndirizzoIP);
+        var sPressProgramName = Project.Current.GetVariable(VariablePaths.Path_sPressProgramName);     // Nome del programma della pressa 
+        var sPressGroup = Project.Current.GetVariable(VariablePaths.Path_sPressGroup);           // Gruppo del programma della pressa 
+        var config_pressPathIn = Project.Current.GetVariable(VariablePaths.Path_config_pressPathIn);    // Percorso di input per la pressa 
+        var config_pressPathOut = Project.Current.GetVariable(VariablePaths.Path_config_pressPathOut);   // Percorso di output per la pressa 
+        var config_pressExt = Project.Current.GetVariable(VariablePaths.Path_config_pressExt);       // Estensione del file della pressa *
+        var config_pressUser = Project.Current.GetVariable(VariablePaths.Path_config_pressUser);      // Username per la connessione FTP *
+        var config_pressPswd = Project.Current.GetVariable(VariablePaths.Path_config_pressPswd);      // Password per la connessione FTP *
+        //private bool config_pressToMount;                                                                                // Flag che indica se montare il volume
+
 
         //casi macchina a stati
         switch ((int)MachineStatus.Value)
         {
             case 0:
-                //------------------------------------------------
+                //-------------------------------------------
                 MachineStatusText.Value = "Inizializzazione";
-                //------------------------------------------------
+                //-------------------------------------------
 
                 if (Project.Current.GetVariable("Model/fillBar").Value <15)
                 {
@@ -335,7 +349,7 @@ public class script_maincycle : BaseNetLogic
                 //------------------------------------------------------------------------------
 
                 //se caricamento dati in pressa eseguito correttamente / a PLC
-                if (GestioneCaricamentoPressa(OdlStartLong)) {
+                if (GestioneCaricamentoPressa(OdlStartLong, sPressProgramName.Value, sPressGroup.Value, config_pressPathIn.Value, config_pressPathOut.Value, config_pressExt.Value, config_pressUser.Value, config_pressPswd.Value)) {
                     DB91_AckInvioProgrammaPressa.Value = true;
                     DB91_AckProgrammaPressaInviatoOK.Value = true;
                     DB91_AckProgrammaPressaInviatoKO.Value = false;
@@ -838,6 +852,42 @@ public class script_maincycle : BaseNetLogic
         {
             MachineStatus.Value = 190;
         }
+
+        if ((short)FolderSelected.Value != 0)
+        {
+            if (PathFolderTemp.Value != "")
+            {
+                switch ((short)FolderSelected.Value) {
+
+                case (short)1:
+                    ftp_NomeCartella.Value = PathFolderTemp.Value;
+                    break;
+
+                case (short)2:
+                    ftp_IndirizzoIP.Value = PathFolderTemp.Value;
+                    break;
+
+                case (short)3:
+                    sPressProgramName.Value = PathFolderTemp.Value;
+                    break;
+
+                case (short)4:
+                    sPressGroup.Value = PathFolderTemp.Value;
+                    break;
+
+                case (short)5:
+                    config_pressPathIn.Value = PathFolderTemp.Value;
+                    break;
+
+                case (short)6:
+                    config_pressPathOut.Value = PathFolderTemp.Value;
+                    break;
+                }
+                FolderSelected.Value = 0;
+                PathFolderTemp.Value = "";
+            }
+        }
+    
     }
 
     private void ResetHMIProductVar()
@@ -907,16 +957,7 @@ public class script_maincycle : BaseNetLogic
     }
 
     //GESTIONE PROGRAMMA PRESSA
-    private string sPressProgramName    = Project.Current.GetVariable(VariablePaths.Path_sPressProgramName).Value;     // Nome del programma della pressa *
-    private string sPressGroup          = Project.Current.GetVariable(VariablePaths.Path_sPressGroup).Value;           // Gruppo del programma della pressa *
-    private string config_pressPathIn   = Project.Current.GetVariable(VariablePaths.Path_config_pressPathIn).Value;    // Percorso di input per la pressa *
-    private string config_pressPathOut  = Project.Current.GetVariable(VariablePaths.Path_config_pressPathOut).Value;   // Percorso di output per la pressa *
-    private string config_pressExt      = Project.Current.GetVariable(VariablePaths.Path_config_pressExt).Value;       // Estensione del file della pressa *
-    private string config_pressUser     = Project.Current.GetVariable(VariablePaths.Path_config_pressUser).Value;      // Username per la connessione FTP *
-    private string config_pressPswd     = Project.Current.GetVariable(VariablePaths.Path_config_pressPswd).Value;      // Password per la connessione FTP *
-    private bool   config_pressToMount;                                                                                // Flag che indica se montare il volume
-
-    public bool GestioneCaricamentoPressa(long OdlStart)
+    public bool GestioneCaricamentoPressa(long OdlStart, string sPressProgramName, string sPressGroup, string config_pressPathIn, string config_pressPathOut, string config_pressExt, string config_pressUser, string config_pressPswd)
     {
         try
         {
@@ -937,11 +978,11 @@ public class script_maincycle : BaseNetLogic
             string FullPath = Path.Combine(config_pressPathIn, FileGroup);
 
             // Verifica se è possibile montare il volume di rete (connessione FTP)
-            if (!MountNetworkDrive(FullPath))
+            if (!MountNetworkDrive(FullPath, config_pressUser, config_pressPswd))
             {
                 // Mostra errore se non è possibile connettersi
                 ShowError("Errore", $"Volume non raggiungibile: {FullPath}");
-                config_pressToMount = true;
+                //config_pressToMount = true;
                 return false;
             }
 
@@ -962,7 +1003,7 @@ public class script_maincycle : BaseNetLogic
             }
 
             // Verifica che la lunghezza del file sorgente e del file copiato siano uguali
-            if (!CheckFileConsistency(FullPath, FileSrc, config_pressPathOut, "0"))
+            if (!CheckFileConsistency(FullPath, FileSrc, config_pressPathOut, "0", config_pressExt))
             {
                 // Mostra errore se i file non sono consistenti
                 ShowError("Errore", "File non esistente sulla pressa.");
@@ -981,7 +1022,7 @@ public class script_maincycle : BaseNetLogic
     }
 
     // Funzione che si occupa di montare il volume di rete (connessione FTP)
-    private bool MountNetworkDrive(string path)
+    private bool MountNetworkDrive(string path, string config_pressUser, string config_pressPswd)
     {
         try
         {
@@ -1044,7 +1085,7 @@ public class script_maincycle : BaseNetLogic
     }
 
     // Funzione che controlla se la lunghezza del file sorgente e quello copiato coincidono
-    private bool CheckFileConsistency(string srcPath, string srcFile, string destPath, string destFile)
+    private bool CheckFileConsistency(string srcPath, string srcFile, string destPath, string destFile, string config_pressExt)
     {
         try
         {
@@ -1068,7 +1109,7 @@ public class script_maincycle : BaseNetLogic
         Console.WriteLine($"{title}: {message}");
     }
 
-    public int SaveProgramPressBrake()
+    public int SaveProgramPressBrake(string sPressProgramName, string sPressGroup, string config_pressPathIn, string config_pressPathOut, string config_pressExt)
     {
         try
         {

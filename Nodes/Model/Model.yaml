@@ -40,3 +40,4 @@ Children:
 - Name: PressaError
   Type: BaseDataVariableType
   DataType: Boolean
+- File: SelectPdf/SelectPdf.yaml

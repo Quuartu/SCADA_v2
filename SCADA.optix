@@ -114,15 +114,15 @@ Project:
    Module: FTOptix.SQLiteStore.Net
    Version: 1.0
  Statistics:
-  TotalNodeCount: 14779
-  Objects: 2508
+  TotalNodeCount: 15479
+  Objects: 2600
   ObjectTypes: 36
-  Variables: 12160
+  Variables: 12768
   VariableTypes: 0
   DataTypes: 0
   Methods: 75
-  References: 517
+  References: 518
   ReferenceTypes: 0
-  Files: 46
+  Files: 47
  Nodes:
  - File: Nodes/SCADA.yaml

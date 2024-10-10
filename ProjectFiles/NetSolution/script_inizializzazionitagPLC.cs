@@ -136,4 +136,10 @@ public static class VariablePaths
 
     public const string Path_LedSQLite                              = "Model/TestConnection/LedSQLite";
     public const string Path_LedSQLexpress                          = "Model/TestConnection/LedSQLexpress";
+
+    public const string Path_FolderSelected                         = "Model/Configurazioni/FolderSelection";
+    public const string Path_PathFolderTemp                         = "Model/SelectPdf/SelectedPath";
+
+    public const string Path_ftp_NomeCartella                       = "Model/Configurazioni/FTPRobot/ftp_NomeCartella";
+    public const string Path_ftp_IndirizzoIP                        = "Model/Configurazioni/FTPRobot/ftp_IndirizzoIP";
 }

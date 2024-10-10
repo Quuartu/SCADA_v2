@@ -81,3 +81,7 @@ Children:
     Id: g=16dd404e9ec9516e8ca6010b3b6f213b
     Type: BaseDataVariableType
     DataType: String
+- Name: FolderSelection
+  Id: g=39b62114434cc874497eced0d579da1d
+  Type: BaseDataVariableType
+  DataType: Int16
