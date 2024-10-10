@@ -332,7 +332,7 @@ Children:
             - Name: Title
               Type: BaseDataVariableType
               DataType: LocalizedText
-              Value: {"NamespaceIndex":7,"TextId":"Filename"}
+              Value: {"NamespaceIndex":7,"TextId":"File name"}
             - Name: Width
               Type: BaseDataVariableType
               DataType: Size
@@ -501,7 +501,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"NamespaceIndex":7,"TextId":"FileNameInput"}
+            Value: {"NamespaceIndex":7,"TextId":"File name:"}
           - Name: VerticalAlignment
             Type: BaseVariableType
             DataType: VerticalAlignment

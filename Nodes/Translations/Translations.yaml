@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [149,3],
+    "Dimensions": [157,3],
     "Body": [
      "","en-US","it-IT",
      "Timestamp","Timestamp","",
@@ -143,15 +143,15 @@ Children:
      "Totale Scarti","Total Scraps","Totale Scarti",
      "ApplicationFolder","Application folder","",
      "ShowHiddenFilesDescription","Toggle visibility of hidden files","",
-     "Filename","File name","",
+     "Filename","File name","NomeFile",
      "StartingPathDescription","Which folder to display when opening the Dialog","",
      "FullPathDescription","Full path of the selected file (returned when clicking \"Confirm\")","",
      "ExtensionDescription","Configure a semicolumn separaded list of extension to filter the valid files (e.g: *.pdf;*.txt)","",
-     "ProjectFolder","Project folder","",
+     "ProjectFolder","Project folder","Cartella del Progetto",
      "Cancel","Cancel","",
      "AccessFullFileSystemDescription","Toggle access to the whole FileSystem (only for Windows and Ubuntu)","",
      "AccessNetworkDrivesDescription","Toggle access to network drives (only for Windows and Ubuntu)","",
-     "FileNameInput","File name:","",
+     "FileNameInput","File name:","NomeFileInput",
      "Confirm","Confirm","",
      "Size","Size","",
      "Connected to Station:","Connected to Station:","Connesso alla stazione:",
@@ -159,6 +159,14 @@ Children:
      "Username","Username","Nome utente",
      "DBMS Type","DBMS Type","Tipo DBMS",
      "Connected"," Connected"," Connesso",
-     "Database","Database","Database"
+     "Database","Database","Database",
+     "Imposta numero articoli extra da produrre:","Set number of extra items to produce:","Imposta numero articoli extra da produrre:",
+     "Path Name Folder:","Path Name Folder:","Nome percorso cartella:",
+     "Press Folder In:","Press Folder In:","Cartella pressa IN:",
+     "Press Folder Out:","Press Folder Out:","Cartella pressa OUT:",
+     "Press Group Folder:","Press Group Folder:","Cartella gruppo pressa:",
+     "FileName:","File name:","",
+     "File name","File name","Nome File",
+     "File name:","File name:","Nome File:"
     ]
    }

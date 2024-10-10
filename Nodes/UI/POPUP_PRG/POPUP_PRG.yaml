@@ -7846,7 +7846,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Imposta numero articoli extra da produrre:"}
+      Value: {"NamespaceIndex":7,"TextId":"Imposta numero articoli extra da produrre:"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
