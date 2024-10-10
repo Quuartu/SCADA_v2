@@ -15517,7 +15517,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Comando Ch 1"}
+        Value: {"NamespaceIndex":7,"TextId":"Comando Ch 1"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15590,7 +15590,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Comando sblocca"}
+        Value: {"NamespaceIndex":7,"TextId":"Comando sblocca"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15663,7 +15663,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Comando blocca"}
+        Value: {"NamespaceIndex":7,"TextId":"Comando blocca"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15736,7 +15736,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Feedback Ch 1"}
+        Value: {"NamespaceIndex":7,"TextId":"Feedback Ch 1"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15778,7 +15778,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Dry Run"}
+        Value: {"NamespaceIndex":7,"TextId":"Dry Run"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15816,7 +15816,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Teaching Mode"}
+        Value: {"NamespaceIndex":7,"TextId":"Teaching Mode"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15854,7 +15854,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Apprendimento Pieghe"}
+        Value: {"NamespaceIndex":7,"TextId":"Apprendimento Pieghe"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -15943,7 +15943,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Controllo Spessore"}
+          Value: {"NamespaceIndex":7,"TextId":"Controllo Spessore"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -16058,7 +16058,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Esegui Lettura"}
+        Value: {"NamespaceIndex":7,"TextId":"Esegui Lettura"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16127,7 +16127,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Spessore Lamiera:"}
+        Value: {"NamespaceIndex":7,"TextId":"Spessore Lamiera:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16200,7 +16200,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Spessore di Setup:"}
+        Value: {"NamespaceIndex":7,"TextId":"Spessore di Setup:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16273,7 +16273,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Calibrazione"}
+        Value: {"NamespaceIndex":7,"TextId":"Calibrazione"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16311,7 +16311,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Tolleranza Spessore:"}
+        Value: {"NamespaceIndex":7,"TextId":"Tolleranza Spessore:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16384,7 +16384,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Offset lettura sensore:"}
+        Value: {"NamespaceIndex":7,"TextId":"Offset lettura sensore:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16458,7 +16458,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Numero acquisizione lettura:"}
+        Value: {"NamespaceIndex":7,"TextId":"Numero acquisizione lettura:"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16666,7 +16666,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Reset Pallet Pieno"}
+        Value: {"NamespaceIndex":7,"TextId":"Reset Pallet Pieno"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -16755,7 +16755,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Reset Pila prelievo"}
+          Value: {"NamespaceIndex":7,"TextId":"Reset Pila prelievo"}
         - Name: HorizontalAlignment
           Type: BaseVariableType
           DataType: HorizontalAlignment
@@ -16839,7 +16839,7 @@ Children:
         Type: BaseDataVariableType
         DataType: LocalizedText
         ModellingRule: Optional
-        Value: {"LocaleId":"en-US","Text":"Reset Altezza Pila prelievo"}
+        Value: {"NamespaceIndex":7,"TextId":"Reset Altezza Pila prelievo"}
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
