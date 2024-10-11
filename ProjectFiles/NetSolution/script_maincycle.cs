@@ -957,6 +957,7 @@ public class script_maincycle : BaseNetLogic
     }
 
     //GESTIONE PROGRAMMA PRESSA
+    PopUpNetLogic popup = new PopUpNetLogic();
     public bool GestioneCaricamentoPressa(long OdlStart, string sPressProgramName, string sPressGroup, string config_pressPathIn, string config_pressPathOut, string config_pressExt, string config_pressUser, string config_pressPswd)
     {
         try
@@ -966,7 +967,7 @@ public class script_maincycle : BaseNetLogic
             if (ProdID == 0)
             {
                 // Mostra errore se l'ID del prodotto è 0
-                ShowError("Errore", "Impossibile caricare l'ordine zero.");
+                popup.OpenPopUp("Impossibile caricare l'ordine zero.", 0);
                 return false;
             }
 
@@ -981,7 +982,7 @@ public class script_maincycle : BaseNetLogic
             if (!MountNetworkDrive(FullPath, config_pressUser, config_pressPswd))
             {
                 // Mostra errore se non è possibile connettersi
-                ShowError("Errore", $"Volume non raggiungibile: {FullPath}");
+                popup.OpenPopUp($"Volume non raggiungibile: {FullPath}", 0);
                 //config_pressToMount = true;
                 return false;
             }
@@ -990,7 +991,7 @@ public class script_maincycle : BaseNetLogic
             if (!File.Exists(Path.Combine(FullPath, FileSrc)))
             {
                 // Mostra errore se il file non è trovato
-                ShowError("Errore", $"File non trovato! Percorso: {FullPath}\\{FileSrc}");
+                popup.OpenPopUp($"File non trovato! Percorso: {FullPath}\\{FileSrc}", 0);
                 return false;
             }
 
@@ -998,7 +999,7 @@ public class script_maincycle : BaseNetLogic
             if (!CopyFile(FileSrc, "0", config_pressExt, FullPath, config_pressPathOut))
             {
                 // Mostra errore se la copia fallisce
-                ShowError("Errore", "Errore durante la copia del file sulla pressa.");
+                popup.OpenPopUp("Errore durante la copia del file sulla pressa.", 0);
                 return false;
             }
 
@@ -1006,7 +1007,7 @@ public class script_maincycle : BaseNetLogic
             if (!CheckFileConsistency(FullPath, FileSrc, config_pressPathOut, "0", config_pressExt))
             {
                 // Mostra errore se i file non sono consistenti
-                ShowError("Errore", "File non esistente sulla pressa.");
+                popup.OpenPopUp("File non esistente sulla pressa.", 0);
                 return false;
             }
 
@@ -1016,7 +1017,7 @@ public class script_maincycle : BaseNetLogic
         catch (Exception ex)
         {
             // Gestione generale degli errori
-            ShowError("Errore", "Errore caricamento pressa: " + ex.Message);
+            popup.OpenPopUp($"Errore caricamento pressa: " + ex.Message, 0);
             return false;
         }
     }
@@ -1041,12 +1042,12 @@ public class script_maincycle : BaseNetLogic
                 // Verifica se la directory esiste
                 if (ftpClient.DirectoryExists(folder))
                 {
-                    Console.WriteLine("Volume montato correttamente.");
+                    popup.OpenPopUp("Volume montato correttamente.", 0);
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("Directory non trovata.");
+                    popup.OpenPopUp("Directory non trovata.", 0);
                     return false;
                 }
             }
@@ -1054,7 +1055,7 @@ public class script_maincycle : BaseNetLogic
         catch (Exception ex)
         {
             // Gestione errori di connessione
-            Console.WriteLine($"Errore connessione FTP: {ex.Message}");
+            popup.OpenPopUp($"Errore connessione FTP: {ex.Message}", 0);
             return false;
         }
     }
@@ -1079,7 +1080,7 @@ public class script_maincycle : BaseNetLogic
         catch (Exception ex)
         {
             // Gestione degli errori durante la copia del file
-            Console.WriteLine($"Errore copia file: {ex.Message}");
+            popup.OpenPopUp($"Errore copia file: {ex.Message}", 0);
             return false;
         }
     }
@@ -1097,16 +1098,9 @@ public class script_maincycle : BaseNetLogic
         catch (Exception ex)
         {
             // Gestione degli errori durante la verifica della lunghezza dei file
-            Console.WriteLine($"Errore verifica file: {ex.Message}");
+            popup.OpenPopUp($"Errore verifica file: {ex.Message}", 0);
             return false;
         }
-    }
-
-    // Funzione che mostra un errore sulla UI (simulato con Console.WriteLine)
-    private void ShowError(string title, string message)
-    {
-        // Simula una finestra pop-up che mostra l'errore
-        Console.WriteLine($"{title}: {message}");
     }
 
     public int SaveProgramPressBrake(string sPressProgramName, string sPressGroup, string config_pressPathIn, string config_pressPathOut, string config_pressExt)
@@ -1116,7 +1110,7 @@ public class script_maincycle : BaseNetLogic
             // Verifica che il nome del programma della pressa non sia vuoto
             if (string.IsNullOrEmpty(sPressProgramName))
             {
-                ShowError("Errore", "Manca il nome del file pressa da salvare!");
+                popup.OpenPopUp("Manca il nome del file pressa da salvare!", 0);
                 return 3; // 3 = Errore salvataggio
             }
 
@@ -1128,7 +1122,7 @@ public class script_maincycle : BaseNetLogic
             //}
 
             // Chiede conferma all'operatore per salvare il programma
-            var result = ShowConfirmation("Conferma", $"Salvare eventuali modifiche apportate al programma pressa '{sPressProgramName}'?");
+            var result = ShowConfirmation($"Salvare eventuali modifiche apportate al programma pressa '{sPressProgramName}'?");
 
             // Se l'operatore conferma il salvataggio
             if (result == true)
@@ -1156,16 +1150,16 @@ public class script_maincycle : BaseNetLogic
         catch (Exception ex)
         {
             // Gestione degli errori
-            ShowError("Errore", "Errore salvataggio programma pressa: " + ex.Message);
+            popup.OpenPopUp("Errore salvataggio programma pressa: " + ex.Message, 0);
             return 3; // 3 = Errore salvataggio
         }
     }
 
     // Funzione che simula la richiesta di conferma all'operatore
-    private bool ShowConfirmation(string title, string message)
+    private bool ShowConfirmation(string message)
     {
         // Simula una finestra di conferma (sì/no) per l'operatore
-        Console.WriteLine($"{title}: {message}");
+        popup.OpenPopUp($"{message}", 4);
         // Per semplicità, restituisce sempre true (conferma)
         return true;
     }
