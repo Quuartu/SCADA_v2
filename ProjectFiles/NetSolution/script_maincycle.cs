@@ -105,16 +105,16 @@ public class script_maincycle : BaseNetLogic
         var FolderSelected                              = Project.Current.GetVariable(VariablePaths.Path_FolderSelected);
         var PathFolderTemp                              = Project.Current.GetVariable(VariablePaths.Path_PathFolderTemp);
 
-        var ftp_NomeCartella = Project.Current.GetVariable(VariablePaths.Path_ftp_NomeCartella);
-        var ftp_IndirizzoIP = Project.Current.GetVariable(VariablePaths.Path_ftp_IndirizzoIP);
-        var sPressProgramName = Project.Current.GetVariable(VariablePaths.Path_sPressProgramName);     // Nome del programma della pressa 
-        var sPressGroup = Project.Current.GetVariable(VariablePaths.Path_sPressGroup);           // Gruppo del programma della pressa 
-        var config_pressPathIn = Project.Current.GetVariable(VariablePaths.Path_config_pressPathIn);    // Percorso di input per la pressa 
-        var config_pressPathOut = Project.Current.GetVariable(VariablePaths.Path_config_pressPathOut);   // Percorso di output per la pressa 
-        var config_pressExt = Project.Current.GetVariable(VariablePaths.Path_config_pressExt);       // Estensione del file della pressa *
-        var config_pressUser = Project.Current.GetVariable(VariablePaths.Path_config_pressUser);      // Username per la connessione FTP *
-        var config_pressPswd = Project.Current.GetVariable(VariablePaths.Path_config_pressPswd);      // Password per la connessione FTP *
-        //private bool config_pressToMount;                                                                                // Flag che indica se montare il volume
+        var ftp_NomeCartella                            = Project.Current.GetVariable(VariablePaths.Path_ftp_NomeCartella);
+        var ftp_IndirizzoIP                             = Project.Current.GetVariable(VariablePaths.Path_ftp_IndirizzoIP);
+        var sPressProgramName                           = Project.Current.GetVariable(VariablePaths.Path_sPressProgramName);          // Nome del programma della pressa 
+        var sPressGroup                                 = Project.Current.GetVariable(VariablePaths.Path_sPressGroup);                // Gruppo del programma della pressa 
+        var config_pressPathIn                          = Project.Current.GetVariable(VariablePaths.Path_config_pressPathIn);         // Percorso di input per la pressa 
+        var config_pressPathOut                         = Project.Current.GetVariable(VariablePaths.Path_config_pressPathOut);        // Percorso di output per la pressa 
+        var config_pressExt                             = Project.Current.GetVariable(VariablePaths.Path_config_pressExt);            // Estensione del file della pressa 
+        var config_pressUser                            = Project.Current.GetVariable(VariablePaths.Path_config_pressUser);           // Username per la connessione FTP 
+        var config_pressPswd                            = Project.Current.GetVariable(VariablePaths.Path_config_pressPswd);           // Password per la connessione FTP 
+
 
 
         //casi macchina a stati
@@ -344,9 +344,9 @@ public class script_maincycle : BaseNetLogic
                 break;
 
             case 55:
-                //------------------------------------------------------------------------------
-                MachineStatusText.Value = "Caricamento progamma in pressa e invio ok/ko al PLC";
-                //------------------------------------------------------------------------------
+                //-------------------------------------------------------------------------------
+                MachineStatusText.Value = "Caricamento programma in pressa e invio ok/ko al PLC";
+                //-------------------------------------------------------------------------------
 
                 //se caricamento dati in pressa eseguito correttamente / a PLC
                 if (GestioneCaricamentoPressa(OdlStartLong, sPressProgramName.Value, sPressGroup.Value, config_pressPathIn.Value, config_pressPathOut.Value, config_pressExt.Value, config_pressUser.Value, config_pressPswd.Value)) {
@@ -1101,66 +1101,5 @@ public class script_maincycle : BaseNetLogic
             popup.OpenPopUp($"Errore verifica file: {ex.Message}", 0);
             return false;
         }
-    }
-
-    public int SaveProgramPressBrake(string sPressProgramName, string sPressGroup, string config_pressPathIn, string config_pressPathOut, string config_pressExt)
-    {
-        try
-        {
-            // Verifica che il nome del programma della pressa non sia vuoto
-            if (string.IsNullOrEmpty(sPressProgramName))
-            {
-                popup.OpenPopUp("Manca il nome del file pressa da salvare!", 0);
-                return 3; // 3 = Errore salvataggio
-            }
-
-            //// Verifica che il codice dell'articolo non sia vuoto
-            //if (string.IsNullOrEmpty(sCodiceArticolo))
-            //{
-            //    ShowError("Errore", "Errore: CodArticolo vuoto!");
-            //    return 3; // 3 = Errore salvataggio
-            //}
-
-            // Chiede conferma all'operatore per salvare il programma
-            var result = ShowConfirmation($"Salvare eventuali modifiche apportate al programma pressa '{sPressProgramName}'?");
-
-            // Se l'operatore conferma il salvataggio
-            if (result == true)
-            {
-                string Src = "0";
-                string Dest = sPressProgramName;
-                string PathOutSave = Path.Combine(config_pressPathIn, sPressGroup);
-                string PathSrcRead = config_pressPathOut;
-
-                // Copia il programma dalla cartella di output a quella di input
-                if (CopyFile(Src, Dest, config_pressExt, PathSrcRead, PathOutSave))
-                {
-                    return 1; // 1 = Salvato con successo
-                }
-                else
-                {
-                    return 3; // 3 = Errore salvataggio
-                }
-            }
-            else
-            {
-                return 2; // 2 = Non salvare
-            }
-        }
-        catch (Exception ex)
-        {
-            // Gestione degli errori
-            popup.OpenPopUp("Errore salvataggio programma pressa: " + ex.Message, 0);
-            return 3; // 3 = Errore salvataggio
-        }
-    }
-
-    // Funzione che simula la richiesta di conferma all'operatore
-    private bool ShowConfirmation(string message)
-    {
-        // Simula una finestra di conferma (sì/no) per l'operatore
-        popup.OpenPopUp($"{message}", 4);
-        // Per semplicità, restituisce sempre true (conferma)
-        return true;
     }
 }
